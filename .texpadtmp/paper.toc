@@ -32,4 +32,6 @@
 \contentsline {subsection}{\numberline {3.7.3}Member import}{7}{subsection.3.7.3}
 \contentsline {chapter}{\numberline {4}Conclusion}{9}{chapter.4}
 \contentsline {chapter}{\numberline {5}Outlook}{11}{chapter.5}
-\contentsline {chapter}{Bibliography}{13}{chapter.5}
+\contentsline {section}{\numberline {5.1}Trello Alfred Extension}{11}{section.5.1}
+\contentsline {section}{\numberline {5.2}Native applications}{12}{section.5.2}
+\contentsline {chapter}{Bibliography}{13}{section.5.2}

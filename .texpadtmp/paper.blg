@@ -1,0 +1,57 @@
+This is BibTeX, Version 0.99d (TeX Live 2011)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: paper.aux
+The style file: alpha.bst
+Database file #1: ../sources.bib
+Warning--entry type for "trello:ios" isn't style-file defined
+--line 12 of file ../sources.bib
+Warning--entry type for "trello:android" isn't style-file defined
+--line 20 of file ../sources.bib
+Warning--entry type for "alfred" isn't style-file defined
+--line 28 of file ../sources.bib
+Warning--I didn't find a database entry for "apple:003"
+Warning--to sort, need author or key in alfred
+Warning--to sort, need author or key in trello:ios
+Warning--to sort, need author or key in trello:android
+You've used 3 entries,
+            2543 wiz_defined-function locations,
+            570 strings with 4730 characters,
+and the built_in function-call counts, 661 in all, are:
+= -- 64
+> -- 3
+< -- 0
++ -- 1
+- -- 0
+* -- 35
+:= -- 81
+add.period$ -- 6
+call.type$ -- 3
+change.case$ -- 12
+chr.to.int$ -- 2
+cite$ -- 9
+duplicate$ -- 30
+empty$ -- 82
+format.name$ -- 0
+if$ -- 153
+int.to.chr$ -- 2
+int.to.str$ -- 0
+missing$ -- 0
+newline$ -- 15
+num.names$ -- 0
+pop$ -- 28
+preamble$ -- 1
+purify$ -- 15
+quote$ -- 0
+skip$ -- 30
+stack$ -- 0
+substring$ -- 24
+swap$ -- 3
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 24
+warning$ -- 3
+while$ -- 0
+width$ -- 5
+write$ -- 30
+(There were 7 warnings)
