@@ -12,7 +12,8 @@
 \contentsline {subsection}{\numberline {2.2.2}Ruby Gems and packages}{4}{subsection.2.2.2}
 \contentsline {section}{\numberline {2.3}JSON}{4}{section.2.3}
 \contentsline {chapter}{\numberline {3}Applications}{5}{chapter.3}
-\contentsline {section}{\numberline {3.1}Trello API wrapper}{6}{section.3.1}
+\contentsline {section}{\numberline {3.1}Trello API wrapper}{5}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Markdown}{5}{subsection.3.1.1}
 \contentsline {section}{\numberline {3.2}Trello framework}{6}{section.3.2}
 \contentsline {section}{\numberline {3.3}Export to HTML}{6}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Twitter Bootstrap Framework}{6}{subsection.3.3.1}

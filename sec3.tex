@@ -7,6 +7,9 @@
 
 \section{Trello API wrapper}
 
+\subsection{Markdown}
+Maybe it's better under \textquotedblleft Export to HTML\textquotedblright
+
 \section{Trello framework}
 
 \section{Export to HTML}
@@ -40,7 +43,8 @@
 \subsubsection{Filename option}
 The -n (or -name) argument for this script stands for the filename of the backup file which contains the  exported Trello data. With -n the user can specify a file to import. While processing the script first checks if the user has passed this argument. If not, it aborts. If the -n argument is given, the scipt proofes if the file is a ZIP file. For that it soesn't use the filename but the MIME type of the file.
 
-\begin{lstlisting}[float=htb, caption=Bewegungsdaten auslesen \cite{apple:003}, label=listing008]
+\todo{listing design}
+\begin{lstlisting}[float=htb, caption=Checking if the file has the MIME type \textquotedblleft application/zip\textquotedblright, label=listing008]
 if `file -Ib #{@filename}`.gsub(/;.*\n/, "") != "application/zip"
 	puts "ERROR: The backup file has to be a ZIP file!"
 	abort
@@ -48,7 +52,9 @@ end
 \end{lstlisting}
 
 	
-In line 1 the \texttt{file -Ib \#\{\@filename\}} is a bash call for receiving the MIME type of a file. Ruby executes it and with the gsub-Method it cuts the MIME part out of the received string.
+In line 1 the \texttt{file -Ib \#\{\@filename\}} is a bash call for receiving the MIME type of a file. Ruby executes it and with the gsub-Method it cuts the MIME part out of the received string. This shell script part in a ruby file is a bit dirty. But only for this small case it would be elaborately to use a seperate gem.
+
+\todo{What's a MIME type?}
 
 \subsection{Member import}
 
