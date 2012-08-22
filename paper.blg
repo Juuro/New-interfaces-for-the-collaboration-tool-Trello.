@@ -1,0 +1,65 @@
+This is BibTeX, Version 0.99d (TeX Live 2012)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: paper.aux
+The style file: alpha.bst
+Database file #1: sources.bib.bib
+Warning--entry type for "oauth" isn't style-file defined
+--line 12 of file sources.bib.bib
+Warning--entry type for "trello:docu" isn't style-file defined
+--line 23 of file sources.bib.bib
+Warning--entry type for "rest" isn't style-file defined
+--line 32 of file sources.bib.bib
+Warning--entry type for "trello:ios" isn't style-file defined
+--line 41 of file sources.bib.bib
+Warning--entry type for "trello:android" isn't style-file defined
+--line 49 of file sources.bib.bib
+Warning--entry type for "alfred" isn't style-file defined
+--line 57 of file sources.bib.bib
+Warning--to sort, need author or key in trello:docu
+Warning--to sort, need author or key in rest
+Warning--to sort, need author or key in oauth
+Warning--to sort, need author or key in alfred
+Warning--to sort, need author or key in trello:ios
+Warning--to sort, need author or key in trello:android
+You've used 6 entries,
+            2543 wiz_defined-function locations,
+            578 strings with 4974 characters,
+and the built_in function-call counts, 1296 in all, are:
+= -- 128
+> -- 6
+< -- 0
++ -- 2
+- -- 0
+* -- 68
+:= -- 149
+add.period$ -- 12
+call.type$ -- 6
+change.case$ -- 24
+chr.to.int$ -- 4
+cite$ -- 18
+duplicate$ -- 60
+empty$ -- 163
+format.name$ -- 0
+if$ -- 304
+int.to.chr$ -- 3
+int.to.str$ -- 0
+missing$ -- 0
+newline$ -- 27
+num.names$ -- 0
+pop$ -- 56
+preamble$ -- 1
+purify$ -- 30
+quote$ -- 0
+skip$ -- 60
+stack$ -- 0
+substring$ -- 48
+swap$ -- 6
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 48
+warning$ -- 6
+while$ -- 0
+width$ -- 9
+write$ -- 58
+(There were 12 warnings)

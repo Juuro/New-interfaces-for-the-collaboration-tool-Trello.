@@ -1,10 +1,14 @@
-\begin{thebibliography}{alf12}
+\begin{thebibliography}{oau12}
 
 \bibitem[alf12]{alfred}
 Alfred app.
 \newblock \url{http://www.alfredapp.com/}, 08 2012.
 
-\bibitem[:re]{:rest}
+\bibitem[oau12]{oauth}
+Oauth community site.
+\newblock \url{http://oauth.net/}, 08 2012.
+
+\bibitem[res]{rest}
 Restful web services: The basics.
 \newblock
   \url{https://www.ibm.com/developerworks/webservices/library/ws-restful/}.

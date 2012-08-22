@@ -1,0 +1,8 @@
+\nomenclatureentry{aAPI@[{API}]\begingroup Application Programming Interface\nomeqref {2.0}|nompageref}{3}
+\nomenclatureentry{aREST@[{REST}]\begingroup Representational State Transfer\nomeqref {2.0}|nompageref}{4}
+\nomenclatureentry{aHTTP@[{HTTP}]\begingroup Hyper Text Transfer Protocol\nomeqref {2.0}|nompageref}{4}
+\nomenclatureentry{aURI@[{URI}]\begingroup Uniform resource identifier\nomeqref {2.0}|nompageref}{4}
+\nomenclatureentry{aXML@[{XML}]\begingroup Extensible Markup Language\nomeqref {2.0}|nompageref}{4}
+\nomenclatureentry{aJSON@[{JSON}]\begingroup JavaScript Object Notation\nomeqref {2.0}|nompageref}{4}
+\nomenclatureentry{aHTML@[{HTML}]\begingroup Hyper Text Markup Language\nomeqref {3.0}|nompageref}{8}
+\nomenclatureentry{aCSS@[{CSS}]\begingroup Cascading Style Sheets\nomeqref {3.0}|nompageref}{8}

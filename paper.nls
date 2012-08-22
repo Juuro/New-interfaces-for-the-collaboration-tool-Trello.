@@ -1,0 +1,22 @@
+\begin{thenomenclature} 
+
+ \nomgroup{A}
+
+  \item [{API}]\begingroup Application Programming Interface\nomeqref {2.0}
+		\nompageref{3}
+  \item [{CSS}]\begingroup Cascading Style Sheets\nomeqref {3.0}
+		\nompageref{8}
+  \item [{HTML}]\begingroup Hyper Text Markup Language\nomeqref {3.0}
+		\nompageref{8}
+  \item [{HTTP}]\begingroup Hyper Text Transfer Protocol\nomeqref {2.0}
+		\nompageref{4}
+  \item [{JSON}]\begingroup JavaScript Object Notation\nomeqref {2.0}
+		\nompageref{4}
+  \item [{REST}]\begingroup Representational State Transfer\nomeqref {2.0}
+		\nompageref{4}
+  \item [{URI}]\begingroup Uniform resource identifier\nomeqref {2.0}
+		\nompageref{4}
+  \item [{XML}]\begingroup Extensible Markup Language\nomeqref {2.0}
+		\nompageref{4}
+
+\end{thenomenclature}
