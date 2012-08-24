@@ -4,13 +4,13 @@
 
 \chapter{Applications}
 
-\section{Trello API wrapper}
+\section{Trello API wrapper}\index{Trello}\index{API}
 These scripts fulfill very different tasks, but they have also much in common. For example almost every script loads single cards. At least potentially. So I wrote a set of functions and classes which represent Trello for Ruby. This is kind of a translation of Trello to Ruby and vice versa. Additionally now the scripts can use the functions and in consequence they can stay very lightweight and clean. Almost everything that's possible whith the Trello API is possible with this API wrapper, too. But due to the fact that the Trello API is still in beta, there can always be errors and missing features.
 
-\section{Command Line Interface}\nomenclature{CLI}{Command Line Interface}
+\section{Command Line Interface}\nomenclature{CLI}{Command Line Interface}\index{CLI}\index{Command Line Interface}
 Almost every script needs some informations. An information which every scripts need is key and token of the user which account should be used for the access to Trello. The scripts have to know which cards, lists and boards they have to look at. So these information has to be passed to the scripts, too. At first we set this information at the top of the script. But it emerged that it's very unpractical to hard code this in each script. So it would be impossible to use the same Ruby file with several Trello accounts. For every Trello account the user has to generate the file. The solution for this problem is a command line interface (CLI). With a CLI the user can pass information to the script in a predefined format, so the script knows exactly what to do. For every other call the user can specify different information for one and the same script.
 
-The CLI commands for the Trello scripts are as follows:
+The CLI commands for the Trello\index{Trello} scripts are as follows:
 \begin{description}
 	\item[\texttt{-k privatekey}] the key of the user
 	\item[\texttt{-t token}] the token of the user
@@ -35,49 +35,49 @@ Used gems:
 \end{itemize}
 
 
-\subsection{Markdown}
+\subsection{Markdown}\index{Markdown}
 
-\subsection{Twitter Bootstrap Framework}
+\subsection{Twitter Bootstrap Framework}\index{Twitter}\index{Bootstrap}
 
-\subsection{HTML 5}
+\subsection{HTML 5}\index{HTML!5}
 
-\subsection{CSS 3 / SASS}\nomenclature{CSS}{Cascading Style Sheets}
+\subsection{CSS 3 / SASS}\nomenclature{CSS}{Cascading Style Sheets}\index{CSS!3}
 
-\subsection{ERB / Templating}
+\subsection{ERB / Templating}\index{ERB}\index{Templating}
 
-\section{One way sny to Google Calendar}
+\section{One way sny to Google Calendar}\index{Google!Calendar}
 
-\section{Export to iCal}
+\section{Export to iCal}\index{iCal}
 
-\section{One way sync to Joomla}
+\section{One way sync to Joomla}\index{Joomla}
 
 \subsection{For every card an article}
 
 \subsection{All cards in one article}
 
-\subsection{One way sync to WordPress}
+\subsection{One way sync to WordPress}\index{WordPress}
 
-\section{Backup}
+\section{Backup}\index{Backup}
 
-\subsection{Export}
+\subsection{Export}\index{Export}
 
-\subsection{Import}
+\subsection{Import}\index{Import}
 
 \subsubsection{Filename option}
-The -n (or -name) argument for this script stands for the filename of the backup file which contains the  exported Trello data. With -n the user can specify a file to import. While processing the script first checks if the user has passed this argument. If not, it aborts. If the -n argument is given, the scipt proofes if the file is a ZIP file. For that it soesn't use the filename but the MIME type of the file.
+The \texttt{-n} (or \texttt{-name}) argument for this script stands for the filename of the backup\index{Backup} file which contains the  exported Trello data. With \texttt{-n} the user can specify a file to import. While processing the script first checks if the user has passed this argument. If not, it aborts. If the \texttt{-n} argument is given, the scipt proofes if the file is a ZIP\index{ZIP} file. For that it soesn't use the filename but the MIME\nomenclature{MIME}{Multipurpose Internet Mail Extensions}\index{MIME} type of the file.
 
 \todo{listing design}
 \begin{lstlisting}[float=htb, caption=Checking if the file has the MIME type \textquotedblleft application/zip\textquotedblright, label=listing008]
 if `file -Ib #{@filename}`.gsub(/;.*\n/, "") != "application/zip"
-	puts "ERROR: The backup file has to be a ZIP file!"
+	puts "ERROR: The backup\index{Backup} file has to be a ZIP\index{ZIP} file!"
 	abort
 end
 \end{lstlisting}
 
 	
-In line 1 the \texttt{file -Ib \#\{\@filename\}} is a bash call for receiving the MIME type of a file. Ruby executes it and with the gsub-Method it cuts the MIME part out of the received string. This shell script part in a ruby file is a bit dirty. But only for this small case it would be elaborately to use a seperate gem.
+In line 1 the \texttt{file -Ib \#\{\@filename\}} is a bash call for receiving the MIME\index{MIME} type of a file. Ruby executes it and with the gsub-Method it cuts the MIME part out of the received string. This shell script part in a ruby file is a bit dirty. But only for this small case it would be elaborately to use a seperate gem.
 
-\todo{What's a MIME type?}
+\todo{What's a MIME\index{MIME} type?}
 
 \subsection{Member import}
 
