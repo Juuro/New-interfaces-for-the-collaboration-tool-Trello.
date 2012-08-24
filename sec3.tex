@@ -3,16 +3,39 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Applications}
-  \label{Applications}
 
 \section{Trello API wrapper}
+These scripts fulfill very different tasks, but they have also much in common. For example almost every script loads single cards. At least potentially. So I wrote a set of functions and classes which represent Trello for Ruby. This is kind of a translation of Trello to Ruby and vice versa. Additionally now the scripts can use the functions and in consequence they can stay very lightweight and clean. Almost everything that's possible whith the Trello API is possible with this API wrapper, too. But due to the fact that the Trello API is still in beta, there can always be errors and missing features.
 
-\subsection{Markdown}
-Maybe it's better under \textquotedblleft Export to HTML\textquotedblright
+\section{Command Line Interface}\nomenclature{CLI}{Command Line Interface}
+Almost every script needs some informations. An information which every scripts need is key and token of the user which account should be used for the access to Trello. The scripts have to know which cards, lists and boards they have to look at. So these information has to be passed to the scripts, too. At first we set this information at the top of the script. But it emerged that it's very unpractical to hard code this in each script. So it would be impossible to use the same Ruby file with several Trello accounts. For every Trello account the user has to generate the file. The solution for this problem is a command line interface (CLI). With a CLI the user can pass information to the script in a predefined format, so the script knows exactly what to do. For every other call the user can specify different information for one and the same script.
 
-\section{Trello framework}
+The CLI commands for the Trello scripts are as follows:
+\begin{description}
+	\item[\texttt{-k privatekey}] the key of the user
+	\item[\texttt{-t token}] the token of the user
+	\item[\texttt{-c card-id[, card-id]}] one or more card-ids
+	\item[\texttt{-l list-id[, list-id]}] one or more list-ids
+	\item[\texttt{-b board-id[, board-id]}] one or more board-ids
+	\item[\texttt{-a}] all boards with all their cards this account is able to see
+\end{description}
+
+These are the basic CLI commands which every script uses. For some script there are additional commands. They are explained in their respective sections.
 
 \section{Export to HTML}\nomenclature{HTML}{Hyper Text Markup Language}
+The export to HTML script is 
+
+Used gems:
+\begin{itemize}
+	\item \texttt{erb}
+	\item \texttt{json}
+	\item \texttt{open-uri}
+	\item \texttt{pp}
+	\item \texttt{kramdown}
+\end{itemize}
+
+
+\subsection{Markdown}
 
 \subsection{Twitter Bootstrap Framework}
 

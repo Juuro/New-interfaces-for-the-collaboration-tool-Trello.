@@ -33,15 +33,35 @@ The Trello API is a \emph{RESTful} web API. That means that the API is conform t
 Though the scripts which are used here need access to private boards in Trello there has to be any kind of authentification. For user applications with a frontend the Trello API provides OAuth2. But because of the concept of OAuth2 the user is required to enter his Trello username and password. \cite{oauth} My scripts are supposed to run on servers as cron jobs. There is no user who could manually enter data. For this kind of applications Trello provides a key/token-system. Every user has a private key. Whith this key the user can generate a token. This token will be send along every request to the Trello API. The token tells Trello which scope the request can see. While generating a token one can specify the scope of the token and when it will expire. The possible expriations of a token are between one day and never. In our case we will use \emph{never}. To generate a token one has to visit a special URL:
 \texttt{
 https://trello.com/1/authorize?key=SUBSTITUTEWITHYOURPRIVATEKEY \&name=My+Application\&expiration=never\&response\_type=token \&scope=read,write}
-In this example the token would never expire and could read and write everything the user can access with the API. Other valid values instead of \texttt{never} for expiration would be \texttt{1day}, \texttt{30days}. \texttt{30days} is the default value.
+In this example the token would never expire and could read and write everything the user can access with the API. Other valid values instead of \texttt{never} for expiration would be \texttt{1day}, \texttt{30days}. \texttt{30days} is the default value. \cite{trello:gettingstarted}
 
 \section{JSON}
-All the responses to Trello API calls use JSON. JSON means \emph{Javascript Object Notation}. It's not directly related to JavaScript, but it was first developed for the use with JavaScript. \todo{verify} JSON an easy markup language like XML. But JSON consists of only two conecpts: arrays and hashes. An array is a list of values. A hash is a list of key-value pairs. Both can be arbitrary nested. At every point one of my script saves content at any other place than Trello it's in the JSON format, too. That's because it guarantees easy compatibility with Trello. 
-\todo{JSON Wikipedia}
+All the responses to Trello API calls use JSON. It is a subset of the JavaScript programming language. Despite its relation to JavaScript it's language independent. JSON is da data-interchange format like XML\nomenclature{XML}{Extensible Markup Language}. But JSON is built on two structures. One is a list of key/value pairs. In most programming languages this is realised as an hash, struct, object or associative array. The other structure is an ordered list of values. This is realised as array, list, vector or sequence in popular programming languages. In JSON itself these structures are called \emph{object} and \emph{array}. Objects start and end with braces. Each key is followed by a colon and the key/value pairs are separated by commas. Arrays start and end with brackets. The values are separated by commas. Both can be arbitrary nested. At every point one of my script saves content at any other place than Trello it's in the JSON format, too. That's because it guarantees easy compatibility with Trello. JSON can be saved in files, too. A JSON file has the suffix \texttt{.json}. \cite{json}
 
 \section{Ruby}
-Ruby is a modern scripting language. It's very similar to Pathon and fills the same purposes as PHP, which is very popular since years. The big difference to older scripting languages like PHP is, that it's much more easier to read. Ruby doesn't require brakets. One can write \texttt{do} and \texttt{end} instead. Thats much more understandable than \texttt{\{} and \texttt{\}} like they are used in PHP. But \texttt{do} and \texttt{end} are replacable by \texttt{\{} and \texttt{\}}.
+Ruby is a modern general-purpose object-oriented programming language. Its big difference to most other languages is that it focuses on humans rather than computers. 
 
-\subsection{Ruby concepts}
-Ruby has a good amount of methods and classes every Ruby installation provides. But there are hundreds of extensions for special use cases – to communicate with RESTful Web APIs for example. There are two different kinds of extensions: \emph{packeges} and \emph{gems}. Ruby gems are small plugins for Ruby which provide additional methods and classes. Gems can be added to an existing Ruby installation at any time. Some Ruby distributions are delivered with several gems. \todo{Wie heißen die vorinstallierten packages?}
-Ruby packages are ...
+Yukihiro Matsumoto, the designer of Ruby, said once:
+\begin{quote}
+Ruby is simple in appearance, but is very
+complex inside, just like our human body.\cite{ruby:talk}
+\end{quote}
+
+That means, that Ruby is very easy readable and is intuitive for humans even so it can perform complex tasks. This is achieved with English keywords instead of brackets and braces. The result for the programmer of this consistent philosophy is a very easy to read language which is also very plain. Because of the English words instead of abstract characters Ruby is easy understandable. Even non-programmers understand mostly whats going on. So programmers produce way less errors while writing the code. A wrongly spelled word is more intuitive recognisable than a missing bracket or semicolon. \cite{ruby:about} More about Ruby can be found at \url{http://www.ruby-lang.org}.
+
+\subsection{RubyGems}
+Ruby has a good amount of methods and classes every Ruby installation provides. But there are hundreds of extensions for special use cases – to communicate with RESTful Web APIs for example – made by third party developers. In Ruby such extensions are called \emph{gems}. To manage and publish these third party libraries theres is the standard \emph{RubyGems}. It provides a standard format for third party libraries for Ruby, a tool to manage the installation of gems and a server for distributing the gems. \cite{ruby:gemdev} Some Ruby distributions are delivered with several gems. Gems can be added to an existing Ruby installation at any time. 
+
+To install an additional gem on a Unix operating system the following command can be used:  
+\begin{center}
+\texttt{gem install gemname}
+\end{center}
+Where \texttt{gemname} is the name of the respective gem. If the installation performed without errors, the gem is ready to use. \cite{ruby:gemdoc}
+
+To use an installed gem in a Ruby script the following code at the top of the script before the code starts is necessary:
+
+\begin{lstlisting}[float=htb, caption=Using the gem \emph{gemname}, label=listing001]
+require 'gemname'
+\end{lstlisting}
+Again, \emph{gemname} stands for the name of the respective gem. If any gems are used in these script which are not part of the Ruby standard distribution, they are listed at the beginning of the related description. Further information at \url{http://doc.rubygems.org} and \url{http://rubyforge.org/projects/rubygems/}.
+

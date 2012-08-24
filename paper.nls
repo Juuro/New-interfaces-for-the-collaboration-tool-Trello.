@@ -4,10 +4,12 @@
 
   \item [{API}]\begingroup Application Programming Interface\nomeqref {2.0}
 		\nompageref{3}
+  \item [{CLI}]\begingroup Command Line Interface\nomeqref {3.0}
+		\nompageref{7}
   \item [{CSS}]\begingroup Cascading Style Sheets\nomeqref {3.0}
 		\nompageref{8}
   \item [{HTML}]\begingroup Hyper Text Markup Language\nomeqref {3.0}
-		\nompageref{8}
+		\nompageref{7}
   \item [{HTTP}]\begingroup Hyper Text Transfer Protocol\nomeqref {2.0}
 		\nompageref{4}
   \item [{JSON}]\begingroup JavaScript Object Notation\nomeqref {2.0}

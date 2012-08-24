@@ -1,29 +1,58 @@
-\begin{thebibliography}{oau12}
+\begin{thebibliography}{rub12b}
 
 \bibitem[alf12]{alfred}
 Alfred app.
 \newblock \url{http://www.alfredapp.com/}, 08 2012.
 
+\bibitem[jso12]{json}
+Json.
+\newblock \url{http://www.json.org/}, 08 2012.
+
 \bibitem[oau12]{oauth}
 Oauth community site.
 \newblock \url{http://oauth.net/}, 08 2012.
 
-\bibitem[res]{rest}
+\bibitem[res12]{rest}
 Restful web services: The basics.
 \newblock
-  \url{https://www.ibm.com/developerworks/webservices/library/ws-restful/}.
+  \url{https://www.ibm.com/developerworks/webservices/library/ws-restful/}, 08
+  2012.
 
-\bibitem[trea]{trello:ios}
+\bibitem[rub00]{ruby:talk}
+[ruby-talk:02773] re: More code browsing questions.
+\newblock
+  \url{http://blade.nagaokaut.ac.jp/cgi-bin/scat.rb/ruby/ruby-talk/2773}, 05
+  2000.
+
+\bibitem[rub12a]{ruby:about}
+About ruby.
+\newblock \url{http://www.ruby-lang.org/en/about/}, 08 2012.
+
+\bibitem[rub12b]{ruby:gemdev}
+Rubyforge: Rubygems: Projektinfo.
+\newblock \url{http://rubyforge.org/projects/rubygems/}, 08 2012.
+
+\bibitem[rub12c]{ruby:gemdoc}
+Rubygems manuals.
+\newblock \url{http://docs.rubygems.org/}, 08 2012.
+
+\bibitem[tre12a]{trello:ios}
 App store - trello.
-\newblock \url{http://itunes.apple.com/us/app/trello/id461504587?mt=8}.
+\newblock \url{http://itunes.apple.com/us/app/trello/id461504587?mt=8}, 08
+  2012.
 
-\bibitem[treb]{trello:android}
+\bibitem[tre12b]{trello:gettingstarted}
+Getting started --- trello documentation.
+\newblock \url{https://trello.com/docs/gettingstarted/index.html}, 08 2012.
+
+\bibitem[tre12c]{trello:android}
 Trello android app available for download! | trello blog.
 \newblock
-  \url{http://blog.trello.com/trello-android-app-available-for-download/}.
+  \url{http://blog.trello.com/trello-android-app-available-for-download/}, 08
+  2012.
 
-\bibitem[trec]{trello:docu}
+\bibitem[tre12d]{trello:docu}
 Trello documentation --- trello documentation.
-\newblock \url{https://trello.com/docs/index.html}.
+\newblock \url{https://trello.com/docs/index.html}, 08 2012.
 
 \end{thebibliography}
