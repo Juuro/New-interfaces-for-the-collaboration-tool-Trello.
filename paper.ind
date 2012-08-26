@@ -1,26 +1,27 @@
 \begin{theindex}
 
-  \item Alfred, \hyperpage{13, 14}
-    \subitem Extension, \hyperpage{13, 14}
-  \item Android, \hyperpage{14}
-  \item API, \hyperpage{3, 4}, \hyperpage{7}
+  \item AJAX, \hyperpage{4}
+  \item Alfred, \hyperpage{21, 22}
+    \subitem Extension, \hyperpage{21, 22}
+  \item Android, \hyperpage{4}, \hyperpage{22}
+  \item API, \hyperpage{4, 5}, \hyperpage{9}
 
   \indexspace
 
-  \item Backup, \hyperpage{9}
-  \item Bootstrap, \hyperpage{9}
+  \item Backup, \hyperpage{15}
+  \item Bootstrap, \hyperpage{15}
 
   \indexspace
 
-  \item CLI, \hyperpage{7}
-  \item Command Line Interface, \hyperpage{7}
+  \item CLI, \hyperpage{9}
+  \item Command-Line Interface, \hyperpage{9}
   \item CSS
-    \subitem 3, \hyperpage{9}
+    \subitem 3, \hyperpage{15}
 
   \indexspace
 
-  \item ERB, \hyperpage{9}
-  \item Export, \hyperpage{9}
+  \item ERB, \hyperpage{15}
+  \item Export, \hyperpage{15}
 
   \indexspace
 
@@ -29,53 +30,53 @@
   \indexspace
 
   \item Google
-    \subitem Calendar, \hyperpage{9}
+    \subitem Calendar, \hyperpage{15}
 
   \indexspace
 
   \item HTML
-    \subitem 5, \hyperpage{9}
+    \subitem 5, \hyperpage{4}, \hyperpage{15}
 
   \indexspace
 
-  \item iCal, \hyperpage{9}
-  \item Import, \hyperpage{9}
-  \item iOS, \hyperpage{14}
+  \item iCalendar, \hyperpage{15}
+  \item Import, \hyperpage{15}
+  \item iOS, \hyperpage{4}, \hyperpage{22}
 
   \indexspace
 
-  \item Joomla, \hyperpage{9}
-  \item JSON, \hyperpage{4, 5}
+  \item Joomla, \hyperpage{15}
+  \item JSON, \hyperpage{5}
 
   \indexspace
 
-  \item Linux, \hyperpage{14}
+  \item Linux, \hyperpage{22}
 
   \indexspace
 
-  \item Mac, \hyperpage{13, 14}
-  \item Markdown, \hyperpage{9}
-  \item MIME, \hyperpage{9, 10}
+  \item Mac, \hyperpage{21, 22}
+  \item Markdown, \hyperpage{12}
+  \item MIME, \hyperpage{16}
 
   \indexspace
 
-  \item Ruby, \hyperpage{5, 6}
-  \item RubyGems, \hyperpage{5}
+  \item Ruby, \hyperpage{6}
+  \item RubyGems, \hyperpage{6}
 
   \indexspace
 
-  \item Templating, \hyperpage{9}
-  \item Trello, \hyperpage{3, 4}, \hyperpage{7}, \hyperpage{13, 14}
-  \item Twitter, \hyperpage{9}
+  \item Templating, \hyperpage{15}
+  \item Trello, \hyperpage{3--5}, \hyperpage{9}, \hyperpage{21, 22}
+  \item Twitter, \hyperpage{15}
 
   \indexspace
 
-  \item Windows, \hyperpage{14}
-    \subitem Search, \hyperpage{13}
-  \item WordPress, \hyperpage{9}
+  \item Windows, \hyperpage{22}
+    \subitem Search, \hyperpage{21}
+  \item WordPress, \hyperpage{15}
 
   \indexspace
 
-  \item ZIP, \hyperpage{9}
+  \item ZIP, \hyperpage{16}
 
 \end{theindex}

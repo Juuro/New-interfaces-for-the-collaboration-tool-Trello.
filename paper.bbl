@@ -1,12 +1,31 @@
-\begin{thebibliography}{rub12b}
+\begin{thebibliography}{rub12d}
 
 \bibitem[alf12]{alfred}
 Alfred app.
 \newblock \url{http://www.alfredapp.com/}, 08 2012.
 
+\bibitem[goo12]{google}
+\url{http://www.google.com}, 08 2012.
+
+\bibitem[htm]{html:logo}
+W3c html5 logo.
+\newblock \url{http://www.w3.org/html/logo/}.
+
+\bibitem[joo12]{joomla}
+‎www.joomla.de.
+\newblock \url{http://www.joomla.de/}, 08 2012.
+
 \bibitem[jso12]{json}
 Json.
 \newblock \url{http://www.json.org/}, 08 2012.
+
+\bibitem[kra12]{kramdown}
+kramdown.
+\newblock \url{http://kramdown.rubyforge.org/}, 06 2012.
+
+\bibitem[mar04]{markdown}
+Daring fireball: Markdown.
+\newblock \url{http://daringfireball.net/projects/markdown/}, 12 2004.
 
 \bibitem[oau12]{oauth}
 Oauth community site.
@@ -18,6 +37,10 @@ Restful web services: The basics.
   \url{https://www.ibm.com/developerworks/webservices/library/ws-restful/}, 08
   2012.
 
+\bibitem[rub]{ruby:icon}
+Iap: Caffeinated crash course in ruby.
+\newblock \url{http://sipb.mit.edu/iap/ruby/}.
+
 \bibitem[rub00]{ruby:talk}
 [ruby-talk:02773] re: More code browsing questions.
 \newblock
@@ -28,11 +51,17 @@ Restful web services: The basics.
 About ruby.
 \newblock \url{http://www.ruby-lang.org/en/about/}, 08 2012.
 
-\bibitem[rub12b]{ruby:gemdev}
+\bibitem[rub12b]{ruby:optionparser}
+Class: Optionparser (ruby 1.9.3).
+\newblock
+  \url{http://ruby-doc.org/stdlib-1.9.3/libdoc/optparse/rdoc/OptionParser.html},
+  08 2012.
+
+\bibitem[rub12c]{ruby:gemdev}
 Rubyforge: Rubygems: Projektinfo.
 \newblock \url{http://rubyforge.org/projects/rubygems/}, 08 2012.
 
-\bibitem[rub12c]{ruby:gemdoc}
+\bibitem[rub12d]{ruby:gemdoc}
 Rubygems manuals.
 \newblock \url{http://docs.rubygems.org/}, 08 2012.
 

@@ -8,12 +8,28 @@
 \section{Trello}
 
 \subsection{How Trello works}\index{Trello}
-Trello is a webservice by the New York City based web corporation Fog Creek Software\footnote{\url{http://www.fogcreek.com}}\index{Fog Creek Software}. It is a collaboration tool where you can manage your projects. There is the concept of so called \emph{boards} which contents several configurable lists. In these lists you can create todo items you're working on, these are called \emph{cards}. You can add your co-workers to these boards and cards. So everone who's working on a project can see whats going on at the moment.
+Trello is a webservice by the New York City based web corporation Fog Creek Software\footnote{Official Fog Creek Software website: \url{http://www.fogcreek.com}}\index{Fog Creek Software}. It is a collaboration tool to manage projects, launched in 2011\footnote{The original launch post in the Trello blog: \url{http://blog.trello.com/launch/}}. 
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=\textwidth]{figures/trello}
+\caption{A Trello board.}
+\label{fig:trello}
+\end{figure}
+
+There is the concept of so called \emph{boards} which contents several configurable lists. Figure \ref{fig:trello} shows a board with the three standard lists \emph{To Do}, \emph{Doing} and \emph{Done}. In these lists the user can create todo items. These todo items are called \emph{cards}. The cards can contain several additional data. Each card has a title and maybe a description, some asigned members, a due date, some labels, votes, checklists, comments and attachments. The creator of the board is the owner in the first place and the owner can add other Trello users to his boards and cards. So everone who's working on a project can see whats going on at the moment. Users who are assigned to a board can even create new todo items by themselves. If somebody works at more than one company with many projects each there is the concept of \emph{organizations}. This is useful in order to ensure a clear separation.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[width=\textwidth]{figures/trello-card}
+\caption{A opened card in Trello.}
+\label{fig:trello-card}
+\end{figure}
 
 \subsection{Why Trello}\index{Trello}
-Trello is not just one of hundreds of thousands of todo applications. It is streamlined for the purposes of small businesses. So for our needs in the university with small groups of people working on the same things it was perfect. Trello has proofed its value several months already.
+Trello is not just one of hundreds of thousands of todo applications. It is streamlined for the purposes of small businesses. So for the needs in the university with small groups of people working on the same things it is perfect. Trello has proofed its value several months already. The Trello website is written in HTML 5\index{HTML!5} with the use of AJAX\index{AJAX} where it makes sense. Trello provides an iOS\index{iOS} \cite{trello:ios} and Android\index{Android} \cite{trello:android} app. Both are constantly evolving. So the system is state-of-the-art. In addition the company behind Trello is not just a start-up with three employees. Thats important, too. A product of a small business, which is based just on the enthusiasm of the founders often doesn't last long. Fog Creek Software is over ten years old and has several products.
 
-The first wish was to see the due dates of the cards one is assigned to in Google calendar. Because Google calendar is the calendar tool of our choice. But thinking about that there were many other use cases for small scripts which could run as a cron job on a server to serve several regular tasks.
+The first wish was to see the due dates of the cards anybody is assigned to in Google Calendar. But thinking about that there were many other use cases for small scripts which could run as cron jobs on a server to serve several regular tasks. These scripts are described in more detail in Chapter 3.
 
 \subsection{Trello API}\index{API}
 Trello has an API \nomenclature{API}{Application Programming Interface} which is still in beta at the moment I'm writing this. But it is already very extensive. \cite{trello:docu}

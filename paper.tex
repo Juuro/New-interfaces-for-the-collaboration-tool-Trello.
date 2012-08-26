@@ -24,6 +24,8 @@
 \makenomenclature
 \makeindex
 
+\setlength{\parindent}{0mm}
+
 \usepackage{xcolor}
 \usepackage{hyperref}
 \definecolor{darkred}{rgb}{0.5,0,0}
@@ -48,16 +50,43 @@ urlcolor=blue
 
 %\lstdefinelanguage[GNU99]{Ruby}
 
+\lstdefinestyle{Bash}
+{language=bash,
+keywordstyle=\color{blue},
+basicstyle=\ttfamily\scriptsize\small,
+morekeywords={peter@kbpet},
+deletekeywords={if},
+alsoletter={:~$},
+morekeywords=[2]{peter@kbpet:},
+keywordstyle=[2]{\color{red}},
+literate={\$}{{\textcolor{red}{\$}}}1 
+         {:}{{\textcolor{red}{:}}}1
+         {~}{{\textcolor{red}{\textasciitilde}}}1,
+}
 
-\lstloadlanguages{RUBY} 
+}
+\lstdefinestyle{Html}{
+ language=HTML,
+        breaklines=true,
+        commentstyle=\textit,
+        keywordstyle=\bfseries,
+        basicstyle=\ttfamily,
+        stringstyle=\ttfamily,
+        showstringspaces=false,
+        frame=single,
+        tabsize=2
+}
+
+
+\lstloadlanguages{Ruby} 
  \lstset{ 
-  language=RUBY, 
+  language=Ruby, 
   numbers=left, 
   numberstyle=\footnotesize, 
   numbersep=5pt, 
   tabsize=2, 
   breaklines=true, 
-  frame=tb, 
+  frame=shadowbox, 
   basicstyle=\ttfamily\scriptsize\small, 
   keywordstyle=\bfseries\itshape\color{javadocblue}, 
   morekeywords={puts, loop, defined, lambda, where}, 
@@ -68,6 +97,7 @@ urlcolor=blue
   backgroundcolor=\color{white}, 
   title=\lstname 
   }
+\lstset{escapeinside={(*@}{@*)}}
   
 
 \textwidth 14cm
