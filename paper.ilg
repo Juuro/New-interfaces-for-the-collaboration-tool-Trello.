@@ -1,6 +1,14 @@
 This is makeindex, version 2.15 [TeX Live 2012] (kpathsea + Thai support).
-Scanning input file /Users/juuro/Dropbox/Studium/Diplomarbeit/Ausarbeitung/./paper.idx....done (60 entries accepted, 0 rejected).
-Sorting entries....done (371 comparisons).
-Generating output file /Users/juuro/Dropbox/Studium/Diplomarbeit/Ausarbeitung/./paper.ind....done (82 lines written, 0 warnings).
-Output written in /Users/juuro/Dropbox/Studium/Diplomarbeit/Ausarbeitung/./paper.ind.
-Transcript written in /Users/juuro/Dropbox/Studium/Diplomarbeit/Ausarbeitung/./paper.ilg.
+Scanning style file /usr/local/texlive/2012/texmf-dist/makeindex/nomencl/nomencl.ist.......
+** Input style error (file = /usr/local/texlive/2012/texmf-dist/makeindex/nomencl/nomencl.ist, line = 70):
+   -- Unknown specifier lethead_prefix.
+** Input style error (file = /usr/local/texlive/2012/texmf-dist/makeindex/nomencl/nomencl.ist, line = 71):
+   -- Unknown specifier lethead_suffix.
+** Input style error (file = /usr/local/texlive/2012/texmf-dist/makeindex/nomencl/nomencl.ist, line = 72):
+   -- Unknown specifier lethead_flag.
+...done (10 attributes redefined, 3 ignored).
+Scanning input file paper.nlo....done (12 entries accepted, 0 rejected).
+Sorting entries....done (43 comparisons).
+Generating output file paper.nls....done (28 lines written, 0 warnings).
+Output written in paper.nls.
+Transcript written in paper.ilg.

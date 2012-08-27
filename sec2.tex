@@ -34,25 +34,86 @@ The first wish was to see the due dates of the cards anybody is assigned to in G
 \subsection{Trello API}\index{API}
 Trello has an API \nomenclature{API}{Application Programming Interface} which is still in beta at the moment I'm writing this. But it is already very extensive. \cite{trello:docu}
 
-\subsubsection{REST}\nomenclature{REST}{Representational State Transfer}
-The Trello API is a \emph{RESTful} web API. That means that the API is conform to the REST design model. REST is a common style of software architecture for distributed systems. An implementation of a REST web service follows four basic design principles:
-\begin{itemize}
-	\item Use HTTP\nomenclature{HTTP}{Hyper Text Transfer Protocol} methods explicitly.
-	\item Be stateless.
-	\item Expose directory structure-like URIs\nomenclature{URI}{Uniform resource identifier}.
-	\item Transfer XML\nomenclature{XML}{Extensible Markup Language}, JSON\nomenclature{JSON}{JavaScript Object Notation}, or both.
-\end{itemize}
-
-\cite{rest}
-
 \subsubsection{Authentification}
 Though the scripts which are used here need access to private boards in Trello\index{Trello} there has to be any kind of authentification. For user applications with a frontend the Trello API provides OAuth2. But because of the concept of OAuth2 the user is required to enter his Trello username and password. \cite{oauth} My scripts are supposed to run on servers as cron jobs. There is no user who could manually enter data. For this kind of applications Trello provides a key/token-system. Every user has a private key. Whith this key the user can generate a token. This token will be send along every request to the Trello API. The token tells Trello which scope the request can see. While generating a token one can specify the scope of the token and when it will expire. The possible expriations of a token are between one day and never. In our case we will use \emph{never}. To generate a token one has to visit a special URL:
 \texttt{
 https://trello.com/1/authorize?key=SUBSTITUTEWITHYOURPRIVATEKEY \&name=My+Application\&expiration=never\&response\_type=token \&scope=read,write}
 In this example the token would never expire and could read and write everything the user can access with the API. Other valid values instead of \texttt{never} for expiration would be \texttt{1day}, \texttt{30days}. \texttt{30days} is the default value. \cite{trello:gettingstarted}
 
+\subsubsection{REST}\nomenclature{REST}{Representational State Transfer}
+The Trello API is a \emph{RESTful} web API. That means that the API is conform to the REST design model. REST is a common style of software architecture for distributed systems. It's built on four of the HTTP request methods: GET, POST, PUT and DELETE. An implementation of a REST web service follows four basic design principles:
+\begin{itemize}
+	\item Use HTTP\nomenclature{HTTP}{Hyper Text Transfer Protocol} methods explicitly.
+	\item Be stateless.
+	\item Expose directory structure-like URIs\nomenclature{URI}{Uniform resource identifier}.
+	\item Transfer XML\nomenclature{XML}{Extensible Markup Language}, JSON\nomenclature{JSON}{JavaScript Object Notation}, or both.
+\end{itemize}
+\cite{rest}
+
+Following these conventions an URL of a RESTful web service looks like this:
+\begin{center}
+\texttt{https://api.trello.com/1/boards/4eea4ffc91e31d1746000046/ checklists?key=PRIVATEKEY\&token=TOKEN}
+\end{center}
+This is a GET request to get all checklists of the board with the id \texttt{4eea4ffc91e31d1746000046}. If this URL is visited in a browser (with correct \emph{key} and \emph{token}) the browser will show plain JSON. In order Ruby can work with it, it must be able to capture this data somehow.
+
+To fulfil the requirements of REST in Ruby there are several gems. Here the RestClient gem is used. In comparison to the open-uri library, which is included in the Ruby standard library, it's much more tidied up when it comes to POST requests.
+
+\begin{lstlisting}[caption=POST request using RestClient., label=listing009]
+response = RestClient.post(
+	'https://api.trello.com/1/boards',
+	:name => board['name'], 
+	:desc => board['desc'],
+	:token => $token
+)
+\end{lstlisting}
+
+\begin{lstlisting}[caption=POST request with open-uri., label=listing010]
+uri = URI('https://api.trello.com/1/boards')
+req = Net::HTTP::Post.new(uri.path)
+
+req.set_form_data(
+	'name' => board['name'], 
+	'desc' => board['desc'],
+	'key'=>$key,
+	'token'=>$token
+)
+
+Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https') do |http|
+	response = http.request(req)
+end
+\end{lstlisting}
+
+Listing \ref{listing009} and listing \ref{listing010} show the very same API call. But \ref{listing009} is realised with RestClient and listing \ref{listing010} with open-uri. Not even is the open-uri code much longer, but open-uri doesn't detect the correct scheme from the given URI. If the call should performed in HTTPS this has to be set explicitly. That implies that for the handling of RESTful web services RestClient is the better choice.
+
 \section{JSON}\index{JSON}
-All the responses to Trello\index{Trello} API\index{API} calls use JSON. It is a subset of the JavaScript programming language. Despite its relation to JavaScript it's language independent. JSON is da data-interchange format like XML\nomenclature{XML}{Extensible Markup Language}. But JSON is built on two structures. One is a list of key/value pairs. In most programming languages this is realised as an hash, struct, object or associative array. The other structure is an ordered list of values. This is realised as array, list, vector or sequence in popular programming languages. In JSON itself these structures are called \emph{object} and \emph{array}. Objects start and end with braces. Each key is followed by a colon and the key/value pairs are separated by commas. Arrays start and end with brackets. The values are separated by commas. Both can be arbitrary nested. At every point one of my script saves content at any other place than Trello it's in the JSON\index{JSON} format, too. That's because it guarantees easy compatibility with Trello. JSON\index{JSON} can be saved in files, too. A JSON\index{JSON} file has the suffix \texttt{.json}. \cite{json}
+All the responses to Trello\index{Trello} API\index{API} calls use JSON. It is a subset of the JavaScript programming language. Despite its relation to JavaScript it's language independent. JSON is da data-interchange format like XML\nomenclature{XML}{Extensible Markup Language}. But JSON is built on two structures. One is a list of key/value pairs. In most programming languages this is realised as an hash, struct, object or associative array. The other structure is an ordered list of values. This is realised as array, list, vector or sequence in popular programming languages. In JSON itself these structures are called \emph{object} and \emph{array}. Objects start and end with curly brackets. Each key is followed by a colon and the key/value pairs are separated by commas. Arrays start and end with suqred brackets. The values are separated by commas. Both can be arbitrary nested. At every point one of my script saves content at any other place than Trello it's in the JSON\index{JSON} format, too. That's because it guarantees easy compatibility with Trello. JSON\index{JSON} can be saved in files, too. A JSON\index{JSON} file has the suffix \texttt{.json}. \cite{json}
+
+\begin{lstlisting}[caption=JSON example., label=listing007]
+{
+    "id": "4eea4ffc91e31d1746000046",
+    "name": "Example Board",
+    "desc": "This board is used in the API examples",
+    "lists": [{
+        "id": "4eea4ffc91e31d174600004a",
+        "name": "To Do Soon"
+    }, {
+        "id": "4eea4ffc91e31d174600004b",
+        "name": "Doing"
+    }, {
+        "id": "4eea4ffc91e31d174600004c",
+        "name": "Done"
+    }]
+}
+\end{lstlisting}
+
+In listing \ref{listing007} a JSON example is shown. This is the response of
+
+\begin{center}
+\texttt{https://api.trello.com/1/boards/4eea4ffc91e31d1746000046? lists=open\&list\_fields=name,desc\&key=PRIVATEKEY\&token=TOKEN}
+\end{center}
+
+The JSON in listing \ref{listing007} starts with a curly bracket. That means the uppermost structure is an object. Here are a few key/value pairs like \texttt{"id": "4eea4ffc91e31d1746000046"}. The key \texttt{"list"} has an array as value. So their value is in suqared brakets. Each element of the array is an object again.
+
 
 \section{Ruby}\index{Ruby}
 Ruby is a modern general-purpose object-oriented programming language. Its big difference to most other languages is that it focuses on humans rather than computers. 
@@ -63,7 +124,7 @@ Ruby is simple in appearance, but is very
 complex inside, just like our human body.\cite{ruby:talk}
 \end{quote}
 
-That means, that Ruby\index{Ruby} is very easy readable and is intuitive for humans even so it can perform complex tasks. This is achieved with English keywords instead of brackets and braces. The result for the programmer of this consistent philosophy is a very easy to read language which is also very plain. Because of the English words instead of abstract characters Ruby is easy understandable. Even non-programmers understand mostly whats going on. So programmers produce way less errors while writing the code. A wrongly spelled word is more intuitive recognisable than a missing bracket or semicolon. \cite{ruby:about} More about Ruby can be found at \url{http://www.ruby-lang.org}.
+That means, that Ruby\index{Ruby} is very easy readable and is intuitive for humans even so it can perform complex tasks. This is achieved with English keywords instead of brackets and curly brackets. The result for the programmer of this consistent philosophy is a very easy to read language which is also very plain. Because of the English words instead of abstract characters Ruby is easy understandable. Even non-programmers understand mostly whats going on. So programmers produce way less errors while writing the code. A wrongly spelled word is more intuitive recognisable than a missing bracket or semicolon. \cite{ruby:about} More about Ruby can be found at \url{http://www.ruby-lang.org}.
 
 \subsection{RubyGems}\index{RubyGems}
 Ruby has a good amount of methods and classes every Ruby installation provides. But there are hundreds of extensions for special use cases – to communicate with RESTful Web APIs for example – made by third party developers. In Ruby such extensions are called \emph{gems}. To manage and publish these third party libraries theres is the standard \emph{RubyGems}. It provides a standard format for third party libraries for Ruby, a tool to manage the installation of gems and a server for distributing the gems. \cite{ruby:gemdev} Some Ruby distributions are delivered with several gems. Gems can be added to an existing Ruby installation at any time. 
@@ -76,8 +137,8 @@ Where \texttt{gemname} is the name of the respective gem. If the installation pe
 
 To use an installed gem in a Ruby\index{Ruby} script the following code at the top of the script before the code starts is necessary:
 
-\begin{lstlisting}[float=htb, caption=Using the gem \emph{gemname}, label=listing001]
+\begin{lstlisting}[caption=Using the gem \emph{gemname}, label=listing001]
 require 'gemname'
 \end{lstlisting}
-Again, \emph{gemname} stands for the name of the respective gem. If any gems are used in these script which are not part of the Ruby standard distribution, they are listed at the beginning of the related description. Further information at \url{http://doc.rubygems.org} and \url{http://rubyforge.org/projects/rubygems/}.
+Again, \emph{gemname} stands for the name of the respective gem. If any gems are used in these script which are not part of the Ruby standard library, they are listed at the beginning of the related description. Further information at \url{http://doc.rubygems.org} and \url{http://rubyforge.org/projects/rubygems/}.
 

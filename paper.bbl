@@ -1,8 +1,21 @@
-\begin{thebibliography}{rub12d}
+\begin{thebibliography}{htm12d}
 
 \bibitem[alf12]{alfred}
 Alfred app.
 \newblock \url{http://www.alfredapp.com/}, 08 2012.
+
+\bibitem[boo12]{bootstrap}
+Twitter bootstrap.
+\newblock \url{http://twitter.github.com/bootstrap/}, 08 2012.
+
+\bibitem[erb11]{erb:introduction}
+An introduction to erb templating.
+\newblock \url{http://www.stuartellis.eu/articles/erb/}, 02 2011.
+
+\bibitem[erb12]{erb:docu}
+Class: Erb (ruby 1.9.3).
+\newblock \url{http://ruby-doc.org/stdlib-1.9.3/libdoc/erb/rdoc/ERB.html}, 08
+  2012.
 
 \bibitem[goo12]{google}
 \url{http://www.google.com}, 08 2012.
@@ -10,6 +23,32 @@ Alfred app.
 \bibitem[htm]{html:logo}
 W3c html5 logo.
 \newblock \url{http://www.w3.org/html/logo/}.
+
+\bibitem[htm11]{html:lastcall}
+W3c invites broad review of html5.
+\newblock \url{http://www.w3.org/2011/05/html5lc-pr.html}, 05 2011.
+
+\bibitem[htm12a]{html5:header}
+4.4 sections --- html standard.
+\newblock
+  \url{http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-footer-element},
+  08 2012.
+
+\bibitem[htm12b]{html5:footer}
+4.4 sections --- html standard.
+\newblock
+  \url{http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-footer-element},
+  08 2012.
+
+\bibitem[htm12c]{html5:article}
+4.4 sections --- html standard.
+\newblock
+  \url{http://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-article-element},
+  08 2012.
+
+\bibitem[htm12d]{html:5differences}
+Html5 differences from html4.
+\newblock \url{http://www.w3.org/TR/html5-diff/}, 03 2012.
 
 \bibitem[joo12]{joomla}
 ‎www.joomla.de.
@@ -23,9 +62,19 @@ Json.
 kramdown.
 \newblock \url{http://kramdown.rubyforge.org/}, 06 2012.
 
+\bibitem[les12]{less}
+Less « the dynamic stylesheet language.
+\newblock \url{http://lesscss.org/}, 08 2012.
+
 \bibitem[mar04]{markdown}
 Daring fireball: Markdown.
 \newblock \url{http://daringfireball.net/projects/markdown/}, 12 2004.
+
+\bibitem[mar12]{markotto}
+Bootstrap in a list apart no. 342 · deep thoughts by mark otto.
+\newblock
+  \url{http://www.markdotto.com/2012/01/17/bootstrap-in-a-list-apart-342/}, 01
+  2012.
 
 \bibitem[oau12]{oauth}
 Oauth community site.
@@ -64,6 +113,12 @@ Rubyforge: Rubygems: Projektinfo.
 \bibitem[rub12d]{ruby:gemdoc}
 Rubygems manuals.
 \newblock \url{http://docs.rubygems.org/}, 08 2012.
+
+\bibitem[sma11]{smartphonesales}
+One billion html5 phones to be sold worldwide in 2013.
+\newblock
+  \url{http://www.strategyanalytics.com/default.aspx?mod=pressreleaseviewer&a0=5145},
+  12 2011.
 
 \bibitem[tre12a]{trello:ios}
 App store - trello.
