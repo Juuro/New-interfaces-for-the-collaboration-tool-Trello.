@@ -22,6 +22,6 @@ The cards in Trello may have set due dates. A due date is a date at which the cr
 fdate = Time.iso8601(date).getlocal
 \end{lstlisting}
 
-It parses the given date string in ISO 8601 format to a Ruby Time object. The \lstinline{getlocal} is the important part here. This function of the Time class determines server's time zone and readjusts the time accordingly. For this function working as intended it's important that the correct time zone is set on the used server. 
+It parses the given date string in ISO 8601 format to a Ruby Time object. The \lstinline{getlocal} is the important part here. This function of the Time class determines server's time zone and readjusts the time accordingly. The method respects the daylight saving time applay in several time zones, too. For this function working as intended it's important that the correct time zone is set on the used server. 
 
 \todo{Describe getDate}

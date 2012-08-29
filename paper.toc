@@ -21,13 +21,13 @@
 \contentsline {subsection}{\numberline {4.2.4}Templating with ERB}{19}{subsection.4.2.4}
 \contentsline {section}{\numberline {4.3}Sync Google Calendar}{23}{section.4.3}
 \contentsline {section}{\numberline {4.4}Export to iCalendar}{26}{section.4.4}
-\contentsline {section}{\numberline {4.5}Sync to Joomla}{28}{section.4.5}
-\contentsline {section}{\numberline {4.6}Backup}{28}{section.4.6}
-\contentsline {subsection}{\numberline {4.6.1}Export}{28}{subsection.4.6.1}
-\contentsline {subsection}{\numberline {4.6.2}Import}{28}{subsection.4.6.2}
-\contentsline {subsubsection}{Filename option}{28}{section*.14}
-\contentsline {subsection}{\numberline {4.6.3}Member import}{29}{subsection.4.6.3}
-\contentsline {subsection}{\numberline {4.6.4}Close all boards}{29}{subsection.4.6.4}
+\contentsline {section}{\numberline {4.5}Sync to Joomla}{29}{section.4.5}
+\contentsline {section}{\numberline {4.6}Backup}{29}{section.4.6}
+\contentsline {subsection}{\numberline {4.6.1}Export}{29}{subsection.4.6.1}
+\contentsline {subsection}{\numberline {4.6.2}Import}{29}{subsection.4.6.2}
+\contentsline {subsubsection}{Filename option}{29}{section*.14}
+\contentsline {subsection}{\numberline {4.6.3}Member import}{30}{subsection.4.6.3}
+\contentsline {subsection}{\numberline {4.6.4}Close all boards}{30}{subsection.4.6.4}
 \contentsline {chapter}{\numberline {5}Conclusion}{31}{chapter.5}
 \contentsline {chapter}{\numberline {6}Outlook}{33}{chapter.6}
 \contentsline {section}{\numberline {6.1}Trello Alfred Extension}{33}{section.6.1}

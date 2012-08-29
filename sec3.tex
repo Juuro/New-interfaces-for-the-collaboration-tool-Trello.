@@ -332,43 +332,42 @@ Used libraries:
 	\item \texttt{pp}
 \end{itemize}
 
-iCalendar is a popular format to exchange calendar data of all sorts. Originally it was introduced in 1998 by Lotus and Microsoft in RFC 2445. \cite{rfc:2445} Meanwhile it is supported by many applications which work with events of any kind. iCalendar is the defacto standard in this field. Hence it has great compatibility with many programs. 
-
-\todo{iCalendar format}
-
+iCalendar is a popular format to exchange calendar data of all sorts. Originally it was introduced in 1998 by Lotus and Microsoft in RFC 2445. \cite{rfc:2445} Meanwhile it is supported by many applications which work with events of any kind. iCalendar is the defacto standard in this field. Hence it has great compatibility with many programs.  The standard defines the MIME type \texttt{text/calendar}. So iCalendar is mostly used for exchanging calendaring data, like sending invitations, and for providing public calendaring data, the timetable of the football world championship for example.
 \begin{lstlisting}[aboveskip=1\baselineskip, style=bash, caption=iCalendar example., label=listing023]
 BEGIN:VCALENDAR
-CALSCALE:GREGORIAN
+CALSCALE:GREGORIAN (*@ \label{line017} @*)
 METHOD:PUBLISH
 PRODID:iCalendar-Ruby
 VERSION:2.0
-BEGIN:VTIMEZONE
+BEGIN:VTIMEZONE (*@ \label{line018} @*)
 TZID:Europe/Berlin
 BEGIN:STANDARD
-DTSTART:20060811T073001
-RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
-TZNAME:GMT+01:00
+DTSTART:19960811T073001
+RRULE:FREQ=DAILY;INTERVAL=2
+TZNAME:UTC+01:00
 TZOFFSETFROM:+0200
 TZOFFSETTO:+0100
 END:STANDARD
 END:VTIMEZONE
-BEGIN:VEVENT
+BEGIN:VEVENT (*@ \label{line019} @*)
 CATEGORIES:FAMILY
-DESCRIPTION:503965e018a5fec561e66af1
-DTEND;TZID=Europe/Berlin:20120828T160000
-DTSTAMP:20120829T053947
-DTSTART;TZID=Europe/Berlin:20120828T160000
+DESCRIPTION:4ffa4c76e75c29032a88ed19
+DTEND;TZID=Europe/Berlin:20120804T170000
+DTSTAMP:20120829T184941
+DTSTART;TZID=Europe/Berlin:20120804T170000
 SEQUENCE:1
-SUMMARY:Buy a mountainbike.
+SUMMARY:Ob-La-Di\, Ob-La-DaAAAA
 TRANSP:TRANSPARENT
-UID:2012-08-29T05:39:47+02:00_400189826@juuroair
-URL:https://trello.com/card/buy-a-mountainbike/4ffa4c5ce75c29032a88ea31/5
+UID:2012-08-29T18:49:41+02:00_158310425@u-081-c222.eap.uni-tuebingen.de
+URL:https://trello.com/card/ob-la-di-ob-la-daaaaa/4ffa4c5ce75c29032a88ea31/2
 END:VEVENT
 \end{lstlisting}
 
-Listing \ref{listing023} shows an example of a file in the iCalendar format.
+Listing \ref{listing023} shows an example of a file in the iCalendar format this script can produce. The top-level element of an iCalendar file is the core object. The first line is \lstinline{BEGIN:VCALENDAR} and the ending line has to be \lstinline{END:VCALENDAR}. Between these two tags is the \emph{icalbody}. Following are the iCalendar properties. These properties apply to the entire calendar. \lstinline{CALSCALE:GREGORIAN} in line \ref{line017} of listing \ref{listing023} defines the calendar scale of this calendar. Hence the standard calendar format is Gregorian world wide it'n not neccessary to specify it in the iCalendar file. The method specification can has other values than \lstinline{PUBLISH}, such like \lstinline{REQUEST} and \lstinline{CANCEL}. \lstinline{REQUEST} would be used if the sender wants to know if the receiver is free at the time of this event. \lstinline{CANCEL} would be used when the provided events in this calendar should be cancelled. The \lstinline{PRODID} simply specifies the product which generated the iCalendar file. The \lstinline{VERSION} property specifies the version that is required in order to interpret the iCalendar file. Version 2.0 is the last version. In line \ref{line018} the definition of the timezone starts. \lstinline{TZID} specifies the identifier of this time zone. \lstinline{TZOFFSETFROM} and \lstinline{TZOFFSETTO} specify both the offset to UTC. \lstinline{TZOFFSETFROM} for daylight saving time and \lstinline{TZOFFSETTO} for standard time. \lstinline{DTSTART} in this context describes the first onset date-time for the observance. The \lstinline{RRULE} property defines a repeating pattern for recurring events. \lstinline{TZNAME} is just a name for the specified timezone. IN \ref{line019} the definition of the actual event begins. Every single event is specified within an \lstinline{VEVENT} object. The \lstinline{VEVENT} objects are listed after each other. There is the possibility to divide the events into categories with the \lstinline{CATEGORIES} property. The \lstinline{DESCRIPTION} contains a description string of the event. Here the script enters the id of the respective card. \lstinline{DTSTART} and \lstinline{DTEND} specify the starting and ending times of the event. The \lstinline{DTSTAMP} property contains the time of the export to iCalenar format. \lstinline{SUMMARY} is the events title.\todo{Hier: Quellen angeben!}\lstinline{SEQUENCE} \lstinline{TRANSP} The \lstinline{UID} countains information abaout the creator of the iCalendar data. In this case it's a time and the name of my computer in the network of Uni Tübingen. Finally the \lstinline{URL} property contains simply the URL of the card at Trello. With this URL the user can visit the card from within his calendaring application. So he can visit and edit the card without navigation through Trello by himself.  
 
 \todo{actual export}
+
+The iCalendar format has a field for attendees. If this is specified everyone can see who's invited to this event. But unfortunately it cann't be used because the Trello API doesn't provide a method to get a users email adress. That's for privacy reasons, for sure, but it would be great if there were such an option. Maybe only for private boards though. 
 
 In comparison to the Google sync, the script is much more simple. There is no need for a sync opportunity and there is no API to work with. There is only one file in the correct format to be created. That's much faster than working with two APIs and perform several API calls. The server has to compute less data and there's less traffic to the APIs while updating. But of course the iCalendar file must be available on a server. With the Google solution there is no need for an own web server. The another bigger problem with the webserver is, that the URL is accesible for everybody. If the calendar includes critical data this is a disqualifier for the user or the company. Although it is possible to provide the server with password protection, this would only be more complicated. Either the calendaring software doesn't support .htaccess or any other web authentication technology orthe user has to enter his login information periodically. The only way to use it safely with critical data is to use it in an intranet. There won't be any need for additional protcetion. But for the domestic use and for most small companies the solution with Google  should be sufficient. Google even provides an iCalendar feed itself. 
 

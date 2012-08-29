@@ -102,6 +102,11 @@ Restful web services: The basics.
   \url{https://www.ibm.com/developerworks/webservices/library/ws-restful/}, 08
   2012.
 
+\bibitem[rfc98]{rfc:2445}
+Rfc 2445 - internet calendaring and scheduling core object specification
+  (icalendar).
+\newblock \url{http://tools.ietf.org/html/rfc2445}, 11 1998.
+
 \bibitem[rub]{ruby:icon}
 Iap: Caffeinated crash course in ruby.
 \newblock \url{http://sipb.mit.edu/iap/ruby/}.
