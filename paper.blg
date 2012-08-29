@@ -3,66 +3,74 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: paper.aux
 The style file: alpha.bst
 Database file #1: sources.bib.bib
-Warning--entry type for "erb:docu" isn't style-file defined
---line 12 of file sources.bib.bib
-Warning--entry type for "erb:introduction" isn't style-file defined
+Warning--entry type for "json:docu" isn't style-file defined
 --line 23 of file sources.bib.bib
-Warning--entry type for "html5:header" isn't style-file defined
+Warning--entry type for "google:calapi" isn't style-file defined
 --line 34 of file sources.bib.bib
-Warning--entry type for "html5:footer" isn't style-file defined
+Warning--entry type for "google:apiscope" isn't style-file defined
 --line 45 of file sources.bib.bib
-Warning--entry type for "html5:article" isn't style-file defined
+Warning--entry type for "google:apisconsole" isn't style-file defined
 --line 56 of file sources.bib.bib
-Warning--entry type for "smartphonesales" isn't style-file defined
+Warning--entry type for "erb:docu" isn't style-file defined
+--line 67 of file sources.bib.bib
+Warning--entry type for "erb:introduction" isn't style-file defined
 --line 78 of file sources.bib.bib
-Warning--entry type for "html:5differences" isn't style-file defined
+Warning--entry type for "html5:header" isn't style-file defined
 --line 89 of file sources.bib.bib
-Warning--entry type for "html:lastcall" isn't style-file defined
+Warning--entry type for "html5:footer" isn't style-file defined
 --line 100 of file sources.bib.bib
-Warning--entry type for "markotto" isn't style-file defined
+Warning--entry type for "html5:article" isn't style-file defined
 --line 111 of file sources.bib.bib
-Warning--entry type for "bootstrap" isn't style-file defined
---line 122 of file sources.bib.bib
-Warning--entry type for "less" isn't style-file defined
+Warning--entry type for "smartphonesales" isn't style-file defined
 --line 133 of file sources.bib.bib
-Warning--entry type for "google" isn't style-file defined
+Warning--entry type for "html:5differences" isn't style-file defined
 --line 144 of file sources.bib.bib
+Warning--entry type for "html:lastcall" isn't style-file defined
+--line 155 of file sources.bib.bib
+Warning--entry type for "markotto" isn't style-file defined
+--line 166 of file sources.bib.bib
+Warning--entry type for "bootstrap" isn't style-file defined
+--line 177 of file sources.bib.bib
+Warning--entry type for "less" isn't style-file defined
+--line 188 of file sources.bib.bib
+Warning--entry type for "google" isn't style-file defined
+--line 199 of file sources.bib.bib
 Warning--entry type for "joomla" isn't style-file defined
---line 154 of file sources.bib.bib
+--line 209 of file sources.bib.bib
 Warning--entry type for "html:logo" isn't style-file defined
---line 165 of file sources.bib.bib
+--line 220 of file sources.bib.bib
 Warning--entry type for "ruby:icon" isn't style-file defined
---line 174 of file sources.bib.bib
+--line 229 of file sources.bib.bib
 Warning--entry type for "kramdown" isn't style-file defined
---line 183 of file sources.bib.bib
-Warning--entry type for "markdown" isn't style-file defined
---line 194 of file sources.bib.bib
-Warning--entry type for "ruby:optionparser" isn't style-file defined
---line 205 of file sources.bib.bib
-Warning--entry type for "ruby:gemdev" isn't style-file defined
---line 216 of file sources.bib.bib
-Warning--entry type for "ruby:gemdoc" isn't style-file defined
---line 227 of file sources.bib.bib
-Warning--entry type for "ruby:about" isn't style-file defined
 --line 238 of file sources.bib.bib
-Warning--entry type for "ruby:talk" isn't style-file defined
+Warning--entry type for "markdown" isn't style-file defined
 --line 249 of file sources.bib.bib
-Warning--entry type for "trello:gettingstarted" isn't style-file defined
+Warning--entry type for "ruby:optionparser" isn't style-file defined
 --line 260 of file sources.bib.bib
-Warning--entry type for "json" isn't style-file defined
+Warning--entry type for "ruby:gemdev" isn't style-file defined
 --line 271 of file sources.bib.bib
-Warning--entry type for "oauth" isn't style-file defined
+Warning--entry type for "ruby:gemdoc" isn't style-file defined
 --line 282 of file sources.bib.bib
-Warning--entry type for "trello:docu" isn't style-file defined
+Warning--entry type for "ruby:about" isn't style-file defined
 --line 293 of file sources.bib.bib
-Warning--entry type for "rest" isn't style-file defined
+Warning--entry type for "ruby:talk" isn't style-file defined
 --line 304 of file sources.bib.bib
-Warning--entry type for "trello:ios" isn't style-file defined
+Warning--entry type for "trello:gettingstarted" isn't style-file defined
 --line 315 of file sources.bib.bib
-Warning--entry type for "trello:android" isn't style-file defined
+Warning--entry type for "json" isn't style-file defined
 --line 326 of file sources.bib.bib
+Warning--entry type for "oauth" isn't style-file defined
+--line 337 of file sources.bib.bib
+Warning--entry type for "trello:docu" isn't style-file defined
+--line 348 of file sources.bib.bib
+Warning--entry type for "rest" isn't style-file defined
+--line 359 of file sources.bib.bib
+Warning--entry type for "trello:ios" isn't style-file defined
+--line 370 of file sources.bib.bib
+Warning--entry type for "trello:android" isn't style-file defined
+--line 381 of file sources.bib.bib
 Warning--entry type for "alfred" isn't style-file defined
---line 336 of file sources.bib.bib
+--line 391 of file sources.bib.bib
 Warning--to sort, need author or key in ruby:icon
 Warning--to sort, need author or key in html:logo
 Warning--to sort, need author or key in joomla
@@ -74,11 +82,11 @@ Warning--to sort, need author or key in trello:docu
 Warning--to sort, need author or key in oauth
 Warning--to sort, need author or key in trello:gettingstarted
 Warning--to sort, need author or key in rest
-Warning--to sort, need author or key in json
 Warning--to sort, need author or key in ruby:talk
 Warning--to sort, need author or key in ruby:about
 Warning--to sort, need author or key in ruby:gemdev
 Warning--to sort, need author or key in ruby:gemdoc
+Warning--to sort, need author or key in json
 Warning--to sort, need author or key in ruby:optionparser
 Warning--to sort, need author or key in markdown
 Warning--to sort, need author or key in less
@@ -92,46 +100,50 @@ Warning--to sort, need author or key in html5:footer
 Warning--to sort, need author or key in html5:article
 Warning--to sort, need author or key in erb:introduction
 Warning--to sort, need author or key in erb:docu
+Warning--to sort, need author or key in google:apisconsole
+Warning--to sort, need author or key in google:apiscope
+Warning--to sort, need author or key in google:calapi
+Warning--to sort, need author or key in json:docu
 Warning--to sort, need author or key in alfred
-You've used 30 entries,
+You've used 34 entries,
             2543 wiz_defined-function locations,
-            654 strings with 7013 characters,
-and the built_in function-call counts, 6460 in all, are:
-= -- 656
-> -- 30
+            667 strings with 7452 characters,
+and the built_in function-call counts, 7320 in all, are:
+= -- 744
+> -- 34
 < -- 0
-+ -- 10
++ -- 14
 - -- 0
-* -- 386
-:= -- 695
-add.period$ -- 59
-call.type$ -- 30
-change.case$ -- 119
+* -- 438
+:= -- 785
+add.period$ -- 67
+call.type$ -- 34
+change.case$ -- 135
 chr.to.int$ -- 21
-cite$ -- 90
-duplicate$ -- 300
-empty$ -- 811
+cite$ -- 102
+duplicate$ -- 340
+empty$ -- 919
 format.name$ -- 0
-if$ -- 1528
-int.to.chr$ -- 10
+if$ -- 1732
+int.to.chr$ -- 14
 int.to.str$ -- 0
 missing$ -- 0
-newline$ -- 122
+newline$ -- 138
 num.names$ -- 0
-pop$ -- 245
+pop$ -- 277
 preamble$ -- 1
-purify$ -- 150
+purify$ -- 170
 quote$ -- 0
-skip$ -- 325
+skip$ -- 367
 stack$ -- 0
-substring$ -- 241
-swap$ -- 30
+substring$ -- 273
+swap$ -- 34
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 240
-warning$ -- 30
+type$ -- 272
+warning$ -- 34
 while$ -- 0
-width$ -- 33
-write$ -- 298
-(There were 60 warnings)
+width$ -- 37
+write$ -- 338
+(There were 68 warnings)

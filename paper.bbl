@@ -17,8 +17,20 @@ Class: Erb (ruby 1.9.3).
 \newblock \url{http://ruby-doc.org/stdlib-1.9.3/libdoc/erb/rdoc/ERB.html}, 08
   2012.
 
-\bibitem[goo12]{google}
+\bibitem[goo12a]{google}
 \url{http://www.google.com}, 08 2012.
+
+\bibitem[goo12b]{google:apiscope}
+Frequently asked questions - google data apis --- google developers.
+\newblock \url{https://developers.google.com/gdata/faq#AuthScopes}, 08 2012.
+
+\bibitem[goo12c]{google:apisconsole}
+Google apis console.
+\newblock \url{https://code.google.com/apis/console/}, 08 2012.
+
+\bibitem[goo12d]{google:calapi}
+Google calendar api - google apps platform --- google developers.
+\newblock \url{https://developers.google.com/google-apps/calendar/}, 08 2012.
 
 \bibitem[htm]{html:logo}
 W3c html5 logo.
@@ -54,9 +66,13 @@ Html5 differences from html4.
 ‎www.joomla.de.
 \newblock \url{http://www.joomla.de/}, 08 2012.
 
-\bibitem[jso12]{json}
+\bibitem[jso12a]{json}
 Json.
 \newblock \url{http://www.json.org/}, 08 2012.
+
+\bibitem[jso12b]{json:docu}
+Json implementation for ruby.
+\newblock url{http://flori.github.com/json/doc/index.html}, 04 2012.
 
 \bibitem[kra12]{kramdown}
 kramdown.

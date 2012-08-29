@@ -64,7 +64,7 @@ literate={\$}{{\textcolor{red}{\$}}}1
          {~}{{\textcolor{red}{\textasciitilde}}}1,
 }
 
-}
+
 \lstdefinestyle{Html}{
  language=HTML,
         breaklines=true,
@@ -126,16 +126,17 @@ literate={\$}{{\textcolor{red}{\$}}}1
   {\large Mathematisch-Naturwissenschaftliche Fakultät \\
 Wilhelm-Schickard-Institut f\"ur Informatik\\[4cm]}
   {\huge Diplom Thesis Informatics\\[2cm]}
-  {\Large\bf  Mit der Trello-API rummuckeln\\[1.5cm]}
+  \todo{?}
+  {\Large\bf  Framework for connecting Trello to other services and applications\\[1.5cm]}
  {\large Sebastian Engel}\\[0.5cm]
-24th July 2012\\[4cm]
+11th September 2012\\[4cm]
 {\small\bf Referees}\\[0.5cm]
-  \parbox{7cm}{\begin{center}{\large Name Erstgutachter}\\
-   (Bioinformatik)\\
+  \parbox{7cm}{\begin{center}{\large Prof. Dr. Torsten Grust}\\
+   (Informatik)\\
   {\footnotesize Wilhelm-Schickard-Institut f\"ur Informatik\\
 	Universit\"at T\"ubingen}\end{center}}\hfill\parbox{7cm}{\begin{center}
   {\large Name Zweitgutachter}\\
-  (Biologie/Medizin)\\
+  ( )\\
   {\footnotesize Medizinische Fakult\"at\\
 	Universit\"at T\"ubingen}\end{center}
  }
@@ -150,7 +151,7 @@ Wilhelm-Schickard-Institut f\"ur Informatik\\[4cm]}
 \vspace*{\fill}
 \begin{minipage}{11.2cm}
 \textbf{Engel, Sebastian:}\\
-\emph{Titel der Arbeit}\\ Diplom Thesis Bioinformatics\\
+\emph{Framework for connecting Trello to other services and applications}\\ Diplom Thesis Informatics\\
 Eberhard Karls Universit\"at T\"ubingen\\
 Thesis period: 13th march to 11th September 2012
 \end{minipage}
@@ -171,10 +172,11 @@ Thesis period: 13th march to 11th September 2012
 Trello is a collaboration webservice to manage projects and assign their todo items to co-workers. There are many collaboration tools today, but most of them are very basic. Trello is very extensive and it is optimal fo small businesses. But although it works fine like it's supposed to it has its limits. Trello as its state now is a closed system. Nothing gets in or out unless you use Trello itself. But sometimes it would be handy if you were able to get content from Trello out into other applications. For example a CMS which should contain completed theses which you are already managing in Trello.
  
 So this thesis addresses small scripts which let Trello interact with other webservices and applications. For this purpose I wrote a wrapper of the Trello API in Ruby to accomplish this task in the most dynamic way possible.
-\newpage
-\section*{Acknowledgements}
 
-Write here your acknowledgements.
+\newpage
+
+\section*{Acknowledgements}
+Thanks to Prof. Grust and M.Sc. Tom Schreiber for the oppurtunity to work on this interesting project. A great thank you to my lectors Alena Dausacker and Jennifer Proehl. Thanks to Moritz Uhlig for introducing me to HTML in the first place. Thanks to Sabrina Pfeffer, Martin Lahl, Philipp Wolter, Thomas Zappe and Steffen Zietkowski for the support during my studies. Thanks to my parents for the financial support and the patience.
 
 \cleardoublepage
 
@@ -251,6 +253,10 @@ Write here your acknowledgements.
 
 %% 
 \input{sec2}
+\cleardoublepage
+
+%% 
+\input{sec21}
 \cleardoublepage
 
 %%

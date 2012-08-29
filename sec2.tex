@@ -50,24 +50,30 @@ The Trello API is a \emph{RESTful} web API. That means that the API is conform t
 \end{itemize}
 \cite{rest}
 
-Following these conventions an URL of a RESTful web service looks like this:
+Following these conventions a GET URL of a RESTful web service looks like this:
 \begin{center}
-\texttt{https://api.trello.com/1/boards/4eea4ffc91e31d1746000046/ checklists?key=PRIVATEKEY\&token=TOKEN}
+\texttt{https://api.trello.com/1/cards/4fc8dd3e1b9ecf0c3571902f? key='PRIVATEKEY\&token=TOKEN}
 \end{center}
-This is a GET request to get all checklists of the board with the id \texttt{4eea4ffc91e31d1746000046}. If this URL is visited in a browser (with correct \emph{key} and \emph{token}) the browser will show plain JSON. In order Ruby can work with it, it must be able to capture this data somehow.
+This is a GET request to get a specific card with the id \texttt{4fc8dd3e1b9ecf0c3571902f}. If this URL is visited in a browser (with correct \emph{key} and \emph{token}) the browser will show plain JSON. In order Ruby can work with it, it must be able to capture this data somehow. To fulfil the requirements of REST in Ruby there are several gems. Here the RestClient gem is used. This GET request with the RestClient gem in Ruby looks like \ref{listing019}.
 
-To fulfil the requirements of REST in Ruby there are several gems. Here the RestClient gem is used. In comparison to the open-uri library, which is included in the Ruby standard library, it's much more tidied up when it comes to POST requests.
+\begin{lstlisting}[aboveskip=1\baselineskip, caption=GET request using RestClient., label=listing019]
+member = RestClient.get('https://api.trello.com/1/cards/4fc8dd3e1b9ecf0c3571902f?key='+$key+'&token='+$token)
+pp JSON.parse(member)
+\end{lstlisting}
 
-\begin{lstlisting}[caption=POST request using RestClient., label=listing009]
+In comparison to the open-uri library, which is included in the Ruby standard library, it's much more tidied up when it comes to POST requests.
+
+\begin{lstlisting}[aboveskip=1\baselineskip, caption=POST request using RestClient., label=listing009]
 response = RestClient.post(
 	'https://api.trello.com/1/boards',
 	:name => board['name'], 
 	:desc => board['desc'],
+	:key => $key,
 	:token => $token
 )
 \end{lstlisting}
 
-\begin{lstlisting}[caption=POST request with open-uri., label=listing010]
+\begin{lstlisting}[aboveskip=1\baselineskip, caption=POST request with open-uri., label=listing010]
 uri = URI('https://api.trello.com/1/boards')
 req = Net::HTTP::Post.new(uri.path)
 
@@ -85,10 +91,39 @@ end
 
 Listing \ref{listing009} and listing \ref{listing010} show the very same API call. But \ref{listing009} is realised with RestClient and listing \ref{listing010} with open-uri. Not even is the open-uri code much longer, but open-uri doesn't detect the correct scheme from the given URI. If the call should performed in HTTPS this has to be set explicitly. That implies that for the handling of RESTful web services RestClient is the better choice.
 
-\section{JSON}\index{JSON}
-All the responses to Trello\index{Trello} API\index{API} calls use JSON. It is a subset of the JavaScript programming language. Despite its relation to JavaScript it's language independent. JSON is da data-interchange format like XML\nomenclature{XML}{Extensible Markup Language}. But JSON is built on two structures. One is a list of key/value pairs. In most programming languages this is realised as an hash, struct, object or associative array. The other structure is an ordered list of values. This is realised as array, list, vector or sequence in popular programming languages. In JSON itself these structures are called \emph{object} and \emph{array}. Objects start and end with curly brackets. Each key is followed by a colon and the key/value pairs are separated by commas. Arrays start and end with suqred brackets. The values are separated by commas. Both can be arbitrary nested. At every point one of my script saves content at any other place than Trello it's in the JSON\index{JSON} format, too. That's because it guarantees easy compatibility with Trello. JSON\index{JSON} can be saved in files, too. A JSON\index{JSON} file has the suffix \texttt{.json}. \cite{json}
 
-\begin{lstlisting}[caption=JSON example., label=listing007]
+\section{Ruby}\index{Ruby}
+Ruby is a modern general-purpose object-oriented programming language. Its big difference to most other languages is that it focuses on humans rather than computers. 
+
+Yukihiro Matsumoto, the designer of Ruby, said once:
+\begin{quote}
+Ruby is simple in appearance, but is very
+complex inside, just like our human body.\cite{ruby:talk}
+\end{quote}
+
+That means, that Ruby\index{Ruby} is very easy readable and is intuitive for humans even so it can perform complex tasks. This is achieved with English keywords instead of brackets and curly brackets. The result for the programmer of this consistent philosophy is a very easy to read language which is also very plain. Because of the English words instead of abstract characters Ruby is easy understandable. Even non-programmers understand mostly whats going on. So programmers produce way less errors while writing the code. A wrongly spelled word is more intuitive recognisable than a missing bracket or semicolon. \cite{ruby:about} More about Ruby can be found at \url{http://www.ruby-lang.org}.
+
+\subsection{RubyGems}\index{RubyGems}
+Ruby has a good amount of methods and classes every Ruby installation provides. But there are hundreds of extensions for special use cases – to communicate with RESTful Web APIs for example – made by third party developers. In Ruby such extensions are called \emph{gems}. To manage and publish these third party libraries theres is the standard \emph{RubyGems}. It provides a standard format for third party libraries for Ruby, a tool to manage the installation of gems and a server for distributing the gems. \cite{ruby:gemdev} Some Ruby distributions are delivered with several gems. Gems can be added to an existing Ruby installation at any time. 
+
+To install an additional gem on a Unix operating system the following command can be used:  
+\begin{center}
+\texttt{gem install gemname}
+\end{center}
+Where \texttt{gemname} is the name of the respective gem. If the installation performed without errors, the gem is ready to use. \cite{ruby:gemdoc}
+
+To use an installed gem in a Ruby\index{Ruby} script the following code at the top of the script before the code starts is necessary:
+
+\begin{lstlisting}[aboveskip=1\baselineskip, caption=Using the gem \emph{gemname}, label=listing001]
+require 'gemname'
+\end{lstlisting}
+Again, \emph{gemname} stands for the name of the respective gem. If any gems are used in these script which are not part of the Ruby standard library, they are listed at the beginning of the related description. Further information at \url{http://doc.rubygems.org} and \url{http://rubyforge.org/projects/rubygems/}.
+
+
+\section{JSON}\index{JSON}
+All the responses to Trello\index{Trello} API\index{API} calls use JSON\footnote{RFC\nomenclature{RFC}{Request For Comments} document for JSON: The application/json Media Type for JavaScript Object Notation (JSON)  \url{http://www.ietf.org/rfc/rfc4627.txt}}. It is a subset of the JavaScript programming language. Despite its relation to JavaScript it's language independent. JSON is da data-interchange format like XML\nomenclature{XML}{Extensible Markup Language}. But JSON is built on two structures. One is a list of key/value pairs. In most programming languages this is realised as an hash, struct, object or associative array. The other structure is an ordered list of values. This is realised as array, list, vector or sequence in popular programming languages. In JSON itself these structures are called \emph{object} and \emph{array}. Objects start and end with curly brackets. Each key is followed by a colon and the key/value pairs are separated by commas. Arrays start and end with suqred brackets. The values are separated by commas. Both can be arbitrary nested. At every point one of my script saves content at any other place than Trello it's in the JSON\index{JSON} format, too. That's because it guarantees easy compatibility with Trello. JSON\index{JSON} can be saved in files, too. A JSON\index{JSON} file has the suffix \texttt{.json}. \cite{json}
+
+\begin{lstlisting}[aboveskip=1\baselineskip, caption=JSON example., label=listing007]
 {
     "id": "4eea4ffc91e31d1746000046",
     "name": "Example Board",
@@ -114,31 +149,13 @@ In listing \ref{listing007} a JSON example is shown. This is the response of
 
 The JSON in listing \ref{listing007} starts with a curly bracket. That means the uppermost structure is an object. Here are a few key/value pairs like \texttt{"id": "4eea4ffc91e31d1746000046"}. The key \texttt{"list"} has an array as value. So their value is in suqared brakets. Each element of the array is an object again.
 
+To process the received JSON Ruby needs to parse it first. For that purpose there is the a gem simply called \emph{JSON}. It parses the JSON with the 
 
-\section{Ruby}\index{Ruby}
-Ruby is a modern general-purpose object-oriented programming language. Its big difference to most other languages is that it focuses on humans rather than computers. 
-
-Yukihiro Matsumoto, the designer of Ruby, said once:
-\begin{quote}
-Ruby is simple in appearance, but is very
-complex inside, just like our human body.\cite{ruby:talk}
-\end{quote}
-
-That means, that Ruby\index{Ruby} is very easy readable and is intuitive for humans even so it can perform complex tasks. This is achieved with English keywords instead of brackets and curly brackets. The result for the programmer of this consistent philosophy is a very easy to read language which is also very plain. Because of the English words instead of abstract characters Ruby is easy understandable. Even non-programmers understand mostly whats going on. So programmers produce way less errors while writing the code. A wrongly spelled word is more intuitive recognisable than a missing bracket or semicolon. \cite{ruby:about} More about Ruby can be found at \url{http://www.ruby-lang.org}.
-
-\subsection{RubyGems}\index{RubyGems}
-Ruby has a good amount of methods and classes every Ruby installation provides. But there are hundreds of extensions for special use cases – to communicate with RESTful Web APIs for example – made by third party developers. In Ruby such extensions are called \emph{gems}. To manage and publish these third party libraries theres is the standard \emph{RubyGems}. It provides a standard format for third party libraries for Ruby, a tool to manage the installation of gems and a server for distributing the gems. \cite{ruby:gemdev} Some Ruby distributions are delivered with several gems. Gems can be added to an existing Ruby installation at any time. 
-
-To install an additional gem on a Unix operating system the following command can be used:  
 \begin{center}
-\texttt{gem install gemname}
+\lstinline{JSON.parse(receivedJson)} 
 \end{center}
-Where \texttt{gemname} is the name of the respective gem. If the installation performed without errors, the gem is ready to use. \cite{ruby:gemdoc}
+command, where \lstinline{receivedJson} is a variable that contains the plain JSON received from the Trello API with a GET request. Aufter the parsing the JSOn objects are now represented as Ruby Hashes and the JSON arrays as Ruby arrays. To post content to the Trello API it has to be in JSON, too. So there is another method of the JSON class in Ruby which generates JSON from Ruby hashes and arrays. 
 
-To use an installed gem in a Ruby\index{Ruby} script the following code at the top of the script before the code starts is necessary:
-
-\begin{lstlisting}[caption=Using the gem \emph{gemname}, label=listing001]
-require 'gemname'
-\end{lstlisting}
-Again, \emph{gemname} stands for the name of the respective gem. If any gems are used in these script which are not part of the Ruby standard library, they are listed at the beginning of the related description. Further information at \url{http://doc.rubygems.org} and \url{http://rubyforge.org/projects/rubygems/}.
-
+\begin{center}
+\lstinline{JSON.generate(hashBoards)} 
+\end{center}

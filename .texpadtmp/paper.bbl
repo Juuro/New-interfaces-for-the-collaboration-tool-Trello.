@@ -1,25 +1,3 @@
-\begin{thebibliography}{alf12}
-
-\bibitem[alf12]{alfred}
-Alfred app.
-\newblock \url{http://www.alfredapp.com/}, 08 2012.
-
-\bibitem[:re]{:rest}
-Restful web services: The basics.
-\newblock
-  \url{https://www.ibm.com/developerworks/webservices/library/ws-restful/}.
-
-\bibitem[trea]{trello:ios}
-App store - trello.
-\newblock \url{http://itunes.apple.com/us/app/trello/id461504587?mt=8}.
-
-\bibitem[treb]{trello:android}
-Trello android app available for download! | trello blog.
-\newblock
-  \url{http://blog.trello.com/trello-android-app-available-for-download/}.
-
-\bibitem[trec]{trello:docu}
-Trello documentation --- trello documentation.
-\newblock \url{https://trello.com/docs/index.html}.
+\begin{thebibliography}{}
 
 \end{thebibliography}
