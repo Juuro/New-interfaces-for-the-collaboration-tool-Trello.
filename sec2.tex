@@ -45,8 +45,8 @@ The Trello API is a \emph{RESTful} web API. That means that the API is conform t
 \begin{itemize}
 	\item Use HTTP\nomenclature{HTTP}{Hyper Text Transfer Protocol} methods explicitly.
 	\item Be stateless.
-	\item Expose directory structure-like URIs\nomenclature{URI}{Uniform resource identifier}.
-	\item Transfer XML\nomenclature{XML}{Extensible Markup Language}, JSON\nomenclature{JSON}{JavaScript Object Notation}, or both.
+	\item Expose directory structure-like URIs\nomenclature{URI}{Uniform Resource Identifier}.
+	\item Transfer XML\nomenclature{XML}{Extensible Markup Language} , JSON\nomenclature{JSON}{JavaScript Object Notation}, or both.
 \end{itemize}
 \cite{rest}
 
@@ -54,7 +54,7 @@ Following these conventions a GET URL of a RESTful web service looks like this:
 \begin{center}
 \texttt{https://api.trello.com/1/cards/4fc8dd3e1b9ecf0c3571902f? key='PRIVATEKEY\&token=TOKEN}
 \end{center}
-This is a GET request to get a specific card with the id \texttt{4fc8dd3e1b9ecf0c3571902f}. If this URL is visited in a browser (with correct \emph{key} and \emph{token}) the browser will show plain JSON. In order Ruby can work with it, it must be able to capture this data somehow. To fulfil the requirements of REST in Ruby there are several gems. Here the RestClient gem is used. This GET request with the RestClient gem in Ruby looks like \ref{listing019}.
+This is a GET request to get a specific card with the id \texttt{4fc8dd3e1b9ecf0c3571902f}. If this URL\nomenclature{URL}{Uniform Resource Locator} is visited in a browser (with correct \emph{key} and \emph{token}) the browser will show plain JSON. In order Ruby can work with it, it must be able to capture this data somehow. To fulfil the requirements of REST in Ruby there are several gems. Here the RestClient gem is used. This GET request with the RestClient gem in Ruby looks like \ref{listing019}.
 
 \begin{lstlisting}[aboveskip=1\baselineskip, caption=GET request using RestClient., label=listing019]
 member = RestClient.get('https://api.trello.com/1/cards/4fc8dd3e1b9ecf0c3571902f?key='+$key+'&token='+$token)
@@ -121,7 +121,7 @@ Again, \emph{gemname} stands for the name of the respective gem. If any gems are
 
 
 \section{JSON}\index{JSON}
-All the responses to Trello\index{Trello} API\index{API} calls use JSON\footnote{RFC\nomenclature{RFC}{Request For Comments} document for JSON: The application/json Media Type for JavaScript Object Notation (JSON)  \url{http://www.ietf.org/rfc/rfc4627.txt}}. It is a subset of the JavaScript programming language. Despite its relation to JavaScript it's language independent. JSON is da data-interchange format like XML\nomenclature{XML}{Extensible Markup Language}. But JSON is built on two structures. One is a list of key/value pairs. In most programming languages this is realised as an hash, struct, object or associative array. The other structure is an ordered list of values. This is realised as array, list, vector or sequence in popular programming languages. In JSON itself these structures are called \emph{object} and \emph{array}. Objects start and end with curly brackets. Each key is followed by a colon and the key/value pairs are separated by commas. Arrays start and end with suqred brackets. The values are separated by commas. Both can be arbitrary nested. At every point one of my script saves content at any other place than Trello it's in the JSON\index{JSON} format, too. That's because it guarantees easy compatibility with Trello. JSON\index{JSON} can be saved in files, too. A JSON\index{JSON} file has the suffix \texttt{.json}. \cite{json}
+All the responses to Trello\index{Trello} API\index{API} calls use JSON\footnote{RFC\nomenclature{RFC}{Request For Comments} document for JSON: The application/json Media Type for JavaScript Object Notation (JSON)  \url{http://www.ietf.org/rfc/rfc4627.txt}}. It is a subset of the JavaScript programming language. Despite its relation to JavaScript it's language independent. JSON is da data-interchange format like XML. But JSON is built on two structures. One is a list of key/value pairs. In most programming languages this is realised as an hash, struct, object or associative array. The other structure is an ordered list of values. This is realised as array, list, vector or sequence in popular programming languages. In JSON itself these structures are called \emph{object} and \emph{array}. Objects start and end with curly brackets. Each key is followed by a colon and the key/value pairs are separated by commas. Arrays start and end with suqred brackets. The values are separated by commas. Both can be arbitrary nested. At every point one of my script saves content at any other place than Trello it's in the JSON\index{JSON} format, too. That's because it guarantees easy compatibility with Trello. JSON\index{JSON} can be saved in files, too. A JSON\index{JSON} file has the suffix \texttt{.json}. \cite{json}
 
 \begin{lstlisting}[aboveskip=1\baselineskip, caption=JSON example., label=listing007]
 {

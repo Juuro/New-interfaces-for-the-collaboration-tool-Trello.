@@ -133,7 +133,7 @@ For converting Markdown to HTML the gem kramdown is used. Figure \ref{fig:kramdo
 \end{figure}
 
 \subsection{Twitter Bootstrap Framework}\index{Twitter}\index{Bootstrap}
-In 2011 Twitter released Bootstrap\footnote{Blog post by Mark Otto: \url{https://dev.twitter.com/blog/bootstrap-twitter}}. Bootstrap is a collection of methods and script for creating front-ends of websites. It contains templates for site structuring, tables, text, buttons, menus, forms, lists and some other often used elements of websites. Additionaly some functions are supported with JavaScript\index{JavaScript}. Bootstrap is written in HTML\index{HTML}, JavaScript, CSS\index{CSS} and LESS\index{LESS}. LESS is a dynamic stylesheet language and extends CSS. That allows the use of varables, functions, nested selectors and operators.\cite{less} Bootstrap is completely free of charge and open source. \cite{bootstrap}
+In 2011 Twitter released Bootstrap\footnote{Blog post form the lead developer about the launch of Twitter Bootstrap: \url{https://dev.twitter.com/blog/bootstrap-twitter}}. Bootstrap is a collection of methods and script for creating front-ends of websites. It contains templates for site structuring, tables, text, buttons, menus, forms, lists and some other often used elements of websites. Additionaly some functions are supported with JavaScript\index{JavaScript}. Bootstrap is written in HTML\index{HTML}, JavaScript, CSS\index{CSS} and LESS\index{LESS}. LESS is a dynamic stylesheet language and extends CSS. That allows the use of varables, functions, nested selectors and operators.\cite{less} Bootstrap is completely free of charge and open source. \cite{bootstrap}
 
 Bootstrap\index{Bootstrap} evolved at Twitter\index{Twitter} while working on several projects with different libraries. The projects became inconsistent and a high administrative effort was needed. Some developers at Twitter lead by Mark Otto worked on something to document and share common design within the company. Twitter determined that this toolkit could be more than an intern helper tool. So they rouned it up with all common function which are needed for modern web development and released it on GitHub. \cite{markotto}
 
@@ -274,7 +274,7 @@ service = client.discovered_api('calendar', 'v3')
 
 Authetication with Google is much more complicated than with Trello. Listing \ref{listing017} shows the initialisation of the Google Calendar API connection. At first the project has to be registered in the Google APIs Console. \cite{google:apisconsole} There the developer can get the \lstinline{client_id} and the \lstinline{client_secret}. The \lstinline{scope} depends on the Google APi the developer wants to use. Here it is \texttt{https://www.googleapis.com/auth/calendar} of course. \cite{google:apiscope} To get the \lstinline{access_token} this URL must be called: 
 \begin{center}
-\lstinline{https://accounts.google.com/o/oauth2/auth?scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcalendar&redirect_uri=https%3A%2F%2Foauth2-login-demo.appspot.com%2Fcode&response_type=code&client_id=812741506391.apps.googleusercontent.com&access_type=offline}
+\lstinline{https://accounts.google.com/o/oauth2/auth?scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcalendar&redirect_uri=https%3A%2F%2Foauth2-login-demo.appspot.com%2Fcode&response_type=code&client_id=CLIENTID.apps.googleusercontent.com&access_type=offline}
 \end{center}
 
 If the request succeeds the response is as noted in listing \ref{listing018}.
@@ -288,7 +288,7 @@ If the request succeeds the response is as noted in listing \ref{listing018}.
 }
 \end{lstlisting}
 
-It's important to store the refresh token. If the application looses the refresh token, the API calls will no longer work. The user, or in this case the developer, has to obtain a refresh token manually again. \cite{google:calapi}
+The access token is the actual important value. But it expires after about an hour typically. If it is used after the expiration date the API will respond with an error. beacuse of that it's important to store the refresh token. Otherwise, the user has to enter his Google login data every time an access token expires. If the application looses the refresh token, the API calls will no longer work. No new access tokens can be generated. The user, or in this case the developer, has to obtain a refresh token manually again. \cite{google:calapi} Unfornately, how long the refresh tokens are valid is unknown.
 
 For the sync to Google Calendar only cards with a due dated are considered. At first the script instructs the API wrapper to get all cards. Sadly the Trello API provides no filter method to get only the cards with a due date. The next step is to check if the cards have due dates. If a card has a due date the script checks if this card is already added as an event in Google Calendar. To do so the Google library looks after this card on the basis of its id. If it's not already in Google Calendar the script has to add a new event to Google Calendar.
 
@@ -322,16 +322,57 @@ If the event is already inserted in the calendar the script checks if the card's
 The third possible scenario is an orphaned event in Google Calendar. If a user in Trello removes the due date of a card or the card itself, the event in Google Calendar is no longer valid. To solve this problem the script loads all cards with due dates and all events from Google Calendar. All card ids are saved in an array and all location field entries in another. Now the array with the card ids from Trello is subtracted from the array with the location fields. The resulting array contains just events which don't have acorresponding card with a due date in Trello. After that the script checks if the remaining location field entries are in the format of Trello card ids. But the only indicators that can be used are the length of the string – a Trelloc ard id has 24 characters – and if it contains only numbers and letters. TBut there's a problem with this approach. If there are other events which are not inserted by this script which have accidently location fields with 24 characters containing only numbers and letters, they will be deleted. It's not very likely that this happens. Names of cities or other typical used date in the location field don't have the length of 24 characters. GPS positions contain dots and are shorter, too. But the possibility of a match exists. The solution would be to use a dedicated calendar only for the use with this script. Or to be very careful with adding new events manually. Of course it's possible to enable this function completely. But in this case there will remain in Trello delted cards as orphaned events in Google Calendar. They have to be deleted manually.
 
 \section{Export to iCalendar}\index{iCalendar}
-iCalendar is a popular format to exchange calndar data of all sorts. Meanwhile it is supported by many applications which work with events of any kind. iCalendar is the defacto standard in this field.
+
+Used libraries:
+\begin{itemize}
+	\item \texttt{icalendar}
+	\item \texttt{date}
+	\item \texttt{json}
+	\item \texttt{rest\_client}
+	\item \texttt{pp}
+\end{itemize}
+
+iCalendar is a popular format to exchange calendar data of all sorts. Originally it was introduced in 1998 by Lotus and Microsoft in RFC 2445. \cite{rfc:2445} Meanwhile it is supported by many applications which work with events of any kind. iCalendar is the defacto standard in this field. Hence it has great compatibility with many programs. 
 
 \todo{iCalendar format}
 
-\todo{Compatibility}
+\begin{lstlisting}[aboveskip=1\baselineskip, style=bash, caption=iCalendar example., label=listing023]
+BEGIN:VCALENDAR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+PRODID:iCalendar-Ruby
+VERSION:2.0
+BEGIN:VTIMEZONE
+TZID:Europe/Berlin
+BEGIN:STANDARD
+DTSTART:20060811T073001
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+TZNAME:GMT+01:00
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+CATEGORIES:FAMILY
+DESCRIPTION:503965e018a5fec561e66af1
+DTEND;TZID=Europe/Berlin:20120828T160000
+DTSTAMP:20120829T053947
+DTSTART;TZID=Europe/Berlin:20120828T160000
+SEQUENCE:1
+SUMMARY:Buy a mountainbike.
+TRANSP:TRANSPARENT
+UID:2012-08-29T05:39:47+02:00_400189826@juuroair
+URL:https://trello.com/card/buy-a-mountainbike/4ffa4c5ce75c29032a88ea31/5
+END:VEVENT
+\end{lstlisting}
 
-\todo{Sync compared to Google}
-In comparison to the Google sync, the script is much more simple. There is no need for a sync opportunity and there is no API to work with. There is only one file in the correct format to be created. That's much faster than working with two APIs and perform several API calls. 
+Listing \ref{listing023} shows an example of a file in the iCalendar format.
 
-\section{One way sync to Joomla}\index{Joomla}
+\todo{actual export}
+
+In comparison to the Google sync, the script is much more simple. There is no need for a sync opportunity and there is no API to work with. There is only one file in the correct format to be created. That's much faster than working with two APIs and perform several API calls. The server has to compute less data and there's less traffic to the APIs while updating. But of course the iCalendar file must be available on a server. With the Google solution there is no need for an own web server. The another bigger problem with the webserver is, that the URL is accesible for everybody. If the calendar includes critical data this is a disqualifier for the user or the company. Although it is possible to provide the server with password protection, this would only be more complicated. Either the calendaring software doesn't support .htaccess or any other web authentication technology orthe user has to enter his login information periodically. The only way to use it safely with critical data is to use it in an intranet. There won't be any need for additional protcetion. But for the domestic use and for most small companies the solution with Google  should be sufficient. Google even provides an iCalendar feed itself. 
+
+\section{Sync to Joomla}\index{Joomla}
 
 \todo{What's Joomla? -> Mambo...}
 
@@ -345,11 +386,11 @@ In comparison to the Google sync, the script is much more simple. There is no ne
 
 \todo{Custom CSS in Joomla}
 
-\section{One way sync to WordPress}\index{WordPress}
+%\section{One way sync to WordPress}\index{WordPress}
 
-\todo{What's WordPress?}
+%\todo{What's WordPress?}
 
-\todo{Why WordPress? -> Exorbitant popularity!}
+%\todo{Why WordPress? -> Exorbitant popularity!}
 
 \section{Backup}\index{Backup}
 

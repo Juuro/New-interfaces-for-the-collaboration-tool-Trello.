@@ -42,6 +42,8 @@
   \item iCalendar, \hyperpage{26}
   \item Import, \hyperpage{27}
   \item iOS, \hyperpage{4}, \hyperpage{32}
+  \item ISO
+    \subitem 8601, \hyperpage{12}
 
   \indexspace
 
@@ -69,6 +71,7 @@
   \indexspace
 
   \item Templating, \hyperpage{19}
+  \item timezone, \hyperpage{12}
   \item Trello, \hyperpage{3, 4}, \hyperpage{8}, \hyperpage{11}, 
 		\hyperpage{31, 32}
   \item Twitter, \hyperpage{18}

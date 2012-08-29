@@ -4,25 +4,38 @@
 
   \item [{API}]\begingroup Application Programming Interface\nomeqref {2.0}
 		\nompageref{4}
-  \item [{CLI}]\begingroup Command Line Interface\nomeqref {3.0}
-		\nompageref{11}
-  \item [{CMS}]\begingroup Content Management System\nomeqref {3.0}
-		\nompageref{14}
-  \item [{HTML}]\begingroup Hyper Text Markup Language\nomeqref {3.0}
+  \item [{CLI}]\begingroup Command Line Interface\nomeqref {4.0}
 		\nompageref{13}
+  \item [{CMS}]\begingroup Content Management System\nomeqref {4.0}
+		\nompageref{15}
+  \item [{ERB}]\begingroup embedded Ruby\nomeqref {4.0}\nompageref{19}
+  \item [{HTML}]\begingroup Hyper Text Markup Language\nomeqref {4.0}
+		\nompageref{14}
   \item [{HTTP}]\begingroup Hyper Text Transfer Protocol\nomeqref {2.0}
 		\nompageref{5}
+  \item [{ISO}]\begingroup International Organization for Standardization\nomeqref {3.0}
+		\nompageref{12}
   \item [{JSON}]\begingroup JavaScript Object Notation\nomeqref {2.0}
 		\nompageref{5}
-  \item [{MIME}]\begingroup Multipurpose Internet Mail Extensions\nomeqref {3.0}
-		\nompageref{19}
+  \item [{MIME}]\begingroup Multipurpose Internet Mail Extensions\nomeqref {4.0}
+		\nompageref{27}
+  \item [{MVC}]\begingroup Model View Controller\nomeqref {4.0}
+		\nompageref{20}
   \item [{REST}]\begingroup Representational State Transfer\nomeqref {2.0}
 		\nompageref{5}
-  \item [{URI}]\begingroup Uniform resource identifier\nomeqref {2.0}
+  \item [{RFC}]\begingroup Request For Comments\nomeqref {2.0}
+		\nompageref{8}
+  \item [{RSS}]\begingroup Really Simple Syndication\nomeqref {4.0}
+		\nompageref{20}
+  \item [{URI}]\begingroup Uniform Resource Identifier\nomeqref {2.0}
 		\nompageref{5}
-  \item [{XHTML}]\begingroup Extensible Hyper Text Markup Language\nomeqref {3.0}
-		\nompageref{17}
+  \item [{URL}]\begingroup Uniform Resource Locator\nomeqref {2.0}
+		\nompageref{5}
+  \item [{UTC}]\begingroup Universal Time Coordinated\nomeqref {3.0}
+		\nompageref{12}
+  \item [{XHTML}]\begingroup Extensible Hyper Text Markup Language\nomeqref {4.0}
+		\nompageref{19}
   \item [{XML}]\begingroup Extensible Markup Language\nomeqref {2.0}
-		\nompageref{5, 6}
+		\nompageref{5}
 
 \end{thenomenclature}
