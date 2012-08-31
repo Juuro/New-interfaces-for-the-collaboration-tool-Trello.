@@ -1,4 +1,4 @@
-\contentsline {chapter}{Nomenclature}{ix}{chapter*.5}
+\contentsline {chapter}{Nomenclature}{xi}{chapter*.5}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {chapter}{\numberline {2}Principles}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}Trello}{3}{section.2.1}
@@ -7,30 +7,48 @@
 \contentsline {subsection}{\numberline {2.1.3}Trello API}{4}{subsection.2.1.3}
 \contentsline {subsubsection}{Authentification}{4}{section*.9}
 \contentsline {subsubsection}{REST}{5}{section*.10}
-\contentsline {section}{\numberline {2.2}Ruby}{6}{section.2.2}
+\contentsline {section}{\numberline {2.2}Ruby}{7}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}RubyGems}{7}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Ruby and MySQL}{8}{subsection.2.2.2}
 \contentsline {section}{\numberline {2.3}JSON}{8}{section.2.3}
 \contentsline {chapter}{\numberline {3}Trello API wrapper}{11}{chapter.3}
-\contentsline {section}{\numberline {3.1}Handling of date and time}{12}{section.3.1}
-\contentsline {chapter}{\numberline {4}Applications}{13}{chapter.4}
-\contentsline {section}{\numberline {4.1}Command Line Interface}{13}{section.4.1}
-\contentsline {section}{\numberline {4.2}Export to HTML}{14}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Markdown}{15}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Twitter Bootstrap Framework}{18}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}HTML5}{19}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}Templating with ERB}{19}{subsection.4.2.4}
-\contentsline {section}{\numberline {4.3}Sync Google Calendar}{23}{section.4.3}
-\contentsline {section}{\numberline {4.4}Export to iCalendar}{26}{section.4.4}
-\contentsline {section}{\numberline {4.5}Sync to Joomla}{29}{section.4.5}
-\contentsline {section}{\numberline {4.6}Backup}{29}{section.4.6}
-\contentsline {subsection}{\numberline {4.6.1}Export}{29}{subsection.4.6.1}
-\contentsline {subsection}{\numberline {4.6.2}Import}{29}{subsection.4.6.2}
-\contentsline {subsubsection}{Filename option}{29}{section*.14}
-\contentsline {subsection}{\numberline {4.6.3}Member import}{30}{subsection.4.6.3}
-\contentsline {subsection}{\numberline {4.6.4}Close all boards}{30}{subsection.4.6.4}
-\contentsline {chapter}{\numberline {5}Conclusion}{31}{chapter.5}
-\contentsline {chapter}{\numberline {6}Outlook}{33}{chapter.6}
-\contentsline {section}{\numberline {6.1}Trello Alfred Extension}{33}{section.6.1}
-\contentsline {section}{\numberline {6.2}Native applications}{34}{section.6.2}
-\contentsline {chapter}{Bibliography}{35}{section.6.2}
-\contentsline {section}{Index}{39}{chapter*.16}
+\contentsline {section}{\numberline {3.1}Error handling}{11}{section.3.1}
+\contentsline {section}{\numberline {3.2}Command Line Interface}{12}{section.3.2}
+\contentsline {section}{\numberline {3.3}Handling of date and time}{14}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}getDate(date, format='de')}{14}{subsection.3.3.1}
+\contentsline {section}{\numberline {3.4}Collect data from Trello}{14}{section.3.4}
+\contentsline {section}{\numberline {3.5}Further information on a card}{14}{section.3.5}
+\contentsline {section}{\numberline {3.6}Member information}{15}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}getMember(memberId)}{15}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.6.2}isThisMe(memberId)}{15}{subsection.3.6.2}
+\contentsline {section}{\numberline {3.7}Accessing CMS}{15}{section.3.7}
+\contentsline {subsection}{\numberline {3.7.1}trelloJoomlaSync(cardId, sectionid, catid, joomlaVersion)}{15}{subsection.3.7.1}
+\contentsline {chapter}{\numberline {4}Applications}{17}{chapter.4}
+\contentsline {section}{\numberline {4.1}Export to HTML}{17}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Markdown}{18}{subsection.4.1.1}
+\contentsline {subsubsection}{kramdown}{20}{section*.13}
+\contentsline {subsection}{\numberline {4.1.2}Twitter Bootstrap Framework}{20}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}HTML5}{21}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.4}Templating with ERB}{22}{subsection.4.1.4}
+\contentsline {section}{\numberline {4.2}Synchronisation Google Calendar}{25}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Google Calendar API}{26}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Synchronisation}{27}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3}Export to iCalendar}{30}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}iCalendar format}{30}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Export}{32}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Comparison to the Google Calendar synchronisation}{34}{subsection.4.3.3}
+\contentsline {section}{\numberline {4.4}synchronisation to Joomla}{34}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Joomla category page}{38}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Customising the design of Joomla}{38}{subsection.4.4.2}
+\contentsline {section}{\numberline {4.5}Backup}{38}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Export}{38}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Import}{38}{subsection.4.5.2}
+\contentsline {subsubsection}{Filename option}{38}{section*.15}
+\contentsline {subsection}{\numberline {4.5.3}Member import}{39}{subsection.4.5.3}
+\contentsline {subsection}{\numberline {4.5.4}Close all boards}{39}{subsection.4.5.4}
+\contentsline {chapter}{\numberline {5}Conclusion}{41}{chapter.5}
+\contentsline {chapter}{\numberline {6}Outlook}{43}{chapter.6}
+\contentsline {section}{\numberline {6.1}Trello Alfred Extension}{43}{section.6.1}
+\contentsline {section}{\numberline {6.2}Native applications}{44}{section.6.2}
+\contentsline {chapter}{Bibliography}{45}{section.6.2}
+\contentsline {section}{Index}{49}{chapter*.17}

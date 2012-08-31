@@ -1,26 +1,27 @@
 \begin{theindex}
 
   \item AJAX, \hyperpage{4}
-  \item Alfred, \hyperpage{31, 32}
-    \subitem Extension, \hyperpage{31, 32}
-  \item Android, \hyperpage{4}, \hyperpage{32}
-  \item API, \hyperpage{4}, \hyperpage{8}, \hyperpage{11, 12}
+  \item Alfred, \hyperpage{43, 44}
+    \subitem Extension, \hyperpage{43, 44}
+  \item Android, \hyperpage{4}, \hyperpage{44}
+  \item API, \hyperpage{4}, \hyperpage{8}, \hyperpage{11}
 
   \indexspace
 
-  \item Backup, \hyperpage{27}
-  \item Bootstrap, \hyperpage{18}
+  \item Backup, \hyperpage{38}
+  \item Bootstrap, \hyperpage{20, 21}
 
   \indexspace
 
-  \item CLI, \hyperpage{13}
-  \item Command-Line Interface, \hyperpage{13}
-  \item CSS, \hyperpage{18}
+  \item CLI, \hyperpage{12}
+  \item CMS, \hyperpage{36}
+  \item Command-Line Interface, \hyperpage{12}
+  \item CSS, \hyperpage{21}
 
   \indexspace
 
-  \item ERB, \hyperpage{19}
-  \item Export, \hyperpage{27}
+  \item ERB, \hyperpage{22}
+  \item Export, \hyperpage{38}
 
   \indexspace
 
@@ -29,68 +30,67 @@
   \indexspace
 
   \item Google
-    \subitem Calendar, \hyperpage{23}
+    \subitem Calendar, \hyperpage{25}
 
   \indexspace
 
-  \item HTML, \hyperpage{18}
-    \subitem 4, \hyperpage{19}
-    \subitem 5, \hyperpage{4}, \hyperpage{19}
+  \item HTML, \hyperpage{21}, \hyperpage{36}
+    \subitem 4, \hyperpage{22}
+    \subitem 5, \hyperpage{4}, \hyperpage{21}
 
   \indexspace
 
-  \item iCalendar, \hyperpage{26}
-  \item Import, \hyperpage{27}
-  \item iOS, \hyperpage{4}, \hyperpage{32}
+  \item iCalendar, \hyperpage{30}
+  \item Import, \hyperpage{38}
+  \item iOS, \hyperpage{4}, \hyperpage{44}
   \item ISO
-    \subitem 8601, \hyperpage{12}
+    \subitem 8601, \hyperpage{14}
 
   \indexspace
 
-  \item JavaScript, \hyperpage{18}
-  \item Joomla, \hyperpage{27}
+  \item JavaScript, \hyperpage{21}
+  \item Joomla, \hyperpage{34}
   \item JSON, \hyperpage{8}
 
   \indexspace
 
-  \item LESS, \hyperpage{18}
-  \item Linux, \hyperpage{32}
+  \item LESS, \hyperpage{21}
+  \item Linux, \hyperpage{44}
 
   \indexspace
 
-  \item Mac, \hyperpage{31, 32}
-  \item Markdown, \hyperpage{15}
-  \item MIME, \hyperpage{27, 28}
+  \item Mac, \hyperpage{43, 44}
+  \item Markdown, \hyperpage{18}, \hyperpage{36}
+  \item MIME, \hyperpage{38, 39}
 
   \indexspace
 
-  \item RSS, \hyperpage{20}
-  \item Ruby, \hyperpage{6, 7}
+  \item RSS, \hyperpage{23}
+  \item Ruby, \hyperpage{7}
   \item RubyGems, \hyperpage{7}
 
   \indexspace
 
-  \item Templating, \hyperpage{19}
-  \item timezone, \hyperpage{12}
+  \item Templating, \hyperpage{22}
+  \item timezone, \hyperpage{14}
   \item Trello, \hyperpage{3, 4}, \hyperpage{8}, \hyperpage{11}, 
-		\hyperpage{31, 32}
-  \item Twitter, \hyperpage{18}
+		\hyperpage{43, 44}
+  \item Twitter, \hyperpage{20, 21}
 
   \indexspace
 
-  \item W3C, \hyperpage{19}
-  \item Windows, \hyperpage{32}
-    \subitem Search, \hyperpage{31}
-  \item WordPress, \hyperpage{27}
-  \item World Wide Web Consortium, \hyperpage{19}
+  \item W3C, \hyperpage{21}
+  \item Windows, \hyperpage{44}
+    \subitem Search, \hyperpage{43}
+  \item World Wide Web Consortium, \hyperpage{21}
 
   \indexspace
 
-  \item XHTML, \hyperpage{19}
-  \item XML, \hyperpage{19, 20}
+  \item XHTML, \hyperpage{22}
+  \item XML, \hyperpage{22, 23}
 
   \indexspace
 
-  \item ZIP, \hyperpage{27}
+  \item ZIP, \hyperpage{38}
 
 \end{theindex}

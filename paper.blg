@@ -3,76 +3,90 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: paper.aux
 The style file: alpha.bst
 Database file #1: sources.bib.bib
-Warning--entry type for "rfc:2445" isn't style-file defined
+Warning--entry type for "joomla:api" isn't style-file defined
 --line 12 of file sources.bib.bib
-Warning--entry type for "json:docu" isn't style-file defined
+Warning--entry type for "joomla:mvc" isn't style-file defined
+--line 23 of file sources.bib.bib
+Warning--entry type for "joomla:architecture" isn't style-file defined
 --line 34 of file sources.bib.bib
-Warning--entry type for "google:calapi" isn't style-file defined
+Warning--entry type for "vcalendar" isn't style-file defined
 --line 45 of file sources.bib.bib
+Warning--entry type for "ical:gemdocu" isn't style-file defined
+--line 54 of file sources.bib.bib
+Warning--entry type for "rfc:5545" isn't style-file defined
+--line 65 of file sources.bib.bib
+Warning--entry type for "ical:specs" isn't style-file defined
+--line 76 of file sources.bib.bib
+Warning--entry type for "rfc:2445" isn't style-file defined
+--line 98 of file sources.bib.bib
+Warning--entry type for "json:docu" isn't style-file defined
+--line 120 of file sources.bib.bib
+Warning--entry type for "google:calapi" isn't style-file defined
+--line 131 of file sources.bib.bib
 Warning--entry type for "google:apiscope" isn't style-file defined
---line 56 of file sources.bib.bib
+--line 142 of file sources.bib.bib
 Warning--entry type for "google:apisconsole" isn't style-file defined
---line 67 of file sources.bib.bib
+--line 153 of file sources.bib.bib
 Warning--entry type for "erb:docu" isn't style-file defined
---line 78 of file sources.bib.bib
+--line 164 of file sources.bib.bib
 Warning--entry type for "erb:introduction" isn't style-file defined
---line 89 of file sources.bib.bib
+--line 175 of file sources.bib.bib
 Warning--entry type for "html5:header" isn't style-file defined
---line 100 of file sources.bib.bib
+--line 186 of file sources.bib.bib
 Warning--entry type for "html5:footer" isn't style-file defined
---line 111 of file sources.bib.bib
+--line 197 of file sources.bib.bib
 Warning--entry type for "html5:article" isn't style-file defined
---line 122 of file sources.bib.bib
+--line 208 of file sources.bib.bib
 Warning--entry type for "smartphonesales" isn't style-file defined
---line 144 of file sources.bib.bib
+--line 230 of file sources.bib.bib
 Warning--entry type for "html:5differences" isn't style-file defined
---line 155 of file sources.bib.bib
+--line 241 of file sources.bib.bib
 Warning--entry type for "html:lastcall" isn't style-file defined
---line 166 of file sources.bib.bib
+--line 252 of file sources.bib.bib
 Warning--entry type for "markotto" isn't style-file defined
---line 177 of file sources.bib.bib
+--line 263 of file sources.bib.bib
 Warning--entry type for "bootstrap" isn't style-file defined
---line 188 of file sources.bib.bib
+--line 274 of file sources.bib.bib
 Warning--entry type for "less" isn't style-file defined
---line 199 of file sources.bib.bib
+--line 285 of file sources.bib.bib
 Warning--entry type for "google" isn't style-file defined
---line 210 of file sources.bib.bib
+--line 296 of file sources.bib.bib
 Warning--entry type for "joomla" isn't style-file defined
---line 220 of file sources.bib.bib
+--line 306 of file sources.bib.bib
 Warning--entry type for "html:logo" isn't style-file defined
---line 231 of file sources.bib.bib
+--line 317 of file sources.bib.bib
 Warning--entry type for "ruby:icon" isn't style-file defined
---line 240 of file sources.bib.bib
-Warning--entry type for "kramdown" isn't style-file defined
---line 249 of file sources.bib.bib
-Warning--entry type for "markdown" isn't style-file defined
---line 260 of file sources.bib.bib
-Warning--entry type for "ruby:optionparser" isn't style-file defined
---line 271 of file sources.bib.bib
-Warning--entry type for "ruby:gemdev" isn't style-file defined
---line 282 of file sources.bib.bib
-Warning--entry type for "ruby:gemdoc" isn't style-file defined
---line 293 of file sources.bib.bib
-Warning--entry type for "ruby:about" isn't style-file defined
---line 304 of file sources.bib.bib
-Warning--entry type for "ruby:talk" isn't style-file defined
---line 315 of file sources.bib.bib
-Warning--entry type for "trello:gettingstarted" isn't style-file defined
 --line 326 of file sources.bib.bib
+Warning--entry type for "kramdown" isn't style-file defined
+--line 335 of file sources.bib.bib
+Warning--entry type for "markdown" isn't style-file defined
+--line 346 of file sources.bib.bib
+Warning--entry type for "ruby:optionparser" isn't style-file defined
+--line 357 of file sources.bib.bib
+Warning--entry type for "ruby:gemdev" isn't style-file defined
+--line 368 of file sources.bib.bib
+Warning--entry type for "ruby:gemdoc" isn't style-file defined
+--line 379 of file sources.bib.bib
+Warning--entry type for "ruby:about" isn't style-file defined
+--line 390 of file sources.bib.bib
+Warning--entry type for "ruby:talk" isn't style-file defined
+--line 401 of file sources.bib.bib
+Warning--entry type for "trello:gettingstarted" isn't style-file defined
+--line 412 of file sources.bib.bib
 Warning--entry type for "json" isn't style-file defined
---line 337 of file sources.bib.bib
+--line 423 of file sources.bib.bib
 Warning--entry type for "oauth" isn't style-file defined
---line 348 of file sources.bib.bib
+--line 434 of file sources.bib.bib
 Warning--entry type for "trello:docu" isn't style-file defined
---line 359 of file sources.bib.bib
+--line 445 of file sources.bib.bib
 Warning--entry type for "rest" isn't style-file defined
---line 370 of file sources.bib.bib
+--line 456 of file sources.bib.bib
 Warning--entry type for "trello:ios" isn't style-file defined
---line 381 of file sources.bib.bib
+--line 467 of file sources.bib.bib
 Warning--entry type for "trello:android" isn't style-file defined
---line 392 of file sources.bib.bib
+--line 478 of file sources.bib.bib
 Warning--entry type for "alfred" isn't style-file defined
---line 402 of file sources.bib.bib
+--line 488 of file sources.bib.bib
 Warning--to sort, need author or key in ruby:icon
 Warning--to sort, need author or key in html:logo
 Warning--to sort, need author or key in joomla
@@ -106,47 +120,54 @@ Warning--to sort, need author or key in google:apisconsole
 Warning--to sort, need author or key in google:apiscope
 Warning--to sort, need author or key in google:calapi
 Warning--to sort, need author or key in json:docu
+Warning--to sort, need author or key in vcalendar
 Warning--to sort, need author or key in rfc:2445
+Warning--to sort, need author or key in rfc:5545
+Warning--to sort, need author or key in ical:specs
+Warning--to sort, need author or key in ical:gemdocu
+Warning--to sort, need author or key in joomla:architecture
+Warning--to sort, need author or key in joomla:mvc
+Warning--to sort, need author or key in joomla:api
 Warning--to sort, need author or key in alfred
-You've used 35 entries,
+You've used 42 entries,
             2543 wiz_defined-function locations,
-            672 strings with 7590 characters,
-and the built_in function-call counts, 7535 in all, are:
-= -- 766
-> -- 35
+            698 strings with 8404 characters,
+and the built_in function-call counts, 9038 in all, are:
+= -- 919
+> -- 42
 < -- 0
-+ -- 14
++ -- 17
 - -- 0
-* -- 451
-:= -- 808
-add.period$ -- 69
-call.type$ -- 35
-change.case$ -- 139
-chr.to.int$ -- 22
-cite$ -- 105
-duplicate$ -- 350
-empty$ -- 946
+* -- 539
+:= -- 969
+add.period$ -- 83
+call.type$ -- 42
+change.case$ -- 167
+chr.to.int$ -- 27
+cite$ -- 126
+duplicate$ -- 420
+empty$ -- 1135
 format.name$ -- 0
-if$ -- 1783
-int.to.chr$ -- 14
+if$ -- 2139
+int.to.chr$ -- 16
 int.to.str$ -- 0
 missing$ -- 0
-newline$ -- 142
+newline$ -- 170
 num.names$ -- 0
-pop$ -- 285
+pop$ -- 343
 preamble$ -- 1
-purify$ -- 175
+purify$ -- 210
 quote$ -- 0
-skip$ -- 378
+skip$ -- 452
 stack$ -- 0
-substring$ -- 281
-swap$ -- 35
+substring$ -- 338
+swap$ -- 42
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 280
-warning$ -- 35
+type$ -- 336
+warning$ -- 42
 while$ -- 0
-width$ -- 38
-write$ -- 348
-(There were 70 warnings)
+width$ -- 46
+write$ -- 417
+(There were 84 warnings)

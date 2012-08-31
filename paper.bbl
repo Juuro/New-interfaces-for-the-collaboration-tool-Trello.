@@ -62,7 +62,32 @@ W3c invites broad review of html5.
 Html5 differences from html4.
 \newblock \url{http://www.w3.org/TR/html5-diff/}, 03 2012.
 
-\bibitem[joo12]{joomla}
+\bibitem[ica03]{ical:specs}
+icalendar specification excerpts.
+\newblock \url{http://www.kanzaki.com/docs/ical/}, 10 2003.
+
+\bibitem[ica12]{ical:gemdocu}
+File: Readme --- documentation for icalendar (1.1.6).
+\newblock \url{http://rubydoc.info/gems/icalendar/1.1.6/frames}, 08 2012.
+
+\bibitem[joo10]{joomla:architecture}
+The case for better architecture.
+\newblock
+  \url{http://people.joomla.org/groups/viewdiscussion/750-the-case-for-better-architecture.html?groupid=708},
+  10 2010.
+
+\bibitem[joo12a]{joomla:api}
+Api - joomla! documentation.
+\newblock \url{http://docs.joomla.org/API}, 02 2012.
+
+\bibitem[joo12b]{joomla:mvc}
+Developing a model-view-controller component/1.5/introduction - joomla!
+  documentation.
+\newblock
+  \url{http://docs.joomla.org/Developing_a_Model-View-Controller_Component/1.5/Introduction},
+  08 2012.
+
+\bibitem[joo12c]{joomla}
 ‎www.joomla.de.
 \newblock \url{http://www.joomla.de/}, 08 2012.
 
@@ -72,7 +97,7 @@ Json.
 
 \bibitem[jso12b]{json:docu}
 Json implementation for ruby.
-\newblock url{http://flori.github.com/json/doc/index.html}, 04 2012.
+\newblock \url{http://flori.github.com/json/doc/index.html}, 04 2012.
 
 \bibitem[kra12]{kramdown}
 kramdown.
@@ -106,6 +131,11 @@ Restful web services: The basics.
 Rfc 2445 - internet calendaring and scheduling core object specification
   (icalendar).
 \newblock \url{http://tools.ietf.org/html/rfc2445}, 11 1998.
+
+\bibitem[rfc09]{rfc:5545}
+Rfc 5545 - internet calendaring and scheduling core object specification
+  (icalendar).
+\newblock \url{http://tools.ietf.org/html/rfc5545}, 09 2009.
 
 \bibitem[rub]{ruby:icon}
 Iap: Caffeinated crash course in ruby.
@@ -159,5 +189,9 @@ Trello android app available for download! | trello blog.
 \bibitem[tre12d]{trello:docu}
 Trello documentation --- trello documentation.
 \newblock \url{https://trello.com/docs/index.html}, 08 2012.
+
+\bibitem[vca]{vcalendar}
+vcalendar overview.
+\newblock \url{http://www.imc.org/pdi/}.
 
 \end{thebibliography}

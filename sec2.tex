@@ -119,6 +119,9 @@ require 'gemname'
 \end{lstlisting}
 Again, \emph{gemname} stands for the name of the respective gem. If any gems are used in these script which are not part of the Ruby standard library, they are listed at the beginning of the related description. Further information at \url{http://doc.rubygems.org} and \url{http://rubyforge.org/projects/rubygems/}.
 
+\subsection{Ruby and MySQL}
+
+\todo{Ruby and DBs (MySQL)?}
 
 \section{JSON}\index{JSON}
 All the responses to Trello\index{Trello} API\index{API} calls use JSON\footnote{RFC\nomenclature{RFC}{Request For Comments} document for JSON: The application/json Media Type for JavaScript Object Notation (JSON)  \url{http://www.ietf.org/rfc/rfc4627.txt}}. It is a subset of the JavaScript programming language. Despite its relation to JavaScript it's language independent. JSON is da data-interchange format like XML. But JSON is built on two structures. One is a list of key/value pairs. In most programming languages this is realised as an hash, struct, object or associative array. The other structure is an ordered list of values. This is realised as array, list, vector or sequence in popular programming languages. In JSON itself these structures are called \emph{object} and \emph{array}. Objects start and end with curly brackets. Each key is followed by a colon and the key/value pairs are separated by commas. Arrays start and end with suqred brackets. The values are separated by commas. Both can be arbitrary nested. At every point one of my script saves content at any other place than Trello it's in the JSON\index{JSON} format, too. That's because it guarantees easy compatibility with Trello. JSON\index{JSON} can be saved in files, too. A JSON\index{JSON} file has the suffix \texttt{.json}. \cite{json}

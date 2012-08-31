@@ -3,7 +3,7 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: paper.aux
 The style file: alpha.bst
 I couldn't open database file sources.bib.bib
----line 177 of file paper.aux
+---line 197 of file paper.aux
  : \bibdata{sources.bib
  :                     }
 I'm skipping whatever remains of this command
@@ -19,11 +19,11 @@ Warning--I didn't find a database entry for "trello:docu"
 Warning--I didn't find a database entry for "oauth"
 Warning--I didn't find a database entry for "trello:gettingstarted"
 Warning--I didn't find a database entry for "rest"
-Warning--I didn't find a database entry for "json"
 Warning--I didn't find a database entry for "ruby:talk"
 Warning--I didn't find a database entry for "ruby:about"
 Warning--I didn't find a database entry for "ruby:gemdev"
 Warning--I didn't find a database entry for "ruby:gemdoc"
+Warning--I didn't find a database entry for "json"
 Warning--I didn't find a database entry for "ruby:optionparser"
 Warning--I didn't find a database entry for "markdown"
 Warning--I didn't find a database entry for "less"
@@ -39,10 +39,14 @@ Warning--I didn't find a database entry for "erb:introduction"
 Warning--I didn't find a database entry for "erb:docu"
 Warning--I didn't find a database entry for "google:apisconsole"
 Warning--I didn't find a database entry for "google:apiscope"
+Warning--I didn't find a database entry for "google:calapi"
+Warning--I didn't find a database entry for "json:docu"
+Warning--I didn't find a database entry for "rfc:2445"
+Warning--I didn't find a database entry for "ical:specs"
 Warning--I didn't find a database entry for "alfred"
 You've used 0 entries,
             2543 wiz_defined-function locations,
-            590 strings with 4779 characters,
+            594 strings with 4819 characters,
 and the built_in function-call counts, 24 in all, are:
 = -- 0
 > -- 0
