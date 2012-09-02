@@ -4,7 +4,7 @@
 
 \chapter{Applications}
 
-\section{Export to HTML}\nomenclature{HTML}{Hyper Text Markup Language}
+\section{Export to HTML}\nomenclature{HTML}{Hyper Text Markup Language}\label{html.rb}
 
 Used libraries:
 \begin{itemize}
@@ -19,20 +19,20 @@ Used libraries:
 ruby html.rb --title TITLE [-c CARDID[,CARDID]] [-l LISTID[,LISTID]] [-b BOARDID[,BOARDID]] [-a] [-t TOKEN] [-k KEY]
 \end{lstlisting}
 
-The \texttt{html.rb} script exports the data of one ore more cards to an HTML file. The resulting HTML file lists the cards one below another. The order is determined by the order in the command-line argument. If the command-line looks like listing \ref{listing005} the script will process the list with the id \texttt{4ffd78ff7f0c71780cc5aa1c} at first. That means in the HTML file are all cards in this list and below these the single card with the id \texttt{4ffd78a2c063afeb066408b8}. In addition to the command-line options described in section \ref{cli} the option \texttt{--title} is used. Here the user has to specify a title for the web page. The title will be displayed at the top of the page in \lstinline{<h1>} HTML tags.
+The \texttt{html.rb} script exports the data from one or more cards to an HTML file. The resulting HTML file lists the cards one below another. The order is determined by the order in the command-line argument. If the command-line looks like listing \ref{listing005} the script will at first process the list with the id \texttt{4ffd78ff7f0c71780cc5aa1c}. That means that all cards in the list are in the HTML file and below these the single card with the id \texttt{4ffd78a2c063afeb066408b8}. In addition to the command-line options described in section \ref{cli} the option \texttt{--title} is used. Here the user has to specify a title for the web page. The title will be displayed at the top of the page in \lstinline{<h1>} HTML tags.
 
-\begin{lstlisting}[aboveskip=1\baselineskip, style=bash, caption=Example for a \texttt{html.rb} call., label=listing005]
+\begin{lstlisting}[aboveskip=1\baselineskip, style=bash, caption=Example of a \texttt{html.rb} call., label=listing005]
 ruby html.rb -l 4ffd78ff7f0c71780cc5aa1c                 -c 4ffd78a2c063afeb066408b8 --title 'Madness'
 \end{lstlisting} 
 
-Each card is displayed with all their information. This includes title, description, members, due date, labels, votes, checklists, comments and attachments.
+Each card is displayed with all its information. This includes title, description, members, due date, labels, votes, checklists, comments and attachments.
 
 Trello itself distinguishes between photos and other attachments. Normal attachments are linked under the description. Photos are embedded in the HTML code as thumbnails. Trello detects JPEG, GIF and PNG files as pictures and displays them as thumbnails. In addition to these formats the resulting HTML file displays TIFF, PSD, BMP and JPEG2000 as thumbnails, too. All modern Browsers support these formats.
 
-The \texttt{html.rb} script generates static HTML. Of course the goal could also reached with a dynamic solution with PHP or Ruby on Rails. But the upside is, that the user of the respective website hasn't to wait for the webserver. Dynamic websites are mostly fast in the meanwhile, but with static HTML files the developer is on the safe side. Especially if the data to be displayed doesn't change every minutes this approach pays off. The server hasn't to generate the whole data with every visit. It has just to send the static HTML files.
+The \texttt{html.rb} script generates static HTML. Of course the goal could also reached with a dynamic solution with PHP or Ruby on Rails. But the upside is that the user of the respective website doesn't have to wait for the webserver. Dynamic websites are mostly fast in the meantime, but with static HTML files the developer is on the safe side. This approach pays off especially if the data to be displayed doesn't change every minute. The server doesn't have to generate the whole data with every visit. It just to send the static HTML files.
 
 \subsection{Markdown}\index{Markdown}
-Markdown is a small lightweight plain text formatting snytax, designed by John Gruber. It's designed for the use with blogs and CMS. In these use cases HTML is often too much. Markdown represents most of the features of HTML that are needed for writing. The designer of Markdown, had the goal that a text, written in Markdown, is still easy to read. John Gruber provides a software tool, written in the Perl programming language, that converts the Markdown formatted text to valid HTML. \cite{markdown}
+Markdown is a small lightweight plain text formatting snytax, designed by John Gruber. It's designed for the use with blogs and CMS. In these cases HTML is often too much. Markdown represents most of the features of HTML that are needed for writing. The designer of Markdown, had the goal that a text, written in Markdown, is still easy to read. John Gruber provides a software tool, written in the Perl programming language, that converts the Markdown formatted text to valid HTML. \cite{markdown}
 
 \begin{lstlisting}[aboveskip=1\baselineskip, style=bash, caption=Example for a text written in Markdown., label=listing006]
 ### iCloud:(*@ \label{line002} @*)
@@ -73,7 +73,7 @@ Here is an example of AppleScript:
 <p><img alt="Apple logo" title="Apple logo" src="http://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"></p>
 \end{lstlisting} 
 
-Listing \ref{listing006} shows a small example of Markdown. The \lstinline{###} in line \ref{line002} is a header equal to \lstinline{<h3>} in HTML. The first list item of the ordered list in line \ref{line003} contains italic and bold words. In line \ref{line004} is a horizontal line. After a normal line of text a code block starts in line \ref{line005}. At the end in line \ref{line006} there is a picture with title and alt texts. After the conversion it looks like listing \ref{listing007} in HTML. The appearance, of course, depends on the used CSS on the respective websites. The appearance in Trello is like in figure \ref{fig:markdown-result}.
+Listing \ref{listing006} shows a small example of Markdown. The \lstinline{###} in line \ref{line002} is a header equal to \lstinline{<h3>} in HTML. The first list item of the ordered list in line \ref{line003} contains italic and bold words. In line \ref{line004} there is a horizontal line. After a normal line of text a code block starts in line \ref{line005}. At the end in line \ref{line006} there is a picture with \lstinline{title} and \lstinline{alt} texts. After the conversion it looks like listing \ref{listing007} in HTML. The appearance, of course, depends on the used CSS on the respective websites. The appearance in Trello is as shown in figure \ref{fig:markdown-result}.
 
 \begin{figure}[htb]
 \centering
@@ -82,11 +82,11 @@ Listing \ref{listing006} shows a small example of Markdown. The \lstinline{###} 
 \label{fig:markdown-result}
 \end{figure}
 
-Meanwhile Markdown became quite popular. Many blogging platforms support it, at least there are Markdown plug-ins for most platforms. Trello supports it in the description of cards. In the unlikely case that markdown reaches its limits inline HTML can be used. The only restriction ist, that HTML block-level-elements have to be separated to the previous and following Markdwon blocks.
+Meanwhile Markdown has become quite popular. Many blogging platforms support it, at least there are Markdown plug-ins for most platforms. Trello supports it in the description of cards. In the unlikely case that markdown reaches its limits inline HTML can be used. The only restriction is, that HTML block-level-elements have to be separated to the previous and following Markdwon blocks.
 
 \subsubsection{kramdown}
 
-For converting Markdown to HTML the gem kramdown is used. Figure \ref{fig:kramdown} decribes the convert options of kramdown. It converts to LaTeX and a special kramdown format, too. The kramdown format is an extended Markdown syntax. As input formats it accepts HTML and kramdown besides standard Markdown. \cite{kramdown} These additional features of kramdown might be useful for future approaches. To generate lists bibliographies for scripts, papers or books.
+In order to convert Markdown to HTML the gem kramdown is used. Figure \ref{fig:kramdown} describes the convert options of kramdown. It converts HTML and Markdown to LaTeX, PDF and a special kramdown format, too. The kramdown format is an extended Markdown syntax. Like input formats it accepts HTML and kramdown besides standard Markdown. \cite{kramdown} These additional features of kramdown might be useful for future approaches. To generate lists bibliographies for scripts, papers or books.
 
 \begin{figure}[htb]
 \centering
@@ -96,26 +96,26 @@ For converting Markdown to HTML the gem kramdown is used. Figure \ref{fig:kramdo
 \end{figure}
 
 \subsection{Twitter Bootstrap Framework}\index{Twitter}\index{Bootstrap}
-In 2011 Twitter released Bootstrap\footnote{Blog post form the lead developer about the launch of Twitter Bootstrap: \url{https://dev.twitter.com/blog/bootstrap-twitter}}. Bootstrap is a collection of methods and script for creating front-ends of websites. It contains templates for site structuring, tables, text, buttons, menus, forms, lists and some other often used elements of websites. Additionaly some functions are supported with JavaScript\index{JavaScript}. Bootstrap is written in HTML\index{HTML}, JavaScript, CSS\index{CSS} and LESS\index{LESS}. LESS is a dynamic stylesheet language and extends CSS. That allows the use of varables, functions, nested selectors and operators.\cite{less} Bootstrap is completely free of charge and open source. \cite{bootstrap}
+In 2011 Twitter released Bootstrap\footnote{Blog post form the lead developer about the launch of Twitter Bootstrap: \url{https://dev.twitter.com/blog/bootstrap-twitter}}. Bootstrap is a collection of methods and scripts for creating front-ends of websites. It contains templates for site structuring, tables, text, buttons, menus, forms, lists and some other often used elements of websites. Additionaly some functions are supported by JavaScript\index{JavaScript}. Bootstrap is written in HTML\index{HTML}, JavaScript, CSS\index{CSS} and LESS\index{LESS}. LESS is a dynamic style sheet language and extends CSS. This enables the use of variables, functions, nested selectors and operators.\cite{less} Bootstrap is completely free of charge and under open source licence. \cite{bootstrap}
 
-Bootstrap\index{Bootstrap} evolved at Twitter\index{Twitter} while working on several projects with different libraries. The projects became inconsistent and a high administrative effort was needed. Some developers at Twitter lead by Mark Otto worked on something to document and share common design within the company. Twitter determined that this toolkit could be more than an intern helper tool. So they rouned it up with all common function which are needed for modern web development and released it on GitHub. \cite{markotto}
+Bootstrap\index{Bootstrap} evolved at Twitter\index{Twitter} during work on several projects with different libraries. The projects became inconsistent and a high administrative effort was needed. Some developers at Twitter led by Mark Otto worked on o tool to document and share common designs within the company. Twitter determined that this toolkit could be more than an intern helper tool. So they equipped it with all the common function which are needed for modern web development and released it on GitHub. \cite{markotto}
 
 \subsection{HTML5}\index{HTML!5}
-Twitter Bootstrap supports HTML5. HTML is the markup language for displaying content in a web browser. HTML5 is the latest revision of the HTML standard. It's an open format developed by the World Wide Web Consortium (W3C)\index{World Wide Web Consortium}\index{W3C}. HTML5 is a working draft since 2008. In 2011 the HTML Working Group at W3C advanced HTML5 to Last Call. So right now HTML communities all over the world are asked to confirm the starndard.  It is estimated that HTML5 will reach W3C Recommendation by 2014.\cite{html:lastcall} Although it is not yet finished, it is already widely used.
+Twitter Bootstrap supports HTML5. HTML is the markup language for displaying content in a web browser. HTML5 is the latest revision of the HTML standard. It's an open format developed by the World Wide Web Consortium (W3C)\index{World Wide Web Consortium}\index{W3C}. HTML5 has been a working draft since 2008. In 2011 the HTML Working Group at W3C advanced HTML5 to Last Call. At the moment HTML communities all over the world are asked to confirm the standard.  It is estimated that HTML5 will reach W3C Recommendation by 2014.\cite{html:lastcall} Although it is not yet finished, it is already widely used.
 
 Before HTML5  there were two popular standards: HTML4\index{HTML!4} and XHTML1\index{XHTML}\nomenclature{XHTML}{Extensible Hyper Text Markup Language}. XHTML1 defines a XML\index{XML} serialisation for HTML4. With HTML5 there is only one language called HTML. This language can be written in HTML syntax and XML syntax. 
-\cite{html:5differences} The W3C realised early the importance og smartphone in the future. They guided the development of HTML5 with the consideration of being able to run on low-powered devices. The market share of HTML5 enabled devices is still rising. \cite{smartphonesales} Smartphone sales even beat PC sales in 2012. Thus, it is increasingly important that web apps work well on small devices. To ensure this HTML5 is used. The foundation created here can therefore be used as a basis for the future.
+\cite{html:5differences} The W3C realised the importance of smartphones in the future early on. They guided the development of HTML5 with the consideration of being able to run on low-powered devices. The market share of HTML5 enabled devices is still rising. \cite{smartphonesales} Smartphone sales even beat PC sales in 2012. Thus, it is becoming increasingly important that web apps work well on small devices. To ensure this HTML5 is used. The foundation created here can therefore be used as a basis for the future.
 
-HTML5 introduces several new elements. Some of the are usen in \texttt{html.rb}. At first there is the \lstinline{<header>} element. A header is an area at the top of a web page. It is used for navigational aids, logos or a search bar. \cite{html5:header} At the bootom is the \lstinline{<footer>} element. The \lstinline{<footer>} element can be used as a side wide footer and as a footer of sections. \cite{html5:footer} Here it is just used as side wide footer as preparation for data like licencing information, imprint and informations about the author. The cards are enclosed in \lstinline{<article>} elements. Every single card is represented as an \lstinline{<article>} element. That makes sense because typicalle a card is an article, especially if the user wants the card to be displayed on a web page. The W3C writes as requirements for a \lstinline{<article>} element that is has to be self-contained. \cite{html5:article} A card is a collection of information which is ordered by the several types of data. 
+HTML5 introduces several new elements. Some of these are used in \texttt{html.rb}. At first there is the \lstinline{<header>} element. A header is an area at the top of a web page. It is used for navigational aids, logos or a search bar. \cite{html5:header} At the bottom is the \lstinline{<footer>} element. The \lstinline{<footer>} element can be used as a side wide footer and as a footer of sections. \cite{html5:footer} Here it is just used as side wide footer as preparation for data like licencing information, imprint and information about the author. The cards are enclosed in \lstinline{<article>} elements. Every single card is represented as an \lstinline{<article>} element. This makes sense because typically a card is an article, especially if the user would like the card to be displayed on a web page. The W3C requires an \lstinline{<article>} element to be self-contained. \cite{html5:article} A card is a collection of information which is ordered by the several types of data. 
 
-This foundation of generating HTML out of Trello can be used in various ways. It's predestinated for website with recuring kinds of information. Every business card style web page can definitely be managed with this script. From very small websites through to whole blogs could build on it.
+This foundation of generating HTML out of Trello can be used in various ways. It's predestinated for website with recurring kinds of information. Every business card style web page can definitely be managed with this script. Very small websites right through to whole blogs can build on it.
 
 \subsection{Templating with ERB}\index{ERB}\index{Templating}\nomenclature{ERB}{embedded Ruby}
-Every card is embedded in the same HTML structure. Templates specify this HTML without the actual data. Instead of the data there is just a wildcard and a few control structures. Templating systems are used to organise the source code in operationally-distinct layers. The design is completely handled in the template file. But the control structure is partially in the template file, too. For a true separation of presentation of the data models and the logic components template engines, however, are unsuitable and there are additional concepts such as Model View Controller required (MVC)\nomenclature{MVC}{Model View Controller}.
+Every card is embedded in the same HTML structure. Templates specify this HTML without the actual data. Instead of the data there is just a wildcard and a few control structures. Templating systems are used to organise the source code in operationally-distinct layers. The design is completely handled in the template file. But the control structure is partially in the template file, too. Template engines are however unsuitable for a real separation of the data models and the logic components. For this porpose additional concepts such as Model View Controller are required (MVC)\nomenclature{MVC}{Model View Controller}.
 
-ERB is a templating system for Ruby. It's part of the Ruby standard library. ERB accepts every string as a template, no matter if it is stored in a file, a database or some other kind of storage. ERB mainly used for generating HTML files. It is also able to generate any other kind of structured text, like RSS\index{RSS}\nomenclature{RSS}{Really Simple Syndication} feeds and XML\index{XML}. \cite{erb:introduction} \cite{erb:docu}
+ERB is a templating system for Ruby. It's part of the Ruby standard library. ERB accepts every string as a template, no matter whether it is stored in a file, a database or some other kind of storage. ERB is mainly used for generating HTML files. It is also able to generate any other kind of structured text, like RSS\index{RSS}\nomenclature{RSS}{Really Simple Syndication} feeds and XML\index{XML}. \cite{erb:introduction} \cite{erb:docu}
 
-While generating the HTML ERB copies the plain text portions of the template file directly to the resulting document.  The parts which ERB has to process are marked with certain tags listed in listing \ref{listing011}
+While generating the HTML ERB copies the plain text parts of the template file directly to the resulting document.  The parts which ERB has to process are marked with certain tags listed in listing \ref{listing011}
 \begin{lstlisting}[aboveskip=1\baselineskip, style=bash, caption=Recognised tags in ERB., label=listing011]
 <% Ruby code -- inline with output %>
 <%= Ruby expression -- replace with result %>
@@ -124,15 +124,15 @@ While generating the HTML ERB copies the plain text portions of the template fil
 %% replaced with % if first thing on a line and % processing is used
 <%% or %%> -- replace with <% or %> respectively
 \end{lstlisting}
-Only the first two tags are used here. The optimum would be if only \lstinline{<%= Ruby expression -- replace with result %>} would be used. Because that would imply that there are no control structures in the template file, just wildcards for data.
+Only the first two tags are used here. The optimum would be if only \lstinline{<%= Ruby expression -- replace with result %>} would be used. As this would imply that there are no control structures in the template file, just wildcards for data.
 
-An real example of an ERB template is listing \ref{listing012}.
+A real example of an ERB template is listing \ref{listing012}.
 
 \begin{lstlisting}[aboveskip=1\baselineskip, caption=Ruby method in ERB template., label=listing012]
 <small><%= getDate(card['due'], format='de') %></small>
 \end{lstlisting}
 
-A Ruby method is used as wildcard here. When processing the template file the method will be executed with the given variables and the result will be copied in the HTML file. But there are control structures, too. The block around the line in listing \ref{listing012} i showed in listing \ref{listing013}
+A Ruby method is used as wildcard here. When processing the template file the method will be executed with the given variables and the result will be copied into the HTML file. But there are control structures, too. The block around the line in listing \ref{listing012} is shown in listing \ref{listing013}
 
 \begin{lstlisting}[aboveskip=1\baselineskip, caption=Ruby method in ERB template., label=listing013]
 <% if card['due'] %>
@@ -140,9 +140,9 @@ A Ruby method is used as wildcard here. When processing the template file the me
 <% end %>
 \end{lstlisting}
 
-The \lstinline{if} construct is embedded with the \lstinline{<% ... %>} tag for ERB. Thats because it's not a wildcars which is replaced with actual content. This tag is just for control structures.
+The \lstinline{if} construct is embedded with the \lstinline{<% ... %>} tag for ERB. This is because it's not a wildcard which is replaced with actual content. This tag is just for control structures.
 
-The alternative to using a templating system is to write the HTML at the same time and in the same file when the data is processed. That would result in a very confusing file which produces equally confusing HTML code. If the developer makes sure that the HTML code is well-structured the source code in the script looks even messier. That's because character escape codes like \lstinline{\t} and \lstinline{\n} have to be inserted manually in the source code. Otherwise the templating system takes this task. An example of such a confusing mixing of HTML, character escape codes and Ruby is shown in \ref{listing014}.
+The alternative to using a templating system is to write the HTML at the same time and in the same file when the data is processed. This would result in a very confusing file which produces equally confusing HTML code. If the developer made sure that the HTML code is well-structured the source code in the script would look even messier. That's because character escape codes like \lstinline{\t} and \lstinline{\n} have to be inserted manually in the source code. Otherwise the templating system takes over this task. An example of such a confusing mixing of HTML, character escape codes and Ruby is shown in \ref{listing014}.
 
 \begin{lstlisting}[aboveskip=1\baselineskip, caption=Generating HTML without a templating engine., label=listing014]
 htmlSite << "</strong></span></p>
@@ -184,7 +184,7 @@ class Webpage
 end
 \end{lstlisting}
 
-There are three methods. The \lstinline{initialize( title )} method generates the actual instance of the class. The instances modeled after this method contain the given title and an empty array for the cards. The \lstinline{add_card( card )} method simply adds a new card to the \lstinline{@cards} array. The last method is \lstinline{get_binding}. It generates a \lstinline{Binding} object of the current local variables.
+There are three methods. The \lstinline{initialize( title )} method generates the actual instance of the class. The instances modeled according to this method contain the given title and an empty array for the cards. The \lstinline{add_card( card )} method simply adds a new card to the \lstinline{@cards} array. The last method is \lstinline{get_binding}. It generates a \lstinline{Binding} object of the current local variables.
 
 \begin{lstlisting}[aboveskip=1\baselineskip, caption=Generating HTML with ERB., label=listing016]
 templateFile = File.open("templateHtml.html.erb", "rb")(*@ \label{line007} @*)
@@ -205,7 +205,7 @@ fileHtml.puts html
 fileHtml.close()
 \end{lstlisting}
 
-In listing \ref{listing016} the template data is set up. At first in line \ref{line007} the template file is opened in the next line read and saved in the \lstinline{template} variable. So the template is saved as string in \lstinline{template}. In line \ref{line008} with \lstinline{rhtml} an instance of ERB is created. After that in line \ref{line009} the \lstinline{Webpage} class is used. One instance with the given title is generated. In line \ref{line010} each card is added to the instance of \lstinline{Webpage}. Finally in line \ref{line011} the \lstinline{Binding} object of \lstinline{webpage} is created. With the ERB method \lstinline{result} the data in the \lstinline{Binding} object and the template come together. This is the step where the wildcards in the template file get filled with the actual data of the \lstinline{Binding} object. The resulting HTML code is saved in the string variable \lstinline{html} and \lstinline{html} is saved to the file \texttt{index.html} in line \ref{line012}. 
+In listing \ref{listing016} the template data is set up. At first in line \ref{line007} the template file is opened, in the next line read and saved in the \lstinline{template} variable. So the template is saved as string in \lstinline{template}. In line \ref{line008} with \lstinline{rhtml} an instance of ERB is created. After that in line \ref{line009} the \lstinline{Webpage} class is used. One instance with the given title is generated. In line \ref{line010} each card is added to the instance of \lstinline{Webpage}. Finally in line \ref{line011} the \lstinline{Binding} object of \lstinline{webpage} is created. With the ERB method \lstinline{result} the data in the \lstinline{Binding} object and the template come together. This is the step where the wildcards in the template file are filled with the actual data of the \lstinline{Binding} object. The resulting HTML code is saved in the string variable \lstinline{html} and \lstinline{html}, is saved to the file \texttt{index.html} in line \ref{line012}. 
 
 \section{Synchronisation Google Calendar}\index{Google!Calendar}
 Used libraries:
@@ -222,10 +222,10 @@ Usage:
 ruby gcal.rb [-c CARDID[,CARDID]] [-l LISTID[,LISTID]] [-b BOARDID[,BOARDID]] [-a] [-t TOKEN] [-k KEY]
 \end{lstlisting}
 
-Google Calendar is a free web service by Google for time-management. The service can be enabled in several calendar applications such as Apple Calendar (it was called iCal prior to Mac OS X 10.8) and Microsoft Outlook. Even all important mobile operating systems support it. Google Calendar it one of the most popular calendar web services. One advantage over other offferings is the excellent integration with all the other Google services which of most are very popular, too.
+Google Calendar is a free web service by Google for time-management. The service can be enabled in several calendar applications such as Apple Calendar (it was called iCal prior to Mac OS X 10.8) and Microsoft Outlook. Even all the important mobile operating systems support it. Google Calendar is one of the most popular calendar web services. One advantage over other suppliers is the excellent integration with all the other Google services, most of which are also very popular.
 
 \subsection{Google Calendar API}
-Google provides an API to access Calendar. There is even an API wrapper for Ruby made by Google. But ether it is very buggy or the documentation is poorly written. Some parameters the documentation says are available to send an API call at aren't actually available. Google grants normal developers a courtesy limit of 10,000 requests per day. Developers who need more requests per day for their application have to negotiate with Google and to contract about a higher request rate.
+Google provides an API to access Calendar. There is even an API wrapper for Ruby made by Google. But either it contains many bugs or the documentation is poorly written. Some parameters the documentation says are able to send an API call at aren't actually able to do so. Google grants normal developers a courtesy limit of 10,000 requests per day. Developers who need more requests per day for their application have to negotiate with Google and to contract into a higher request rate.
 
 \begin{lstlisting}[aboveskip=1\baselineskip, caption=Initialisation of the Google Calendar API connection., label=listing017]
 client = Google::APIClient.new
@@ -241,7 +241,7 @@ client.authorization.access_token = result['access_token']
 service = client.discovered_api('calendar', 'v3')
 \end{lstlisting}
 
-Authetication with Google is much more complicated than with Trello. Listing \ref{listing017} shows the initialisation of the Google Calendar API connection. At first the project has to be registered in the Google APIs Console. \cite{google:apisconsole} There the developer can get the \lstinline{client_id} and the \lstinline{client_secret}. The \lstinline{scope} depends on the Google APi the developer wants to use. Here it is \texttt{https://www.googleapis.com/auth/calendar} of course. \cite{google:apiscope} To get the \lstinline{access_token} this URL must be called: 
+Authentication with Google is much more complicated than with Trello. Listing \ref{listing017} shows the initialisation of the Google Calendar API connection. At first the project has to be registered in the Google APIs Console. \cite{google:apisconsole} There the developer can get the \lstinline{client_id} and the \lstinline{client_secret}. The \lstinline{scope} depends on the Google API the developer wants to use. Here it is \texttt{https://www.googleapis.com/auth/calendar}. \cite{google:apiscope} To get the \lstinline{access_token} this URL must be called: 
 \begin{center}
 \lstinline{https://accounts.google.com/o/oauth2/auth?scope=https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcalendar&redirect_uri=https%3A%2F%2Foauth2-login-demo.appspot.com%2Fcode&response_type=code&client_id=CLIENTID.apps.googleusercontent.com&access_type=offline}
 \end{center}
@@ -343,7 +343,7 @@ END:VEVENT
 
 Listing \ref{listing024} shows an example of a file in the iCalendar format this script can produce. The top-level element of an iCalendar file is the core object. The first line is \lstinline{BEGIN:VCALENDAR} and the ending line has to be \lstinline{END:VCALENDAR}. Between these two tags is the \emph{icalbody}. Following are the iCalendar properties. These properties apply to the entire calendar. \lstinline{CALSCALE:GREGORIAN} in line \ref{line017} of listing \ref{listing024} defines the calendar scale of this calendar. Hence the standard calendar format is Gregorian world wide it'n not neccessary to specify it in the iCalendar file. The method specification can has other values than \lstinline{PUBLISH}, such like \lstinline{REQUEST} and \lstinline{CANCEL}. \lstinline{REQUEST} would be used if the sender wants to know if the receiver is free at the time of this event. \lstinline{CANCEL} would be used when the provided events in this calendar should be cancelled. The \lstinline{PRODID} simply specifies the product which generated the iCalendar file. The \lstinline{VERSION} property specifies the version that is required in order to interpret the iCalendar file. Version 2.0 is the last version. In line \ref{line018} the definition of the timezone starts. \lstinline{TZID} specifies the identifier of this time zone. \lstinline{TZOFFSETFROM} and \lstinline{TZOFFSETTO} specify both the offset to UTC. \lstinline{TZOFFSETFROM} for daylight saving time and \lstinline{TZOFFSETTO} for standard time. \lstinline{DTSTART} in this context describes the first onset date-time for the observance. The \lstinline{RRULE} property defines a repeating pattern for recurring events. \lstinline{TZNAME} is just a name for the specified timezone. In \ref{line019} the definition of the actual event begins. Every single event is specified within an \lstinline{VEVENT} object. The \lstinline{VEVENT} objects are listed after each other. There is the possibility to divide the events into categories with the \lstinline{CATEGORIES} property. The \lstinline{DESCRIPTION} contains a description string of the event. Here the script enters the id of the respective card. \lstinline{DTSTART} and \lstinline{DTEND} specify the starting and ending times of the event. The \lstinline{DTSTAMP} property contains the time of the export to iCalenar format. \lstinline{SUMMARY} is the events title. The \lstinline{SEQUENCE} is teh revision counter of an event object. If the user makes significant changes to the event, the \lstinline{SEQUENCE} must be incremented. When the event object is created the \lstinline{SEQUENCE} is  zero. \lstinline{TRANSP} determines whether the event object consumes time on a calendar or not. Events that consume time with the calendar should have the \lstinline{TRANSP} value \lstinline{OPAQUE}. Events which are marked as \lstinline{OPAQUE} can be detected as consuming time by free/busy time searches on the calendar. If events don't consume actual time on the calendar they should be marked as \lstinline{TRANSPARENT}. Here the script gives all events an \lstinline{TRANSP} value of \lstinline{TRANSPARENT} because the due date of a Trello card is not an actual appointment with a duration. It's more like a deadline for a particular task. The \lstinline{UID} countains information abaout the creator of the iCalendar data. In this case it's a time and the name of my computer in the network of Uni Tübingen. Finally the \lstinline{URL} property contains simply the URL of the card at Trello. With this URL the user can visit the card from within his calendaring application. So he can visit and edit the card without navigation through Trello by himself. \cite{ical:specs}
 
-This is just a subset of the iCalendar geared to use with the \texttt{ical.rb} script. iCalendar supports much more. For example, todo lists, recurring events, journals, searching for free/busy time and updating calendars. These features wouldn't be useful with the intented use with Trello. 
+This is just a subset of the iCalendar geared to use with the \texttt{ical.rb} script. iCalendar supports much more. For example, to-do lists, recurring events, journals, searching for free/busy time and updating calendars. These features wouldn't be useful with the intented use with Trello. 
 
 \subsection{Export}
 
@@ -405,7 +405,7 @@ The iCalendar format has a field for attendees. If this is specified everyone ca
 
 In comparison to the Google synchronisation, the script is much more simple. There is no need for synchronization because the iCalendar file is regenerated with each run of the script and there is no API to work with. There is only one file in the correct format to be created. That's much faster than working with two APIs and perform several API calls. The server has to compute less data and there's less traffic to the APIs while updating. But of course the iCalendar file must be available on a server. With the Google solution there is no need for an own web server. The another bigger problem with the webserver is, that the URL is accesible for everybody. If the calendar includes critical data this is a disqualifier for the user or the company. Although it is possible to provide the server with password protection, this would only be more complicated. Either the calendaring software doesn't support .htaccess or any other web authentication technology orthe user has to enter his login information periodically. The only way to use it safely with critical data is to use it in an intranet. There won't be any need for additional protcetion. But for the domestic use and for most small companies the solution with Google  should be sufficient. Google even provides an iCalendar feed itself. 
 
-\section{synchronisation to Joomla}\index{Joomla}
+\section{Synchronisation to Joomla}\index{Joomla}
 
 Used libraries:
 \begin{itemize}
@@ -492,26 +492,139 @@ if hasChecklist[0] != nil
 end
 \end{lstlisting}
 
-To process the checklists of a card the method \lstinline{getChecklist(cardId)} is called first. If the response contains checklist data a \lstinline{<h4>} HTML tag with the checklists name is added to the description. After that a \lstinline{<ul>} is started again. For every checklist item the \lstinline{isCompleted()} method must be called to resolve the determine of the checklist item. Depending on that the name of the item is displayed as crossed out or not.
+To process the checklists of a card the method \lstinline{getChecklist(cardId)} is called first. If the response contains checklist data a \lstinline{<h4>} HTML tag with the checklists name is added to the description. After that a \lstinline{<ul>} is started again. For every checklist item the \lstinline{isCompleted()} method must be called to resolve the determine of the checklist item. Depending on that the name of the item is displayed as crossed out or not. Rubys append method is used because the description is a HTML string already.
 
-Rubys append method is used because the description is a HTML string already.
+Now that the content is available to the script, it must be written to the database. Because the \lstinline{trelloJoomlaSync()} method supports Joomla versions 1.5 and 2.5, every database query is existing twice. From Joomla 1.5 to Joomla 2.5 the underlying database structury has changed a bit. 
 
-Because the \lstinline{trelloJoomlaSync()} method supports Joomla version 1.5 and version 2.5 every database query is doubled. From Joomla 1.5 to Joomla 2.5 the underlying database structury has changed a bit. 
+\begin{lstlisting}[aboveskip=1\baselineskip, caption=\texttt{joomlaMultiple.rb} usage., label=listing033]
+begin  
+	existingArticleQuery = my.query(" (*@ \label{line028}@*)
+		SELECT id, created, modified
+		FROM jos_content 
+		WHERE metadata='"+cardId+"'
+	") (*@ \label{line029}@*)
+rescue Mysql::Error => e
+	puts e
+else
+	# if article doesn't exist insert it into the db
+	if existingArticleQuery.num_rows == 0
+		begin
+			
+			# Insert new article, see listing (*@ \ref{listing034} @*)(*@ \label{line030}@*)
+			
+		rescue Mysql::Error => e
+			puts e
+			return
+		ensure
+			stmt.close if stmt
+		end			
+	else
+		# this should be only one because per Trello card id should only exist one article in Joomla
+		existingArticleQuery.each do |thisArticle|
+			
+			existingId = thisArticle[0]
+			existingCreated = thisArticle[1]
+			existingModified = thisArticle[2]
+			
+			# check if the modiefied timestamp im Trello is different to the modiefied timestamp in Joomla
+			begin 
+				if existingModified != changed
+					
+					# Update article, see listing (*@ \ref{listing036} @*)(*@ \label{line032}@*)
+					
+					puts 'Changed: '+cardId+" : "+title
+				else 
+					puts 'Nothing changed: '+cardId+" : "+title
+				end					
+			rescue Mysql::Error => e
+				puts e
+				return
+			ensure
+				stmt.close if stmt
+			end
+		end
+	end	
+ensure
+	my.close if my
+end
+\end{lstlisting}
 
-\todo{MySQL gem, aber unter API wrapper. Nicht hier!}
+In the first \lstinline{begin} block of listing \ref{listing033} from line \ref{line028} to line \ref{line029} the method searches the database table \lstinline{jos_content} after an article with the actual handled cardId in the \lstinline{metadata} field. If the response of this query is an empty array, the card isn't in the database. So the script must insert a new article into the database. Thats performed in line \ref{line030}. The corresponsing MySQL code is showed in listing \ref{listing034}. If the resulting array in line \ref{line028} contains a row, the script must check if the new data is newer as the data in the database. This array can not contain more than one row, because the script inserts the article just once if it's new, otherwise it replaces the old article with an updated version. In order to do that the script looks at the \lstinline{modified} field of the existing article. This date is saved in the \lstinline{existingModified} variable. The update date of the actual Trello card, that is determined in listing \ref{listing030}, is stored in the \lstinline{changed} variable. If \lstinline{existingModified} differs from \lstinline{changed} the article is updated with the new date of the Trello card in line \ref{line032}. In this behaviour the script assumes that the Trello card contains always the correct data. So it's not necessary to check back if the \lstinline{changed} is actual newer. The MySQL statemnt of the update statemnt is showed in listing \ref{listing036}.
+
+\begin{lstlisting}[aboveskip=1\baselineskip, caption=Insert new article in the Joomla database., label=listing034]
+begin
+	stmt = my.prepare("
+		INSERT INTO jos_content (
+			title, 
+			alias, 
+			`introtext`, 
+			state, 
+			sectionid, 
+			catid, 
+			created, 
+			created_by, 
+			modified,
+			parentid, 
+			ordering, 
+			access,					
+			metadata
+		)
+		VALUES (
+			?, 
+			?, 
+			?, 
+			1, 
+			?, 
+			?, 
+			?, 
+			62, 
+			?,
+			0, 
+			1, 
+			0,
+			?
+		)
+	")
+	
+	stmt.execute title, title.downcase, description.gsub((*@/'/@*), '&(*@\#@*)39;'), sectionid, catid, changed, changed, cardId
+	puts 'New article: '+cardId+" : "+title
+rescue Mysql::Error => e
+	puts e
+	return
+ensure
+	stmt.close if stmt
+end
+\end{lstlisting}
 
 
-
-
-
-
-\todo{Single article <-> multiple articles}
+\begin{lstlisting}[aboveskip=1\baselineskip, caption=Updating existing Joomla article., label=listing036]
+stmt = my.prepare("
+	UPDATE jos_content 
+	SET
+		title = '"+title+"',
+		alias = '"+title.downcase+"',
+		`introtext` = '"+description.gsub(/'/, '&#39;')+"',
+		state = 1,
+		sectionid = 5,
+		catid = 34,
+		created = '"+changed+"',
+		created_by = 62,
+		modified = '"+changed+"',
+		parentid = 0,
+		ordering = 1,
+		access = 0
+	WHERE
+		metadata = '"+cardId+"'
+")
+stmt.execute
+\end{lstlisting}
 
 \subsection{Joomla category page}
-\todo{Category page}
 
-\subsection{Customising the design of Joomla}
-\todo{Custom CSS in Joomla}
+After the cards from Trello are imported to Joomla as articles they are saved in Joomla, but not necessarily accessible on the web site. To view the articles on one page Joomla provides the item type \emph{Category Blog Layout}. This is a menu object type. The user must specify a category when executing the script. All the articles which are assigned to this category will be displayed on a atomatically created web page. If the user wants to display all the imported articles from Trello on one page he have to create such an category blog layout for the category he specified. The user can customize the appearence of the site.
+
+\subsection{Single article}
+Sometimes it makes more sense if all the cards are stored as a single article in Joomla. The \texttt{joomlaSingle.rb} does that. This script works exclusively with Joomla version 1.5. This verion of Joomla uses still HTML tables for structuring the websites. So the script generates a special HTML site of all cars, similar to the \texttt{html.rb} script described in section \ref{html.rb}.
 
 %\section{One way synchronisation to WordPress}\index{WordPress}
 
@@ -521,23 +634,69 @@ Because the \lstinline{trelloJoomlaSync()} method supports Joomla version 1.5 an
 
 \section{Backup}\index{Backup}
 
-\todo{Saving JSON in files.}
-
-\todo{Just one file.}
-
-\todo{zip(py)}
-
-\todo{Use temporary space of the OS. Why?}
-
-
+Trello doesn't provide a complete backup solution. Single cards can be downloaded as *.json files, but that's not worth colling it a backup solution. It might be usefull to have the possibility to access the whole sight of a users Trello account offline. For example to use it in a dedicated Trello application or another project dedicated software. Anyhow the user is on the safe side if he backs his Trello boards up.
 
 \subsection{Export}\index{Export}
+Usage:
+\begin{lstlisting}[aboveskip=1\baselineskip, style=bash, caption=\texttt{export.rb} usage., label=listing037]
+ruby export.rb -n filename -t TOKEN -k KEY
+\end{lstlisting}
+
+The \texttt{-n} command-line property specifies the filename which is used to store the exported data from Trello.
+
+The \texttt{export.rb} script at first has to accumulate the data. Unlike the other scripts the whole information is needed all at once and in the most compact structure. So, there are four big types of content: boards, lists, cards and members. The method \lstinline(getBoardsByMember('me')) determines the boards of the member. \lstinline{getMembersByBoard()} determines the members by board, means, this is an array which contains the boards as hashes. One value of these hashes contains all members that are assigned to this board. For each board \lstinline{getListsByBoard()} determines the related lists. The cards are collected by board as well with the \lstinline{getCardsByBoard} method. But because these API response contains not the whole information about a card the card array must be extended with the \lstinline{getCardsAsArray()} method. This method also downloads attachments, if any.  When all the data of these four content types is avalable, each array is saved to a mutual hash:
+
+\begin{lstlisting}[aboveskip=1\baselineskip, caption=\texttt{joomlaMultiple.rb} usage., label=listing038]
+hashBackup = Hash.new
+hashBackup['boards'] = arrayBoards
+hashBackup['members'] = arrayMembersByBoards
+hashBackup['lists'] = arrayLists
+hashBackup['cards'] = arrayCards
+\end{lstlisting}
+
+\lstinline{hashBackup} contains the whole data of a users Trello account. Now it have to be saved to the backup file. 
+
+\subsubsection{Saving to JSON files}
+The JSON library for Ruby described in section \ref{jsonsec} is able to generate JSON out of Ruby hashes and arrays.
+
+\begin{lstlisting}[aboveskip=1\baselineskip, caption=Using the temporary directory of the operating system to save the JSON to file., label=listing039]
+backupFile = File.new(File.join(Dir.tmpdir, 'backup.json'), "wb") (*@ \label{line033} @*)
+backupFile.puts JSON.generate(hashBackup)
+backupFile.close()
+\end{lstlisting}
+
+In line \ref{line033} of listing \ref{listing039} a file called \texttt{backup.json} is opened. \lstinline{Dir.tmpdir} determines the path to the temporary directory of the operating system. This works under every operating system Ruby supports. Using the temporary directory has several advantages. Even if the saving process is cancelled it wouldn't result in a cluttered directory. The temporary directory is cleaned by the operating system regularly. The \lstinline{join} method of Rubys \lstinline{File} class merges the path of the temporary directory and the file name to a correct path to a file in the temporary directory. \lstinline{File.new} makes this new file accesible with the variable \lstinline{backupFile}. To store the generated hash in the file the script first generates the JSON with the \lstinline{generate} method of the JSON library. The result is directly stored in the \texttt{backup.json} file because the \lstinline{puts} method applied to the \lstinline{backupFile} variable accesses the file in the temporary directory. The last step closes the \texttt{backup.json} file.
+
+Now there is one JSON file and a directory with attachments. For exchanging the data this combination is not practical. A single file is needed. In order to achive that and to minimise file size the script uses the gem \texttt{zippy}. \texttt{zippy} is used to easily generate ZIP archives. 
+
+\begin{lstlisting}[aboveskip=1\baselineskip, caption=Creating a ZIP archive out of the backed up data., label=listing040]
+Zippy.create @filename do |zip|
+	zip['backup.json'] = File.open(backupFile) (*@ \label{line034} @*)
+
+	Dir.entries(directoryNameAttachments).each do |file| (*@ \label{line035} @*)
+		fileName = File.new(File.join(directoryNameAttachments, file), "r") 
+		if file != "." && file != ".."
+			zip['attachments/'+file] = File.open(fileName)
+			fileName.close
+			File.delete(fileName)
+		end
+	end
+end
+\end{lstlisting}
+
+In order to create a single ZIP file \texttt{zippy} opens a \lstinline{create} block. To add a file to the ZIP archive it can be specified like in an array. In  line \ref{line034} of listing \ref{listing040} a new file with the name \texttt{backup.json} in the ZIP archive is created. In the same step it is filled with the contents of the \lstinline{backupFile} variable, which is basicly the \texttt{backup.json} in the temporary directory. In line \ref{line035} the script iterates through attachment directory in the temporary directory. Each attachment is stored in an \texttt{attachments} directory in the ZIP archive. After that the attachments are deleted from the temporary directory. Unless the operating system will delete them anyway if they are not in use, the attachments directory and the \texttt{backup.json} file are also deleted.
+
+
+
 
 \subsection{Import}\index{Import}
 
-\subsubsection{Filename option}
-The \texttt{-n} (or \texttt{-name}) argument for this script stands for the filename of the backup\index{Backup} file which contains the  exported Trello data. With \texttt{-n} the user can specify a file to import. While processing the script first checks if the user has passed this argument. If not, it aborts. If the \texttt{-n} argument is given, the scipt proofes if the file is a ZIP\index{ZIP} file. For that it soesn't use the filename but the MIME\nomenclature{MIME}{Multipurpose Internet Mail Extensions}\index{MIME} type of the file.
+Usage:
+\begin{lstlisting}[aboveskip=1\baselineskip, style=bash, caption=\texttt{import.rb} usage., label=listing041]
+ruby import.rb -n filename -t TOKEN -k KEY
+\end{lstlisting}
 
+In contrast to the \texttt{export.rb} script, with the \texttt{-n} the user can specify a file to import. At first the scipt checks if the file is a ZIP\index{ZIP} file. For this it doesn't use the file name but the MIME\nomenclature{MIME}{Multipurpose Internet Mail Extensions}\index{MIME} type of the file.
 
 \begin{lstlisting}[aboveskip=1\baselineskip, caption=Checking if the file has the MIME type \textquotedblleft application/zip\textquotedblright, label=listing008]
 if `file -Ib #{@filename}`.gsub(/;.*\n/, "") != "application/zip"
@@ -547,7 +706,7 @@ end
 \end{lstlisting}
 
 	
-In line 1 the \texttt{file -Ib \#\{\@filename\}} is a bash call for receiving the MIME\index{MIME} type of a file. Ruby executes it and with the gsub-Method it cuts the MIME part out of the received string. This shell script part in a ruby file is a bit dirty. But only for this small case it would be elaborately to use a seperate gem.
+In line 1 the \texttt{file -Ib \#\{\@filename\}} is a bash call for receiving the MIME\index{MIME} type of a file. Ruby executes it and with the gsub-Method it cuts the MIME part out of the received string. This shell script part in a ruby file is a bit messy. But only for this small case it would be complicated to use a separate gem.
 
 \todo{What's a MIME\index{MIME} type?}
 
@@ -560,5 +719,5 @@ In line 1 the \texttt{file -Ib \#\{\@filename\}} is a bash call for receiving th
 \todo{Solution with memberimport.rb.}
 
 \subsection{Close all boards}
-\texttt{closeboards.rb} is more of a helper tool for developers. While developing for Trello emerge several Testaccounts, which get crowded with test boards now and then. The execution of this script will close all boards in the specified Trello account. The CLI isn't employed here because it would be too dangerous. If accidentally the wrong account would be indicated all the boards were gone.
+\texttt{closeboards.rb} is more of a helper tool for developers. Do you mean: While developing Trello, several test accounts emerge which now and then get crowded with test boards. The execution of this script will close all boards in the specified Trello account. The CLI isn't employed here because it would be too dangerous. If the wrong account was accitently indicated all the boards would go.
 

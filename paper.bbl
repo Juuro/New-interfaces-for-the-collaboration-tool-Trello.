@@ -117,6 +117,14 @@ Bootstrap in a list apart no. 342 · deep thoughts by mark otto.
   \url{http://www.markdotto.com/2012/01/17/bootstrap-in-a-list-apart-342/}, 01
   2012.
 
+\bibitem[mys08]{mysql:popularity}
+Mysql :: Market share.
+\newblock \url{http://www.mysql.com/why-mysql/marketshare/}, 2008.
+
+\bibitem[mys12]{mysql:rubydoc}
+File: Readme --- documentation for mysql (2.8.1).
+\newblock \url{http://rubydoc.info/gems/mysql/2.8.1/frames}, 08 2012.
+
 \bibitem[oau12]{oauth}
 Oauth community site.
 \newblock \url{http://oauth.net/}, 08 2012.

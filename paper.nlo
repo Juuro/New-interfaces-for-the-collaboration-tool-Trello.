@@ -5,14 +5,17 @@
 \nomenclatureentry{aXML@[{XML}]\begingroup Extensible Markup Language\nomeqref {2.0}|nompageref}{5}
 \nomenclatureentry{aJSON@[{JSON}]\begingroup JavaScript Object Notation\nomeqref {2.0}|nompageref}{5}
 \nomenclatureentry{aURL@[{URL}]\begingroup Uniform Resource Locator\nomeqref {2.0}|nompageref}{5}
-\nomenclatureentry{aRFC@[{RFC}]\begingroup Request For Comments\nomeqref {2.0}|nompageref}{8}
-\nomenclatureentry{aCLI@[{CLI}]\begingroup Command Line Interface\nomeqref {3.0}|nompageref}{12}
-\nomenclatureentry{aISO@[{ISO}]\begingroup International Organization for Standardization\nomeqref {3.0}|nompageref}{14}
-\nomenclatureentry{aUTC@[{UTC}]\begingroup Universal Time Coordinated\nomeqref {3.0}|nompageref}{14}
-\nomenclatureentry{aHTML@[{HTML}]\begingroup Hyper Text Markup Language\nomeqref {4.0}|nompageref}{17}
-\nomenclatureentry{aXHTML@[{XHTML}]\begingroup Extensible Hyper Text Markup Language\nomeqref {4.0}|nompageref}{22}
-\nomenclatureentry{aERB@[{ERB}]\begingroup embedded Ruby\nomeqref {4.0}|nompageref}{22}
-\nomenclatureentry{aMVC@[{MVC}]\begingroup Model View Controller\nomeqref {4.0}|nompageref}{22}
-\nomenclatureentry{aRSS@[{RSS}]\begingroup Really Simple Syndication\nomeqref {4.0}|nompageref}{23}
-\nomenclatureentry{aCMS@[{CMS}]\begingroup Content Management System\nomeqref {4.0}|nompageref}{35}
-\nomenclatureentry{aMIME@[{MIME}]\begingroup Multipurpose Internet Mail Extensions\nomeqref {4.0}|nompageref}{38}
+\nomenclatureentry{aUTF-8@[{UTF-8}]\begingroup 8-Bit UCS Transformation Format\nomeqref {2.0}|nompageref}{8}
+\nomenclatureentry{aUCS@[{UCS}]\begingroup Universal Character Set\nomeqref {2.0}|nompageref}{8}
+\nomenclatureentry{aDBMS@[{DBMS}]\begingroup Database Management System\nomeqref {2.0}|nompageref}{9}
+\nomenclatureentry{aRFC@[{RFC}]\begingroup Request For Comments\nomeqref {2.0}|nompageref}{10}
+\nomenclatureentry{aCLI@[{CLI}]\begingroup Command Line Interface\nomeqref {3.0}|nompageref}{15}
+\nomenclatureentry{aISO@[{ISO}]\begingroup International Organization for Standardization\nomeqref {3.0}|nompageref}{17}
+\nomenclatureentry{aUTC@[{UTC}]\begingroup Universal Time Coordinated\nomeqref {3.0}|nompageref}{17}
+\nomenclatureentry{aHTML@[{HTML}]\begingroup Hyper Text Markup Language\nomeqref {4.0}|nompageref}{27}
+\nomenclatureentry{aXHTML@[{XHTML}]\begingroup Extensible Hyper Text Markup Language\nomeqref {4.0}|nompageref}{32}
+\nomenclatureentry{aERB@[{ERB}]\begingroup embedded Ruby\nomeqref {4.0}|nompageref}{32}
+\nomenclatureentry{aMVC@[{MVC}]\begingroup Model View Controller\nomeqref {4.0}|nompageref}{32}
+\nomenclatureentry{aRSS@[{RSS}]\begingroup Really Simple Syndication\nomeqref {4.0}|nompageref}{32}
+\nomenclatureentry{aCMS@[{CMS}]\begingroup Content Management System\nomeqref {4.0}|nompageref}{45}
+\nomenclatureentry{aMIME@[{MIME}]\begingroup Multipurpose Internet Mail Extensions\nomeqref {4.0}|nompageref}{54}

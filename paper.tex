@@ -40,6 +40,7 @@
 \definecolor{javagreen}{rgb}{0.25,0.5,0.35} % comments
 \definecolor{javapurple}{rgb}{0.5,0,0.35} % keywords
 \definecolor{javadocblue}{rgb}{0.25,0.35,0.75} % javadoc
+\definecolor{softgray}{rgb}{0.96,0.96,0.96}
 
 \newcommand{\todo}[1]{\textbf{\textsc{\textcolor{red}{TODO: #1}}}}
 
@@ -82,13 +83,13 @@ literate={\$}{{\textcolor{red}{\$}}}1
 
 \lstloadlanguages{Ruby} 
  \lstset{ 
-  language=Ruby, 
+  language=Ruby,
   numbers=left, 
-  numberstyle=\footnotesize, 
-  numbersep=5pt, 
+  numberstyle=\color{gray}, 
+  numbersep=8pt, 
   tabsize=2, 
   breaklines=true, 
-  frame=shadowbox, 
+  frame=single, 
   basicstyle=\ttfamily\scriptsize\small, 
   keywordstyle=\bfseries\itshape\color{javadocblue}, 
   morekeywords={puts, loop, defined, lambda, where}, 
@@ -96,7 +97,7 @@ literate={\$}{{\textcolor{red}{\$}}}1
   stringstyle=\color{javared}, 
   showspaces=false, 
   showstringspaces=false, 
-  backgroundcolor=\color{white}, 
+  backgroundcolor=\color{softgray}, 
   title=\lstname ,
   captionpos=b
   }
@@ -173,9 +174,9 @@ Thesis period: 13th march to 11th September 2012
 
 \section*{Abstract}
 
-Trello is a collaboration webservice to manage projects and assign their todo items to co-workers. There are many collaboration tools today, but most of them are very basic. Trello is very extensive and it is optimal fo small businesses. But although it works fine like it's supposed to it has its limits. Trello as its state now is a closed system. Nothing gets in or out unless you use Trello itself. But sometimes it would be handy if you were able to get content from Trello out into other applications. For example a CMS which should contain completed theses which you are already managing in Trello.
+Trello is a collaboration webservice to manage projects and assign their to-do items to co-workers. There are many collaboration tools available today, but most of them are very basic. Trello however is very extensive and it is optimal fo small businesses. But although it works fine the way it's supposed to it also has its limitations. Trello as it is now is a closed system. Nothing get in or out unless Trello itself is used. But sometimes it would be handy if is would be possible to apply data of Trello to other applications. For example a CMS which should contain alist of completed theses which are already managed in Trello.
  
-So this thesis addresses small scripts which let Trello interact with other webservices and applications. For this purpose I wrote a wrapper of the Trello API in Ruby to accomplish this task in the most dynamic way possible.
+So this thesis addresses small scripts which let Trello interact with other webservices and applications. To accomplish this task in the most dynamic way possible an API wrapper of the Trello API in the Ruby programming language emerged.
 
 \newpage
 
