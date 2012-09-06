@@ -1,12 +1,12 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces A Trello board.\relax }}{3}{figure.caption.7}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces A opened card in Trello.\relax }}{12}{figure.caption.8}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces A opened card in Trello.\relax }}{14}{figure.caption.8}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Connections between Trello, the API wrapper and the actual features. \cite {ruby:icon}\cite {html:logo}\cite {joomla}\cite {google} \relax }}{14}{figure.caption.11}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Connections between Trello, the API wrapper and the actual features. \cite {ruby:icon}\cite {html:logo}\cite {joomla}\cite {google} \relax }}{16}{figure.caption.11}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces The browser view of the HTML converted from the Markdown in listing \ref {listing006}\relax }}{30}{figure.caption.32}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Overview about kramdowns converting options. \cite {kramdown}\relax }}{31}{figure.caption.34}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces The browser view of the HTML converted from the Markdown in listing \ref {listing006}\relax }}{34}{figure.caption.32}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Overview about kramdowns converting options. \cite {kramdown}\relax }}{35}{figure.caption.34}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Alfred Extension for Trello: This command would add a card with the name \emph {Visit the Reichstag} to the board called \emph {Berlin}.\relax }}{60}{figure.caption.36}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Alfred Extension for Trello: This command would add a card with the name \emph {Visit the Reichstag} to the board called \emph {Berlin}.\relax }}{68}{figure.caption.36}
