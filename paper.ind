@@ -1,96 +1,96 @@
 \begin{theindex}
 
-  \item AJAX, \hyperpage{4}
-  \item Alfred, \hyperpage{43, 44}
-    \subitem Extension, \hyperpage{43, 44}
-  \item Android, \hyperpage{4}, \hyperpage{44}
-  \item API, \hyperpage{4}, \hyperpage{8}, \hyperpage{11}
+  \item AJAX, \hyperpage{3}
+  \item Alfred, \hyperpage{69--71}
+    \subitem Extension, \hyperpage{69, 70}
+  \item Android, \hyperpage{3}, \hyperpage{71}
+  \item API, \hyperpage{3}, \hyperpage{11}, \hyperpage{15}
 
   \indexspace
 
-  \item Backup, \hyperpage{38}
-  \item Bootstrap, \hyperpage{20, 21}
+  \item Backup, \hyperpage{61}
+  \item Bootstrap, \hyperpage{36}
 
   \indexspace
 
-  \item CLI, \hyperpage{12}
-  \item CMS, \hyperpage{36}
-  \item Command-Line Interface, \hyperpage{12}
-  \item CSS, \hyperpage{21}
+  \item CLI, \hyperpage{16}
+  \item CMS, \hyperpage{54}
+  \item Command-Line Interface, \hyperpage{16}
+  \item CSS, \hyperpage{36}
 
   \indexspace
 
-  \item ERB, \hyperpage{22}
-  \item Export, \hyperpage{38}
+  \item ERB, \hyperpage{37}
+  \item Export, \hyperpage{61}
 
   \indexspace
 
-  \item Fog Creek Software, \hyperpage{3}
+  \item Fog Creek Software, \hyperpage{1}
 
   \indexspace
 
   \item Google
-    \subitem Calendar, \hyperpage{25}
+    \subitem Calendar, \hyperpage{41}
 
   \indexspace
 
-  \item HTML, \hyperpage{21}, \hyperpage{36}
-    \subitem 4, \hyperpage{22}
-    \subitem 5, \hyperpage{4}, \hyperpage{21}
+  \item HTML, \hyperpage{36}, \hyperpage{54}
+    \subitem 4, \hyperpage{36}
+    \subitem 5, \hyperpage{3}, \hyperpage{36}
 
   \indexspace
 
-  \item iCalendar, \hyperpage{30}
-  \item Import, \hyperpage{38}
-  \item iOS, \hyperpage{4}, \hyperpage{44}
+  \item iCalendar, \hyperpage{46}
+  \item Import, \hyperpage{64}
+  \item iOS, \hyperpage{3}, \hyperpage{71}
   \item ISO
-    \subitem 8601, \hyperpage{14}
+    \subitem 8601, \hyperpage{18}
 
   \indexspace
 
-  \item JavaScript, \hyperpage{21}
-  \item Joomla, \hyperpage{34}
-  \item JSON, \hyperpage{8}
+  \item JavaScript, \hyperpage{36}
+  \item Joomla, \hyperpage{52}
+  \item JSON, \hyperpage{11, 12}
 
   \indexspace
 
-  \item LESS, \hyperpage{21}
-  \item Linux, \hyperpage{44}
+  \item LESS, \hyperpage{36}
+  \item Linux, \hyperpage{71}
 
   \indexspace
 
-  \item Mac, \hyperpage{43, 44}
-  \item Markdown, \hyperpage{18}, \hyperpage{36}
-  \item MIME, \hyperpage{38, 39}
+  \item Mac, \hyperpage{69}, \hyperpage{71}
+  \item Markdown, \hyperpage{32}, \hyperpage{54}
+  \item MIME, \hyperpage{64}
 
   \indexspace
 
-  \item RSS, \hyperpage{23}
-  \item Ruby, \hyperpage{7}
-  \item RubyGems, \hyperpage{7}
+  \item RSS, \hyperpage{38}
+  \item Ruby, \hyperpage{4, 5}
+  \item RubyGems, \hyperpage{5}
 
   \indexspace
 
-  \item Templating, \hyperpage{22}
-  \item timezone, \hyperpage{14}
-  \item Trello, \hyperpage{3, 4}, \hyperpage{8}, \hyperpage{11}, 
-		\hyperpage{43, 44}
-  \item Twitter, \hyperpage{20, 21}
+  \item Templating, \hyperpage{37}
+  \item timezone, \hyperpage{18}
+  \item Trello, \hyperpage{3, 4}, \hyperpage{11}, \hyperpage{15}, 
+		\hyperpage{69, 70}
+  \item Twitter, \hyperpage{36}
 
   \indexspace
 
-  \item W3C, \hyperpage{21}
-  \item Windows, \hyperpage{44}
-    \subitem Search, \hyperpage{43}
-  \item World Wide Web Consortium, \hyperpage{21}
+  \item W3C, \hyperpage{36}
+  \item Windows, \hyperpage{71}
+    \subitem Search, \hyperpage{69}
+  \item World Wide Web Consortium, \hyperpage{36}
 
   \indexspace
 
-  \item XHTML, \hyperpage{22}
-  \item XML, \hyperpage{22, 23}
+  \item XHTML, \hyperpage{36}
+  \item XML, \hyperpage{36}, \hyperpage{38}
 
   \indexspace
 
-  \item ZIP, \hyperpage{38}
+  \item ZIP, \hyperpage{64}
 
 \end{theindex}

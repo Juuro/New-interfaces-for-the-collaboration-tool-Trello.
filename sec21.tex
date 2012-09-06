@@ -2,61 +2,33 @@
 % Trello API wrapper
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \onehalfspacing
-\chapter{Trello API wrapper}\index{Trello}\index{API}
+\chapter{Trello API wrapper}\index{Trello}\index{API}\label{apiwrapper}
 
-These scripts fulfill very different tasks, but they have also much in common. For example almost every script potentially loads single cards. This API wrapper represent Trello in Ruby. This is a kind of translation from Trello to Ruby and vice versa. Additionally, now the scripts can use the functions and in consequence they can stay very lightweight and clean. Almost everything that's possible with the Trello API is also possible with this API wrapper. But it doesn't cover all features, because the API is still in beta phase, so it changes quite quickly.
+These scripts fulfill very different tasks, but they have also much in common. For example, almost every script potentially loads single cards. This API wrapper represents Trello in Ruby. This is a kind of translation from Trello to Ruby and vice versa. Additionally, the scripts can now use the functions and, in consequence, they can stay very lightweight and clean. Almost everything that is possible with the Trello API is also possible with this API wrapper. It doesn't cover all features, though, because the API is still in beta phase, so it changes quite quickly.
 
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{figures/api-wrapper}
-\caption{Connections between Trello, the API wrapper and the actual features. \cite{ruby:icon}\cite{html:logo}\cite{joomla}\cite{google} }
+\caption{Connections between Trello, the API wrapper, and the actual features. \cite{ruby:icon}\cite{html:logo}\cite{joomla}\cite{google} }
 \label{fig: api-wrapper}
 \end{figure}
 
-The API wrapper also has functions to pre-process data for Ruby. From a developer's point of view, Trello is all about cards. Cards are the only things in Trello with real data, not just meta data. So if the task is to get a board from the API\index{API} it means to get the cards of the board. There is an API call to get all cards which are in a specific board. But with this call the developer doesn't get all the information about the cards. So the API wrapper has to execute the API call for a single card to cumulate all the information about all the cards of the board. This is the function of the API wrapper to keep the actual script clean. So the developer can work with the data and doesn't have to worry about determining it.
+The API wrapper also has functions to pre-process data for Ruby. From a developer's point of view, Trello is all about cards. Cards are the only things in Trello with real data, not just meta data. So if the task is to get a board from the API\index{API}, it means to get the cards of the board. Although the developer won't be able to read out all information, there is an API call to get all cards belonging in a specific board. So the API wrapper has to execute the API call for a single card to cumulate all the information about all the cards of the board. This is the function of the API wrapper, to keep the actual script clean. So the developer can work with the data and doesn't have to worry about determining it.
 
 \todo{So stehen lassen?} The API wrapper is meant to perform all API calls which are required by the scripts. None of the API calls should be performed by the scripts that use the bucket.
 
-\section{Error handling}
-\todo{Error Handling}
-
-Error handling in Ruby is realised with \lstinline{begin} blocks. A \lstinline{begin} block is like an \lstinline{if} expression but for \lstinline{exceptions}. 
-
-\begin{lstlisting}[aboveskip=1\baselineskip, caption=Error handling with \lstinline{begin} blocks., label=listing042]
-begin
-	my = Mysql.init
-	my.real_connect(dbhost, dbuser, dbpassword, db)
-rescue => e
-	puts e.message
-else  (*@ \label{line036} @*)
-	puts "It works!"
-ensure
-	mysql.close if mysql
-end
-\end{lstlisting}
-
-A \lstinline{begin} block has several section. The first section is the \lstinline{begin} section. Here the code to check is executed. The example in listing \ref{listing042} shows a simple database connection. With the \lstinline{begin} block araound it Ruby checks if there occur any exceptions while executing this code. If there are exception indeed, the \lstinline{rescue} sections comes to help out. The error is stored in the variable \lstinline{e}. At least the message can be printed here, to inform the user. A \lstinline{begin} block may contain multiple \lstinline{rescue} sections. It's possible to specify special types of exceptions so corresponding actions can be performed. 
-
-\begin{lstlisting}[aboveskip=1\baselineskip, caption=\texttt{joomlaMultiple.rb} usage., label=listing043]
-rescue Mysql::Error => e
-\end{lstlisting}
-
-In listing \ref{listing043} the \lstinline{Mysql::Error} class is specified. In this \lstinline{rescue} section only exception of this class will be handled.
-
-An \lstinline{else} section in a \lstinline{begin} block like in \ref{line036} of listing \ref{listing042} is allowed only if there is one or more \lstinline{rescue} blocks. It is executed if there are no exceptions. The last section is the \lstinline{ensure} block. It is executed no matter whether there is an exception or not. In the example the initialiser database connection is closed. This section is supposed to finish the execution of the whole block.
-
 
 \section{Command Line Interface}\nomenclature{CLI}{Command Line Interface}\index{CLI}\index{Command-Line Interface}\label{cli}
-Almost every script needs some information. The information which every scripts needs is the key and token of the user whose account should be used to access Trello. The scripts have to know which cards, lists and boards they have to look at. So this information has to be passed on to the scripts, too. At first we set this information at the top of the script. But it emerged that it's very unpractical to hard code this in each script. So it would be impossible to use the same Ruby file with several Trello accounts. For every Trello account the user has to generate a dedicated file. The solution for this problem is a command-line interface (CLI). With a CLI the user can pass on information to the script in a predefined format, so the script knows exactly what to do. For every other call the user can specify different information for the same script.
+Almost every script needs some information. The information which every scripts needs, is the key and token of the user whose account is supposed to be used to access Trello. The scripts have to know which cards, lists, and boards they have to look at. Therefore, this information has to be passed on to the scripts, too. At first we set this information at the top of the script. But it became obvious that it is very unpractical to hard code this in each script. This way, it would be impossible to use the same Ruby file with several Trello accounts. For every Trello account, the user has to generate a dedicated file. The solution for this problem is a command-line interface (CLI). With a CLI, the user can pass on information to the script in a predefined format, so the script knows exactly what to do. For every other call, the user can specify different information for the same script.
 
-The Ruby class OptionParser\cite{ruby:optionparser} provides easy customisable command-line option analysis. The developer is able to specify its own options for each script. For this purpose a dedicated class is used. 
-In order to let the actual script \emph{know} about the CLI arguments the developer has to require the respective CLI class with the command-line option definitions.
+The Ruby class OptionParser\cite{ruby:optionparser} provides easy customisable command-line option analysis. The developer is able to specify their own options for each script. For this purpose, a dedicated class is used. 
+In order to let the actual script \emph{know} about the CLI arguments, the developer has to require the respective CLI class with the command-line option definitions.
 
 \begin{lstlisting}[aboveskip=1\baselineskip, style=bash, caption=Example usage of a script with CLI., label=listing004]
 ruby html.rb -c 4ffd78a2c063afeb066408b8
 \end{lstlisting}
 
-An example usage of a script with CLI would look like Listing \ref{listing004}. The \texttt{-c} is a command-line option. If there is a string behind the option, like in this case, the string is a so called \emph{argument}. But there are command-line options which stand by themselves. These are called \emph{flags}. Flags are only for polar decisions.
+An example usage of a script with CLI would look like Listing \ref{listing004}. The \texttt{-c} is a command-line option. If there is a string behind the option, like in this case, the string is a so called \emph{argument}. But there are command-line options which stand by themselves. These are called \emph{flags}, which are for polar decisions only.
 
 \begin{lstlisting}[aboveskip=1\baselineskip, caption=Definition of a command-line option, label=listing002]
 # Trello list(s)
@@ -71,7 +43,7 @@ OptionParse provides an automated help option. If the user types
 \begin{center}
 \texttt{ruby script.rb -h} 
 \end{center}
-he gets the explanation the developer wrote in the CLI class for this script with all possible options. This list is automatically generated by the definitions of the command-line options like in Listing \ref{listing002}. It works with \texttt{-help} and \texttt{--help} instead of \texttt{-h}, too.
+they get the explanation the developer wrote in the CLI class for this script with all possible options. This list is automatically generated by the definitions of the command-line options like in Listing \ref{listing002}. It works with \texttt{-help} and \texttt{--help} instead of \texttt{-h}, too.
 
 \begin{lstlisting}[aboveskip=1\baselineskip, style=bash, caption=Output of the \texttt{-h} option., label=listing003]
 Usage: ical.rb [options]
@@ -81,19 +53,20 @@ Specific options:
  -a, --[no-]all         Set this if all due dates of all cards of all boards this user can see shall be used.
  -l, --lists x,y,z      Ids of one or more Trello lists.
  -b, --boards x,y,z     Ids of one or more Trello boards.
+ -o, --organizations x,y,z Ids of one or more Trello organizations.
  -c, --cards x,y,z      Ids of one or more Trello cards.
  -k MANDATORY, --key    Your Trello key.
  -t MANDATORY, --token  The Trello token.
 \end{lstlisting}
 
 Listing \ref{listing003} shows the Output of \texttt{ruby ical.rb -h}. 
-These are the basic CLI commands used by every script. For some scripts there are additional commands. They are explained in their respective sections.
+These are the basic CLI commands used by every script. For some scripts there are additional commands, which are explained in their respective sections.
 
-\section{Actual methods} \todo{Working title!!!}
+\section{Methods}
 The API calls which are wrapped by the following methods need a private key and a token to access content in private boards. Thus, private key and token need not be sent to each method, it will be initialized in each script as global variables. The variable for the private key is alled \lstinline{$key} and the one for the token is called \lstinline{$token}.
 
 \subsection{Handling of date and time}
-Content in Trello may have set dates. These dates are represented by the Trello API as an ISO\nomenclature{ISO}{International Organization for Standardization} 8601\index{ISO!8601}\footnote{More information about ISO 8601 on the website of the International Organization for Standardization: \url{http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=40874}. The RFC 3339 is a profile of ISO 8601: \url{http://www.ietf.org/rfc/rfc3339.txt}} formatted string. The timezone\index{timezone} of the date is UTC\nomenclature{UTC}{Universal Time Coordinated}. To ensure that the correct time is always displayed the date has to be adapted to the local time. 
+Content in Trello may have set dates. These dates are represented by the Trello API as an ISO\nomenclature{ISO}{International Organization for Standardization} 8601\index{ISO!8601}\footnote{More information about ISO 8601 on the website of the International Organization for Standardization: \url{http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=40874}. The RFC 3339 is a profile of ISO 8601: \url{http://www.ietf.org/rfc/rfc3339.txt}} formatted string. The timezone\index{timezone} of the date is UTC\nomenclature{UTC}{Universal Time Coordinated}. To ensure that the correct time is always displayed, the date has to be adapted to local time. 
 
 \subsubsection{getDate(date, format='de')}
 \begin{lstlisting}[aboveskip=1\baselineskip, caption=\lstinline{getDate()}, label=listing044]
@@ -116,7 +89,7 @@ def getDate(date, format='de')
 end
 \end{lstlisting}
 
-In line \ref{line045} of listing \ref{listing044} the given date string in ISO 8601 format is parsed to a Ruby Time object. The \lstinline{getlocal} is the important part here. This function of the Time class determines the server's time zone and readjusts the time accordingly. The method respects the daylight saving time in several time zones, too. For this function working as intended it's important that the correct time zone is set on the used server. 
+In line \ref{line045} of listing \ref{listing044} the given date string in ISO 8601 format is parsed to a Ruby Time object. The \lstinline{getlocal} is the important part here. This function of the Time class determines the server's time zone and readjusts the time accordingly. This method respects the daylight saving time in several time zones, too. For this function working as intended it is important that the correct time zone is set on the used server. 
 
 The \lstinline{getDate()} method additionaly converts the date to othe formats. 
 
@@ -288,8 +261,6 @@ def getCardsAsArray(arrayCardsStd, downloads = true)
 end
 \end{lstlisting}
 
-\todo{Describe all the methods. Consider renaming for constancy?}
-
 \subsection{Further information on a card}
 
 \subsubsection{getCardActions(cardId)}
@@ -362,8 +333,6 @@ def getAttachment(cardId)
 end
 \end{lstlisting}
 
-\todo{Describe all the methods. Consider renaming for constancy?}
-
 \subsection{Member information}
 
 \subsubsection{getMember(memberId)}
@@ -404,7 +373,3 @@ end
 \begin{lstlisting}[aboveskip=1\baselineskip, caption= trelloJoomlaSync(), label=listing062]
 
 \end{lstlisting}
-
-
-
-

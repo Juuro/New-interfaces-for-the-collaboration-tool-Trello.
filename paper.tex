@@ -18,13 +18,15 @@
 \usepackage{textcomp}
 \usepackage[numbers]{natbib}
 \usepackage[margin=10pt,font=small,labelfont=bf]{caption}
-\usepackage[utf8]{inputenc}
+%\usepackage[utf8]{inputenc}
+\usepackage[utf8x]{inputenc} %%%%%%%%%%%%%%%%%%Linuxified!
+\usepackage[normalem]{ulem} %%%%%%%%%%%%% Alena braucht
 \usepackage{nomencl} 
 \usepackage{makeidx}
 \makenomenclature
 \makeindex
-
 \usepackage{setspace}
+
 
 \setlength{\parindent}{0mm}
 
@@ -45,6 +47,17 @@
 \definecolor{softgray}{rgb}{0.96,0.96,0.96}
 
 \newcommand{\todo}[1]{\textbf{\textsc{\textcolor{red}{TODO: #1}}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%% Alenas Korrektur-Tools
+
+\newcommand{\anmerkung}[1]{\marginpar{\textcolor{darkgreen}{#1}}} %Randbemerkungen
+\newcommand{\headsup}{\marginpar{\textbf{\textcolor{darkgreen}X}}}
+\newcommand{\alena}[1]{\textbf{\textcolor{darkgreen}{#1}}} %Inline-Korrekturen
+\newcommand{\komma}{\alena{, }} %% Aufgrund häufigen Gebrauchs ein eigener Befehl ;)
+\newcommand{\nicht}[1]{\textbf{\sout{\textcolor{darkgreen}{#1}}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %\lstloadlanguages{Java,XML,HTML,C++,SQL,C}
 \hypersetup{colorlinks,
@@ -121,31 +134,38 @@ literate={\$}{{\textcolor{red}{\$}}}1
 \begin{document}
 
 
-\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% hier steht die neue Titelseite 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- 
+
 \begin{titlepage}
  \begin{center}
   {\LARGE Eberhard Karls Universit\"at T\"ubingen}\\
-  {\large Mathematisch-Naturwissenschaftliche Fakultät \\
-Wilhelm-Schickard-Institut f\"ur Informatik\\[4cm]}
-  {\huge Diplom Thesis Informatics\\[2cm]}
+  {\large Faculty of Science \\
+Wilhelm-Schickard Institute of Computer Science\\
+Database Systems Chair\\[4cm]}
+  {\huge Diplom Thesis Computer Science\\
+  \\[2cm]}
   \todo{?}
-  {\Large\bf  Framework for connecting Trello to other services and applications\\[1.5cm]}
+  {\Large\bf  New interfaces for the collaboration tool Trello\\[1.5cm]}
  {\large Sebastian Engel}\\[0.5cm]
 11th September 2012\\[4cm]
-{\small\bf Referees}\\[0.5cm]
-  \parbox{7cm}{\begin{center}{\large Prof. Dr. Torsten Grust}\\
-   (Informatik)\\
-  {\footnotesize Wilhelm-Schickard-Institut f\"ur Informatik\\
-	Universit\"at T\"ubingen}\end{center}}\hfill\parbox{7cm}{\begin{center}
-  {\large Name Zweitgutachter}\\
-  ( )\\
-  {\footnotesize Medizinische Fakult\"at\\
-	Universit\"at T\"ubingen}\end{center}
+
+  \parbox{7cm}{\begin{center}
+
+{\small\bf Supervisor}\\[0.5cm]
+{\large Prof. Dr. Torsten Grust}\\
+   %(Informatik)\\
+  %{\footnotesize Wilhelm-Schickard-Institut f\"ur Informatik\\
+	%Universit\"at T\"ubingen}
+	\end{center}
+	}\hfill\parbox{7cm}{\begin{center}
+{\small\bf Advisor}\\[0.5cm]
+  {\large M.Sc. Tom Schreiber}\\
+  %(Informatik)\\
+  %{\footnotesize Wilhelm-Schickard-Institut f\"ur Informatik\\
+	%Universit\"at T\"ubingen}
+	\end{center}
  }
   \end{center}
 \end{titlepage}
@@ -158,7 +178,7 @@ Wilhelm-Schickard-Institut f\"ur Informatik\\[4cm]}
 \vspace*{\fill}
 \begin{minipage}{11.2cm}
 \textbf{Engel, Sebastian:}\\
-\emph{Framework for connecting Trello to other services and applications}\\ Diplom Thesis Informatics\\
+\emph{Framework for connecting Trello to other services and applications}\\ Diplom Thesis Computer Science\\
 Eberhard Karls Universit\"at T\"ubingen\\
 Thesis period: 13th march to 11th September 2012
 \end{minipage}
@@ -173,17 +193,19 @@ Thesis period: 13th march to 11th September 2012
 %%% Seite I: Zusammenfassug, Danksagung
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\onehalfspacing
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
 
 \section*{Abstract}
 
-Trello is a collaboration webservice to manage projects and assign their to-do items to co-workers. There are many collaboration tools available today, but most of them are very basic. Trello however is very extensive and it is optimal fo small businesses. But although it works fine the way it's supposed to it also has its limitations. Trello as it is now is a closed system. Nothing get in or out unless Trello itself is used. But sometimes it would be handy if is would be possible to apply data of Trello to other applications. For example a CMS which should contain alist of completed theses which are already managed in Trello.
+Trello is a collaboration webservice to manage projects and assign their to-do items to co-workers. There are many collaboration tools available today, but most of them are very basic. Nevertheless, it also has its limitations. Trello, as it is now, is a closed system. Nothing gets in or out unless Trello itself is used. It sometimes would be handy though, if it would be possible to apply Trello data to other applications. For example a CMS containing a list of posts which already managed in Trello.
  
-So this thesis addresses small scripts which let Trello interact with other webservices and applications. To accomplish this task in the most dynamic way possible an API wrapper of the Trello API in the Ruby programming language emerged.
+Therefore, several scripts were developed for this thesis which let Trello interact with other webservices and applications. To accomplish this task in the most dynamic way possible, an API wrapper of the Trello API in the Ruby programming language was implemented.\\[5mm]
 
 \newpage
 
 \section*{Acknowledgements}
-Thanks to Prof. Grust and M.Sc. Tom Schreiber for the oppurtunity to work on this interesting project. A great thank you to my lectors Alena Dausacker and Jennifer Proehl. Thanks to Moritz Uhlig for introducing me to HTML in the first place. Thanks to Sabrina Pfeffer, Martin Lahl, Philipp Wolter, Thomas Zappe and Steffen Zietkowski for the support during my studies. Thanks to my parents for the financial support and the patience.
+%Thanks to Prof. Grust and M.Sc. Tom Schreiber for the oppurtunity to work on this interesting project. A great thank you to my lectors Alena Dausacker and Jennifer Proehl. Thanks to Moritz Uhlig for introducing me to HTML in the first place. Thanks to Sabrina Pfeffer, Martin Lahl, Philipp Wolter, Thomas Zappe and Steffen Zietkowski for the support during my studies. Thanks to my parents for the financial support and the patience.
 
 \cleardoublepage
 
@@ -306,7 +328,7 @@ Thanks to Prof. Grust and M.Sc. Tom Schreiber for the oppurtunity to work on thi
 \thispagestyle{empty}
 \section*{Statement of authorship}
 
-I certify that I have prepared this thesis independently and that I'm using only the tools mentioned here. All passages that have been taken from other works are characterized as borrowing. This thesis has been submitted in identical or similar form in any other program as an examination.
+I hereby declare that I have authored this thesis alone and independently, exclusively using the tools mentioned. All passages taken from or based on other works are marked as citations. I confirm that this thesis has never been submitted in identical or similar form for examination in any other degree programme.
 
 \vskip 3cm
 

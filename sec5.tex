@@ -7,7 +7,7 @@
 
 \section{Trello Alfred Extension}\index{Trello}\index{Alfred!Extension}
 
-Alfred \cite{alfred}\index{Alfred} is a small Mac\index{Mac} application which simplifies the way one can search the web or access all sorts of applications. It constist just of a input field which one cann access with a keystroke combination. It's like an extended Spotlight (on Mac\index{Mac}) or Windows Search\index{Windows!Search} (on Windows). Developers can write extensions to access other webservices and applications with Alfred\index{Alfred}. It's even possible to run scripts with Alfred\index{Alfred}. With that possibility given it's perfect for acessing Trello while working in a fast and easy way. 
+Alfred \cite{alfred}\index{Alfred} is a small Mac\index{Mac} application which simplifies the way one can search the web or access all sorts of applications. It simply consists of an input field which one can access with a keystroke combination. It is alike to an extended Spotlight (on Mac\index{Mac}) or Windows Search\index{Windows!Search} (on Windows). Developers can write extensions to access other webservices and applications with Alfred\index{Alfred}. It even is possible to run scripts with Alfred\index{Alfred}. With that possibility given, it is perfect for accessing Trello while working in a fast and easy way. 
 
 
 
@@ -20,7 +20,7 @@ There are three commands to add or read cards with this extension:
 	\item \texttt{trello board-name list-name text for a new card} will add a new card with the specified text to this list of this board.
 \end{enumerate}
 
-If you enter \texttt{trello Berlin Visit the Reichstag} in Alfred\index{Alfred} the extension looks for a board called \emph{Berlin}. If it finds nothign it looks for \emph{Berlin Visit} and so on. So your board names shouldn't end with an imperative. The thought behind this operating principle is that it's very unlikely that a board name ends with an imperative and that imperatives are often used for card titles because cards are sort of a command.
+If you enter \texttt{trello Berlin Visit the Reichstag} in Alfred\index{Alfred}, the extension looks for a board called \emph{Berlin}. If it finds nothing, it looks for \emph{Berlin Visit} and so forth. It is therefore advisable for board names to not end on an imperative. The thought behind this operating principle is that it's very unlikely for a board name to end on an imperative and that imperatives are often used for card titles because cards are generally phrased as a command to oneself.
 
 \begin{figure}[htb]
 \centering
@@ -29,13 +29,11 @@ If you enter \texttt{trello Berlin Visit the Reichstag} in Alfred\index{Alfred} 
 \label{fig:trello-ext}
 \end{figure}
 
-If you omit the text after the board name the extension will show you all card names of this board and its statuses.
+If you omit the text after the board name, the extension will show you all card names of this board and their statuses.
 
-Sometimes there are several boards with similar board names. In this case the extension will pick the \textquotedblleft last\textquotedblright match. So if you have two boards called \emph{Berlin} and \emph{Berlin sightseeing} the extension will would pick \emph{Berlin sightseeing}. This approach makes sense because if the extension would pick the first match, in this case \emph{Berlin}, it wouldn't be possible to access \emph{Berlin sightseeing}. In the case that one wants to access \emph{Berlin} and add a new card beginning with \emph{sightseeing} one has to put this board name betweet tick marks.
-
-\todo{Maybe code it and verify practicability.}
+Sometimes, there are several boards with similar names. In this case, the extension will pick the \textquotedblleft last\textquotedblright match. If you have two boards called \emph{Berlin} and \emph{Berlin sightseeing}, the extension will pick \emph{Berlin sightseeing}. This approach makes sense considering that, if the extension would pick the first match -- in this case \emph{Berlin} -- it wouldn't be possible at all to access \emph{Berlin sightseeing}. When aiming to access \emph{Berlin} and add a new card beginning with \emph{sightseeing}, one has to put this board name betweet tick marks.
 
 \section{Native applications}
-Although Trello is an extremely good web-app, I'm of the opinion that a native application is always the better solution. The first reason is because it's a dedicated app and so it's integrated with the operationg system. Especially for to-do-applications it's an advantage that they can access the systems notification system, or that they could completely vanish in the background so they don't bother the user while working. There are mobile applications for iOS\index{iOS} \cite{trello:ios} and Android\index{Android} \cite{trello:android} by Trello itself. But theres no Mac\index{Mac}, Windows\index{Windows} or Linux\index{Linux} application.
+Although Trello is an extremely good web-app, I'm convinced that a native application is always the better solution. Firstly, it is a dedicated app and therefore integrated with the operating system. Especially for todo-applications, it is favourable to be able to access the system's notification system. This way, the application can stay invisible in the background until the user acutally needs to be alerted, thus granting an undisturbed working environment. There are mobile applications for iOS\index{iOS} \cite{trello:ios} and Android\index{Android} \cite{trello:android} by Trello itself, but there is no Mac\index{Mac}, Windows\index{Windows}, or Linux\index{Linux} application.
 
-A native application would even speed up the Alfred\index{Alfred} extension because the application could cache the data. So there hasn't to be an actual HTTP request for every command by the Alfred extension. And if a HTTP request necessary the user hasn't to wait because the application will handle the command in the background.
+A native application would even speed up the Alfred\index{Alfred} extension because it could cache the data. This way, ther wouldn't be a need for an actual HTTP request for every command by the Alfred extension. And, if a HTTP request is necessary, the user doesn't have to wait as the application will handle the command in the background.
