@@ -4,24 +4,51 @@
   \item Alfred, \hyperpage{69--71}
     \subitem Extension, \hyperpage{69, 70}
   \item Android, \hyperpage{3}, \hyperpage{71}
-  \item API, \hyperpage{3}, \hyperpage{11}, \hyperpage{15}
+  \item API, \hyperpage{3}, \hyperpage{11}, \hyperpage{15}, 
+		\hyperpage{19}, \hyperpage{22}, \hyperpage{26}, 
+		\hyperpage{28}, \hyperpage{48, 49}, \hyperpage{58}, 
+		\hyperpage{61, 62}, \hyperpage{67}
+    \subitem call, \hyperpage{8}
+    \subitem RESTful, \hyperpage{5}
+    \subitem wrapper, \hyperpage{6}, \hyperpage{15}, \hyperpage{19}, 
+		\hyperpage{25}, \hyperpage{37}, \hyperpage{48}, 
+		\hyperpage{55}, \hyperpage{59}
+  \item API wrapper, \hyperpage{49}
+  \item Apple
+    \subitem Calendar, \hyperpage{48}
+    \subitem iCal, \hyperpage{48}
+  \item authentication, \hyperpage{48}
 
   \indexspace
 
-  \item Backup, \hyperpage{61}
-  \item Bootstrap, \hyperpage{36}
+  \item Backup, \hyperpage{60}
+  \item Bootstrap, \hyperpage{41, 42}
+  \item browser, \hyperpage{10}
 
   \indexspace
 
-  \item CLI, \hyperpage{16}
-  \item CMS, \hyperpage{54}
+  \item CLI, \hyperpage{16, 17}, \hyperpage{65}
+  \item CMS, \hyperpage{26, 27}, \hyperpage{58}, \hyperpage{67}
+  \item collaboration tool, \hyperpage{67}
   \item Command-Line Interface, \hyperpage{16}
-  \item CSS, \hyperpage{36}
+  \item CSS, \hyperpage{41}
 
   \indexspace
 
-  \item ERB, \hyperpage{37}
-  \item Export, \hyperpage{61}
+  \item database, \hyperpage{6}, \hyperpage{8, 9}, \hyperpage{29, 30}
+    \subitem connection, \hyperpage{6}
+  \item databse, \hyperpage{26}
+  \item daylight saving time, \hyperpage{22}
+  \item DBMS, \hyperpage{7, 8}
+  \item developer, \hyperpage{5}
+
+  \indexspace
+
+  \item ERB, \hyperpage{43}, \hyperpage{47}
+  \item error handling, \hyperpage{8}
+  \item exception, \hyperpage{8, 9}
+  \item Export, \hyperpage{60}
+  \item extensions, \hyperpage{5}
 
   \indexspace
 
@@ -29,68 +56,146 @@
 
   \indexspace
 
-  \item Google
-    \subitem Calendar, \hyperpage{41}
+  \item Gem, \hyperpage{5}
+  \item gem, \hyperpage{5}, \hyperpage{55}
+  \item Google, \hyperpage{48, 49}, \hyperpage{57}
+    \subitem Calendar, \hyperpage{47--52}, \hyperpage{57}, 
+		\hyperpage{67}
+    \subitem Calendar API, \hyperpage{48}, \hyperpage{51}
+  \item Gruber
+    \subitem John, \hyperpage{39}
 
   \indexspace
 
-  \item HTML, \hyperpage{36}, \hyperpage{54}
-    \subitem 4, \hyperpage{36}
-    \subitem 5, \hyperpage{3}, \hyperpage{36}
+  \item HTML, \hyperpage{27--29}, \hyperpage{33}, \hyperpage{38--43}, 
+		\hyperpage{45}, \hyperpage{47}, \hyperpage{60}, 
+		\hyperpage{67}
+    \subitem 4, \hyperpage{43}
+    \subitem 5, \hyperpage{3}, \hyperpage{42, 43}
+    \subitem Working Group, \hyperpage{42}
+  \item HTTP
+    \subitem request method, \hyperpage{9}
 
   \indexspace
 
-  \item iCalendar, \hyperpage{46}
-  \item Import, \hyperpage{64}
+  \item iCalendar, \hyperpage{52--57}, \hyperpage{67}
+  \item Import, \hyperpage{63}
+  \item installation, \hyperpage{5}
+  \item Internet Engineering Task Force Calendaring and Scheduling Working Group, 
+		\hyperpage{52}
+  \item Internet Mail Consortium, \hyperpage{52}
+  \item intuitive, \hyperpage{4}
   \item iOS, \hyperpage{3}, \hyperpage{71}
   \item ISO
-    \subitem 8601, \hyperpage{18}
+    \subitem 8601, \hyperpage{21}
 
   \indexspace
 
-  \item JavaScript, \hyperpage{36}
-  \item Joomla, \hyperpage{52}
-  \item JSON, \hyperpage{11, 12}
+  \item JavaScript, \hyperpage{41}
+  \item Joomla, \hyperpage{26}, \hyperpage{29}, \hyperpage{33}, 
+		\hyperpage{58--60}, \hyperpage{67}
+    \subitem Platform, \hyperpage{58}
+  \item JSON, \hyperpage{10--13}, \hyperpage{20}, \hyperpage{61, 62}
 
   \indexspace
 
-  \item LESS, \hyperpage{36}
+  \item kramdown, \hyperpage{40, 41}
+
+  \indexspace
+
+  \item LaTeX, \hyperpage{41}
+  \item LESS, \hyperpage{41}
+  \item library, \hyperpage{5}
   \item Linux, \hyperpage{71}
 
   \indexspace
 
   \item Mac, \hyperpage{69}, \hyperpage{71}
-  \item Markdown, \hyperpage{32}, \hyperpage{54}
-  \item MIME, \hyperpage{64}
+  \item Mac OS X
+    \subitem 10.8, \hyperpage{48}
+  \item Markdown, \hyperpage{27}, \hyperpage{39--41}
+  \item Matsumoto
+    \subitem Yukihiro, \hyperpage{4}
+  \item Microsoft
+    \subitem Outlook, \hyperpage{48}
+  \item MIME, \hyperpage{52}, \hyperpage{63, 64}
+  \item MySQL, \hyperpage{6}, \hyperpage{8}, \hyperpage{30}
+    \subitem library, \hyperpage{7}
+    \subitem query, \hyperpage{6}
+    \subitem statement, \hyperpage{6, 7}, \hyperpage{31}
 
   \indexspace
 
-  \item RSS, \hyperpage{38}
-  \item Ruby, \hyperpage{4, 5}
+  \item open-uri, \hyperpage{11}
+  \item OpenStruct, \hyperpage{18}
+  \item operating system, \hyperpage{5}
+  \item OptionParser, \hyperpage{16}
+
+  \indexspace
+
+  \item PDF, \hyperpage{41}
+  \item Perl, \hyperpage{39}
+  \item prepared statements, \hyperpage{8}
+  \item private key, \hyperpage{19}
+  \item programming language, \hyperpage{4}
+
+  \indexspace
+
+  \item query optimisation, \hyperpage{7}
+
+  \indexspace
+
+  \item RestClient, \hyperpage{10}
+  \item RESTful, \hyperpage{9--11}
+  \item RSS, \hyperpage{44}
+  \item Ruby, \hyperpage{4--7}, \hyperpage{9}, \hyperpage{15, 16}, 
+		\hyperpage{18}, \hyperpage{29}, \hyperpage{46}, 
+		\hyperpage{48}, \hyperpage{55}, \hyperpage{61}, 
+		\hyperpage{67}
+    \subitem installation, \hyperpage{5}
+    \subitem standard library, \hyperpage{5}
   \item RubyGems, \hyperpage{5}
 
   \indexspace
 
-  \item Templating, \hyperpage{37}
-  \item timezone, \hyperpage{18}
+  \item SQL
+    \subitem injection, \hyperpage{8}
+
+  \indexspace
+
+  \item Templating, \hyperpage{43}
+  \item time zone, \hyperpage{22}
+  \item timezone, \hyperpage{21}
+  \item token, \hyperpage{19}
   \item Trello, \hyperpage{3, 4}, \hyperpage{11}, \hyperpage{15}, 
 		\hyperpage{69, 70}
-  \item Twitter, \hyperpage{36}
+  \item Twitter, \hyperpage{41, 42}
 
   \indexspace
 
-  \item W3C, \hyperpage{36}
+  \item Unix, \hyperpage{5}
+  \item URL, \hyperpage{28}, \hyperpage{49}
+
+  \indexspace
+
+  \item variable
+    \subitem global, \hyperpage{19}
+
+  \indexspace
+
+  \item W3C, \hyperpage{42}
   \item Windows, \hyperpage{71}
     \subitem Search, \hyperpage{69}
-  \item World Wide Web Consortium, \hyperpage{36}
+  \item World Wide Web Consortium, \hyperpage{42}
 
   \indexspace
 
-  \item XHTML, \hyperpage{36}
-  \item XML, \hyperpage{36}, \hyperpage{38}
+  \item XHTML, \hyperpage{43}
+  \item XML, \hyperpage{43, 44}
 
   \indexspace
 
-  \item ZIP, \hyperpage{64}
+  \item ZIP, \hyperpage{63}
+  \item zippy, \hyperpage{62}
 
 \end{theindex}

@@ -135,6 +135,10 @@ Restful web services: The basics.
   \url{https://www.ibm.com/developerworks/webservices/library/ws-restful/}, 08
   2012.
 
+\bibitem[rfc96]{rfc:2046}
+Rfc 2046 - multipurpose internet mail extensions (mime) part two: Media types.
+\newblock \url{http://tools.ietf.org/html/rfc2046}, 11 1996.
+
 \bibitem[rfc98]{rfc:2445}
 Rfc 2445 - internet calendaring and scheduling core object specification
   (icalendar).
@@ -159,19 +163,31 @@ Iap: Caffeinated crash course in ruby.
 About ruby.
 \newblock \url{http://www.ruby-lang.org/en/about/}, 08 2012.
 
-\bibitem[rub12b]{ruby:optionparser}
+\bibitem[rub12b]{ruby:openstruct}
+Class: Openstruct (ruby 1.9.3).
+\newblock
+  \url{http://www.ruby-doc.org/stdlib-1.9.3/libdoc/ostruct/rdoc/OpenStruct.html#method-i-3D-3D},
+  09 2012.
+
+\bibitem[rub12c]{ruby:optionparser}
 Class: Optionparser (ruby 1.9.3).
 \newblock
   \url{http://ruby-doc.org/stdlib-1.9.3/libdoc/optparse/rdoc/OptionParser.html},
   08 2012.
 
-\bibitem[rub12c]{ruby:gemdev}
+\bibitem[rub12d]{ruby:gemdev}
 Rubyforge: Rubygems: Projektinfo.
 \newblock \url{http://rubyforge.org/projects/rubygems/}, 08 2012.
 
-\bibitem[rub12d]{ruby:gemdoc}
+\bibitem[rub12e]{ruby:gemdoc}
 Rubygems manuals.
 \newblock \url{http://docs.rubygems.org/}, 08 2012.
+
+\bibitem[sko09]{skorks}
+Ruby exceptions and exception handling.
+\newblock
+  \url{http://www.skorks.com/2009/09/ruby-exceptions-and-exception-handling/},
+  09 2009.
 
 \bibitem[sma11]{smartphonesales}
 One billion html5 phones to be sold worldwide in 2013.
@@ -201,5 +217,9 @@ Trello documentation --- trello documentation.
 \bibitem[vca]{vcalendar}
 vcalendar overview.
 \newblock \url{http://www.imc.org/pdi/}.
+
+\bibitem[zip12]{zippy}
+toretore/zippy.
+\newblock \url{https://github.com/toretore/zippy}, 07 2012.
 
 \end{thebibliography}

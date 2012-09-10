@@ -9,12 +9,12 @@
 \nomenclatureentry{aURL@[{URL}]\begingroup Uniform Resource Locator\nomeqref {2.0}|nompageref}{10}
 \nomenclatureentry{aRFC@[{RFC}]\begingroup Request For Comments\nomeqref {2.0}|nompageref}{11}
 \nomenclatureentry{aCLI@[{CLI}]\begingroup Command Line Interface\nomeqref {3.0}|nompageref}{16}
-\nomenclatureentry{aISO@[{ISO}]\begingroup International Organization for Standardization\nomeqref {3.0}|nompageref}{18}
-\nomenclatureentry{aUTC@[{UTC}]\begingroup Universal Time Coordinated\nomeqref {3.0}|nompageref}{18}
-\nomenclatureentry{aHTML@[{HTML}]\begingroup Hyper Text Markup Language\nomeqref {4.0}|nompageref}{31}
-\nomenclatureentry{aXHTML@[{XHTML}]\begingroup Extensible Hyper Text Markup Language\nomeqref {4.0}|nompageref}{36}
-\nomenclatureentry{aERB@[{ERB}]\begingroup embedded Ruby\nomeqref {4.0}|nompageref}{37}
-\nomenclatureentry{aMVC@[{MVC}]\begingroup Model View Controller\nomeqref {4.0}|nompageref}{37}
-\nomenclatureentry{aRSS@[{RSS}]\begingroup Really Simple Syndication\nomeqref {4.0}|nompageref}{38}
-\nomenclatureentry{aCMS@[{CMS}]\begingroup Content Management System\nomeqref {4.0}|nompageref}{53}
-\nomenclatureentry{aMIME@[{MIME}]\begingroup Multipurpose Internet Mail Extensions\nomeqref {4.0}|nompageref}{64}
+\nomenclatureentry{aISO@[{ISO}]\begingroup International Organization for Standardization\nomeqref {3.0}|nompageref}{21}
+\nomenclatureentry{aUTC@[{UTC}]\begingroup Universal Time Coordinated\nomeqref {3.0}|nompageref}{21}
+\nomenclatureentry{aHTML@[{HTML}]\begingroup Hyper Text Markup Language\nomeqref {4.0}|nompageref}{37}
+\nomenclatureentry{aXHTML@[{XHTML}]\begingroup Extensible Hyper Text Markup Language\nomeqref {4.0}|nompageref}{43}
+\nomenclatureentry{aERB@[{ERB}]\begingroup embedded Ruby\nomeqref {4.0}|nompageref}{43}
+\nomenclatureentry{aMVC@[{MVC}]\begingroup Model View Controller\nomeqref {4.0}|nompageref}{44}
+\nomenclatureentry{aRSS@[{RSS}]\begingroup Really Simple Syndication\nomeqref {4.0}|nompageref}{44}
+\nomenclatureentry{aCMS@[{CMS}]\begingroup Content Management System\nomeqref {4.0}|nompageref}{58}
+\nomenclatureentry{aMIME@[{MIME}]\begingroup Multipurpose Internet Mail Extensions\nomeqref {4.0}|nompageref}{63}

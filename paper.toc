@@ -4,7 +4,7 @@
 \contentsline {section}{\numberline {2.1}Trello}{3}{section.2.1}
 \contentsline {subsection}{\numberline {2.1.1}Why Trello}{3}{subsection.2.1.1}
 \contentsline {subsection}{\numberline {2.1.2}Trello API}{3}{subsection.2.1.2}
-\contentsline {subsubsection}{Authentification}{4}{section*.9}
+\contentsline {subsubsection}{Authentication}{4}{section*.9}
 \contentsline {section}{\numberline {2.2}Ruby}{4}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}RubyGems}{5}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Ruby and MySQL}{6}{subsection.2.2.2}
@@ -13,58 +13,45 @@
 \contentsline {section}{\numberline {2.4}JSON}{11}{section.2.4}
 \contentsline {chapter}{\numberline {3}Trello API wrapper}{15}{chapter.3}
 \contentsline {section}{\numberline {3.1}Command Line Interface}{16}{section.3.1}
-\contentsline {section}{\numberline {3.2}Methods}{18}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Handling of date and time}{18}{subsection.3.2.1}
-\contentsline {subsubsection}{getDate(date, format='de')}{18}{section*.11}
-\contentsline {subsection}{\numberline {3.2.2}Collect data from Trello}{19}{subsection.3.2.2}
-\contentsline {subsubsection}{getBoardsByMember(memberId)}{19}{section*.12}
-\contentsline {subsubsection}{getListsByBoard(boardId)}{20}{section*.13}
-\contentsline {subsubsection}{getList(listId)}{20}{section*.14}
-\contentsline {subsubsection}{getSingleCard(cardId)}{20}{section*.15}
-\contentsline {subsubsection}{getCardsByBoard(boardId)}{21}{section*.16}
-\contentsline {subsubsection}{getCardsByList(listId)}{21}{section*.17}
-\contentsline {subsubsection}{getCardsAsArray(arrayCardsStd, downloads = true)}{21}{section*.18}
-\contentsline {subsection}{\numberline {3.2.3}Further information on a card}{25}{subsection.3.2.3}
-\contentsline {subsubsection}{getCardActions(cardId)}{25}{section*.19}
-\contentsline {subsubsection}{getCardComments(cardId)}{25}{section*.20}
-\contentsline {subsubsection}{cardUpdated(cardId)}{26}{section*.21}
-\contentsline {subsubsection}{cardCreated(cardId)}{26}{section*.22}
-\contentsline {subsubsection}{isCompleted(cardId, itemId)}{26}{section*.23}
-\contentsline {subsubsection}{getChecklist(cardId)}{27}{section*.24}
-\contentsline {subsubsection}{getAttachment(cardId)}{27}{section*.25}
-\contentsline {subsection}{\numberline {3.2.4}Member information}{28}{subsection.3.2.4}
-\contentsline {subsubsection}{getMember(memberId)}{28}{section*.26}
-\contentsline {subsubsection}{isThisMe(memberId)}{28}{section*.27}
-\contentsline {subsubsection}{getMembersByBoard(boardId)}{28}{section*.28}
-\contentsline {subsection}{\numberline {3.2.5}Accessing CMS}{29}{subsection.3.2.5}
-\contentsline {subsubsection}{trelloToJoomlaSingle(joomlaArticleId, articles)}{29}{section*.29}
-\contentsline {subsubsection}{trelloJoomlaSync(cardId, sectionid, catid, joomlaVersion)}{29}{section*.30}
-\contentsline {chapter}{\numberline {4}Applications}{31}{chapter.4}
-\contentsline {section}{\numberline {4.1}Export to HTML}{31}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Markdown}{32}{subsection.4.1.1}
-\contentsline {subsubsection}{kramdown}{35}{section*.32}
-\contentsline {subsection}{\numberline {4.1.2}Twitter Bootstrap Framework}{36}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}HTML5}{36}{subsection.4.1.3}
-\contentsline {subsection}{\numberline {4.1.4}Templating with ERB}{37}{subsection.4.1.4}
-\contentsline {section}{\numberline {4.2}Synchronisation Google Calendar}{41}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Google Calendar API}{42}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Synchronisation}{43}{subsection.4.2.2}
-\contentsline {section}{\numberline {4.3}Export to iCalendar}{46}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}iCalendar format}{47}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Export}{49}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}Comparison to the Google Calendar synchronisation}{52}{subsection.4.3.3}
-\contentsline {section}{\numberline {4.4}Synchronisation to Joomla}{52}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}Joomla category page}{60}{subsection.4.4.1}
+\contentsline {section}{\numberline {3.2}Methods}{19}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Handling of date and time}{21}{subsection.3.2.1}
+\contentsline {subsubsection}{getDate(date, format='de')}{21}{section*.11}
+\contentsline {subsection}{\numberline {3.2.2}Special methods}{22}{subsection.3.2.2}
+\contentsline {subsubsection}{getCardsAsArray(arrayCardsStd, downloads = true)}{22}{section*.12}
+\contentsline {subsubsection}{isThisMe(memberId)}{26}{section*.13}
+\contentsline {subsection}{\numberline {3.2.3}Accessing CMS}{26}{subsection.3.2.3}
+\contentsline {subsubsection}{trelloJoomlaSync(cardId, sectionid, catid, joomlaVersion)}{27}{section*.14}
+\contentsline {subsubsection}{trelloToJoomlaSingle(joomlaArticleId, articles)}{33}{section*.15}
+\contentsline {chapter}{\numberline {4}Applications}{37}{chapter.4}
+\contentsline {section}{\numberline {4.1}Export to HTML}{37}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Markdown}{39}{subsection.4.1.1}
+\contentsline {subsubsection}{kramdown}{40}{section*.17}
+\contentsline {subsection}{\numberline {4.1.2}Twitter Bootstrap Framework}{41}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}HTML5}{42}{subsection.4.1.3}
+\contentsline {subsection}{\numberline {4.1.4}Templating with ERB}{43}{subsection.4.1.4}
+\contentsline {section}{\numberline {4.2}Google Calendar Synchronisation}{47}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Google Calendar API}{48}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Synchronisation}{49}{subsection.4.2.2}
+\contentsline {section}{\numberline {4.3}iCalendar Export}{52}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}iCalendar format}{52}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Export}{55}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Comparison to the Google Calendar synchronisation}{57}{subsection.4.3.3}
+\contentsline {section}{\numberline {4.4}Joomla Synchronisation}{58}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}Joomla category page}{59}{subsection.4.4.1}
 \contentsline {subsection}{\numberline {4.4.2}Single article}{60}{subsection.4.4.2}
-\contentsline {section}{\numberline {4.5}Backup}{61}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}Export}{61}{subsection.4.5.1}
-\contentsline {subsubsection}{Saving to JSON files}{62}{section*.34}
-\contentsline {subsection}{\numberline {4.5.2}Import}{64}{subsection.4.5.2}
-\contentsline {subsection}{\numberline {4.5.3}Member import}{65}{subsection.4.5.3}
-\contentsline {subsection}{\numberline {4.5.4}Close all boards}{65}{subsection.4.5.4}
+\contentsline {section}{\numberline {4.5}Backup}{60}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Export}{60}{subsection.4.5.1}
+\contentsline {subsubsection}{Saving to JSON files}{61}{section*.19}
+\contentsline {subsection}{\numberline {4.5.2}Import}{63}{subsection.4.5.2}
+\contentsline {subsection}{\numberline {4.5.3}Member import}{64}{subsection.4.5.3}
+\contentsline {section}{\numberline {4.6}Close all boards and organizations}{65}{section.4.6}
 \contentsline {chapter}{\numberline {5}Conclusion}{67}{chapter.5}
 \contentsline {chapter}{\numberline {6}Outlook}{69}{chapter.6}
 \contentsline {section}{\numberline {6.1}Trello Alfred Extension}{69}{section.6.1}
 \contentsline {section}{\numberline {6.2}Native applications}{70}{section.6.2}
-\contentsline {chapter}{Bibliography}{73}{section.6.2}
-\contentsline {section}{Index}{77}{chapter*.36}
+\contentsline {section}{\numberline {6.3}New interesting methods}{71}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Card Cover Images}{71}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.2}Searching}{71}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}Google Drive integration}{72}{subsection.6.3.3}
+\contentsline {chapter}{Bibliography}{73}{subsection.6.3.3}
+\contentsline {section}{Index}{77}{chapter*.21}
