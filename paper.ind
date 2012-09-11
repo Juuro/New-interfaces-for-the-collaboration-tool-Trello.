@@ -6,18 +6,18 @@
   \item Android, \hyperpage{3}, \hyperpage{71}
   \item API, \hyperpage{3}, \hyperpage{11}, \hyperpage{15}, 
 		\hyperpage{19}, \hyperpage{22}, \hyperpage{26}, 
-		\hyperpage{28}, \hyperpage{48, 49}, \hyperpage{58}, 
+		\hyperpage{28}, \hyperpage{48, 49}, \hyperpage{59}, 
 		\hyperpage{61, 62}, \hyperpage{67}
     \subitem call, \hyperpage{8}
     \subitem RESTful, \hyperpage{5}
     \subitem wrapper, \hyperpage{6}, \hyperpage{15}, \hyperpage{19}, 
-		\hyperpage{25}, \hyperpage{37}, \hyperpage{48}, 
+		\hyperpage{26}, \hyperpage{37}, \hyperpage{48}, 
 		\hyperpage{55}, \hyperpage{59}
-  \item API wrapper, \hyperpage{49}
+  \item API wrapper, \hyperpage{50}
   \item Apple
     \subitem Calendar, \hyperpage{48}
     \subitem iCal, \hyperpage{48}
-  \item authentication, \hyperpage{48}
+  \item authentication, \hyperpage{49}
 
   \indexspace
 
@@ -28,16 +28,17 @@
   \indexspace
 
   \item CLI, \hyperpage{16, 17}, \hyperpage{65}
-  \item CMS, \hyperpage{26, 27}, \hyperpage{58}, \hyperpage{67}
+  \item CMS, \hyperpage{27}, \hyperpage{58, 59}, \hyperpage{67}
   \item collaboration tool, \hyperpage{67}
   \item Command-Line Interface, \hyperpage{16}
   \item CSS, \hyperpage{41}
 
   \indexspace
 
-  \item database, \hyperpage{6}, \hyperpage{8, 9}, \hyperpage{29, 30}
+  \item database, \hyperpage{6}, \hyperpage{8, 9}, \hyperpage{29}, 
+		\hyperpage{31}
     \subitem connection, \hyperpage{6}
-  \item databse, \hyperpage{26}
+  \item databse, \hyperpage{27}
   \item daylight saving time, \hyperpage{22}
   \item DBMS, \hyperpage{7, 8}
   \item developer, \hyperpage{5}
@@ -58,10 +59,10 @@
 
   \item Gem, \hyperpage{5}
   \item gem, \hyperpage{5}, \hyperpage{55}
-  \item Google, \hyperpage{48, 49}, \hyperpage{57}
-    \subitem Calendar, \hyperpage{47--52}, \hyperpage{57}, 
-		\hyperpage{67}
-    \subitem Calendar API, \hyperpage{48}, \hyperpage{51}
+  \item Google, \hyperpage{48, 49}, \hyperpage{57, 58}
+    \subitem Calendar, \hyperpage{47, 48}, \hyperpage{50--52}, 
+		\hyperpage{57}, \hyperpage{67}
+    \subitem Calendar API, \hyperpage{48, 49}, \hyperpage{51}
   \item Gruber
     \subitem John, \hyperpage{39}
 
@@ -78,7 +79,7 @@
 
   \indexspace
 
-  \item iCalendar, \hyperpage{52--57}, \hyperpage{67}
+  \item iCalendar, \hyperpage{52--58}, \hyperpage{67}
   \item Import, \hyperpage{63}
   \item installation, \hyperpage{5}
   \item Internet Engineering Task Force Calendaring and Scheduling Working Group, 
@@ -92,10 +93,10 @@
   \indexspace
 
   \item JavaScript, \hyperpage{41}
-  \item Joomla, \hyperpage{26}, \hyperpage{29}, \hyperpage{33}, 
+  \item Joomla, \hyperpage{27}, \hyperpage{29}, \hyperpage{33}, 
 		\hyperpage{58--60}, \hyperpage{67}
-    \subitem Platform, \hyperpage{58}
-  \item JSON, \hyperpage{10--13}, \hyperpage{20}, \hyperpage{61, 62}
+    \subitem Platform, \hyperpage{58, 59}
+  \item JSON, \hyperpage{10--13}, \hyperpage{21}, \hyperpage{61, 62}
 
   \indexspace
 
@@ -119,7 +120,7 @@
   \item Microsoft
     \subitem Outlook, \hyperpage{48}
   \item MIME, \hyperpage{52}, \hyperpage{63, 64}
-  \item MySQL, \hyperpage{6}, \hyperpage{8}, \hyperpage{30}
+  \item MySQL, \hyperpage{6}, \hyperpage{8}, \hyperpage{31}
     \subitem library, \hyperpage{7}
     \subitem query, \hyperpage{6}
     \subitem statement, \hyperpage{6, 7}, \hyperpage{31}

@@ -210,12 +210,16 @@ fileHtml.close()
 
 In listing \ref{listing016}, the template data is set up. At first, in line \ref{line007}, the template file is opened. It is then read and saved in the \lstinline{template} variable in the next line, so the template is saved as string in \lstinline{template}. In line \ref{line008}, an instance of ERB\index{ERB} is created with \lstinline{rhtml}. After that, in line \ref{line009}, the \lstinline{Webpage} class is used. One instance with the given title is generated. In line \ref{line010}, each card is added to the instance of \lstinline{Webpage}. Finally, in line \ref{line011}, the \lstinline{Binding} object of \lstinline{webpage} is created. With the ERB\index{ERB} method \lstinline{result}, the data in the \lstinline{Binding} object and the template come together. This is the step where the wildcards in the template file are filled with the actual data of the \lstinline{Binding} object. The resulting HTML\index{HTML} code is stored in the string variable \lstinline{html} which is saved to the file \texttt{index.html} in line \ref{line012}. 
 
+
+
 \section{Google Calendar Synchronisation}\index{Google!Calendar}
 Used additional libraries:
 \begin{itemize}
 	\item \texttt{erb}
 	\item \texttt{google/api\_client}
 \end{itemize}
+
+\vskip 3cm
 
 Usage:
 \begin{lstlisting}[aboveskip=1\baselineskip, style=bash, caption=\texttt{gcal.rb} usage., label=listing025]
@@ -481,6 +485,8 @@ hashBackup['cards'] = arrayCards
 
 \subsubsection{Saving to JSON files}
 The JSON\index{JSON} library for Ruby\index{Ruby} described in section \ref{jsonsec} is able to generate JSON out of Ruby hashes and arrays.
+
+\vskip 3cm
 
 \begin{lstlisting}[aboveskip=1\baselineskip, caption=Using the temporary directory of the operating system to save the JSON to file., label=listing039]
 backupFile = File.new(File.join(Dir.tmpdir, 'backup.json'), "wb") (*@ \label{line033} @*)

@@ -70,7 +70,7 @@ my.query("SET NAMES utf8") (*@ \label{line050} @*)
 
 Listing \ref{listing050} above shows the initialisation of a new connection to a MySQL\index{MySQL} database with the Ruby MySQL gem. The variable \lstinline{my} is a new database handler. If the correct charset isn't set, it won't work. The host, the user, the password, and the database name should be stored in separate variables so they are easily editable. \lstinline{SET NAMES utf8} in line \ref{line050} of listing \ref{listing050} is a first execution of a MySQL query\index{MySQL!query}. It tells the server the charset name of future connections. In this example, the server expects all future queries as UTF8 \nomenclature{UTF-8}{8-Bit UCS Transformation Format}\nomenclature{UCS}{Universal Character Set} charset.
 
-MySQL statements\index{MySQL!statement} can be executed directly or as \emph{prepared statements}. The example in line \ref{line050} of  \ref{listing050} is a normal statement which is executed directly. Listing \ref{listing051} shows a longer example. 
+MySQL statements\index{MySQL!statement} can be executed directly or as \emph{prepared statements}. The example in line \ref{line050} of  \ref{listing050} is a normal statement which is executed directly. Listing \ref{listing051} shows a longer example.
 
 \begin{lstlisting}[aboveskip=1\baselineskip, caption=Example for a directly executed MySQL query., label=listing051]
 response = my.query(" 

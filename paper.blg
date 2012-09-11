@@ -4,101 +4,101 @@ The top-level auxiliary file: paper.aux
 The style file: alpha.bst
 Database file #1: sources.bib.bib
 Warning--entry type for "skorks" isn't style-file defined
---line 12 of file sources.bib.bib
-Warning--entry type for "rfc:2046" isn't style-file defined
 --line 23 of file sources.bib.bib
-Warning--entry type for "zippy" isn't style-file defined
+Warning--entry type for "rfc:2046" isn't style-file defined
 --line 34 of file sources.bib.bib
-Warning--entry type for "ruby:openstruct" isn't style-file defined
+Warning--entry type for "zippy" isn't style-file defined
 --line 45 of file sources.bib.bib
-Warning--entry type for "mysql:rubydoc" isn't style-file defined
+Warning--entry type for "ruby:openstruct" isn't style-file defined
 --line 56 of file sources.bib.bib
-Warning--entry type for "mysql:popularity" isn't style-file defined
+Warning--entry type for "mysql:rubydoc" isn't style-file defined
 --line 67 of file sources.bib.bib
+Warning--entry type for "mysql:popularity" isn't style-file defined
+--line 78 of file sources.bib.bib
 Warning--entry type for "joomla:api" isn't style-file defined
---line 88 of file sources.bib.bib
-Warning--entry type for "joomla:mvc" isn't style-file defined
 --line 99 of file sources.bib.bib
-Warning--entry type for "joomla:architecture" isn't style-file defined
+Warning--entry type for "joomla:mvc" isn't style-file defined
 --line 110 of file sources.bib.bib
-Warning--entry type for "vcalendar" isn't style-file defined
+Warning--entry type for "joomla:architecture" isn't style-file defined
 --line 121 of file sources.bib.bib
+Warning--entry type for "vcalendar" isn't style-file defined
+--line 132 of file sources.bib.bib
 Warning--entry type for "ical:gemdocu" isn't style-file defined
---line 130 of file sources.bib.bib
-Warning--entry type for "rfc:5545" isn't style-file defined
 --line 141 of file sources.bib.bib
-Warning--entry type for "ical:specs" isn't style-file defined
+Warning--entry type for "rfc:5545" isn't style-file defined
 --line 152 of file sources.bib.bib
+Warning--entry type for "ical:specs" isn't style-file defined
+--line 163 of file sources.bib.bib
 Warning--entry type for "rfc:2445" isn't style-file defined
---line 174 of file sources.bib.bib
+--line 185 of file sources.bib.bib
 Warning--entry type for "json:docu" isn't style-file defined
---line 196 of file sources.bib.bib
-Warning--entry type for "google:calapi" isn't style-file defined
 --line 207 of file sources.bib.bib
-Warning--entry type for "google:apiscope" isn't style-file defined
+Warning--entry type for "google:calapi" isn't style-file defined
 --line 218 of file sources.bib.bib
-Warning--entry type for "google:apisconsole" isn't style-file defined
+Warning--entry type for "google:apiscope" isn't style-file defined
 --line 229 of file sources.bib.bib
-Warning--entry type for "erb:docu" isn't style-file defined
+Warning--entry type for "google:apisconsole" isn't style-file defined
 --line 240 of file sources.bib.bib
-Warning--entry type for "erb:introduction" isn't style-file defined
+Warning--entry type for "erb:docu" isn't style-file defined
 --line 251 of file sources.bib.bib
-Warning--entry type for "html5:header" isn't style-file defined
+Warning--entry type for "erb:introduction" isn't style-file defined
 --line 262 of file sources.bib.bib
-Warning--entry type for "html5:footer" isn't style-file defined
+Warning--entry type for "html5:header" isn't style-file defined
 --line 273 of file sources.bib.bib
-Warning--entry type for "html5:article" isn't style-file defined
+Warning--entry type for "html5:footer" isn't style-file defined
 --line 284 of file sources.bib.bib
+Warning--entry type for "html5:article" isn't style-file defined
+--line 295 of file sources.bib.bib
 Warning--entry type for "smartphonesales" isn't style-file defined
---line 306 of file sources.bib.bib
-Warning--entry type for "html:5differences" isn't style-file defined
 --line 317 of file sources.bib.bib
-Warning--entry type for "html:lastcall" isn't style-file defined
+Warning--entry type for "html:5differences" isn't style-file defined
 --line 328 of file sources.bib.bib
-Warning--entry type for "markotto" isn't style-file defined
+Warning--entry type for "html:lastcall" isn't style-file defined
 --line 339 of file sources.bib.bib
-Warning--entry type for "bootstrap" isn't style-file defined
+Warning--entry type for "markotto" isn't style-file defined
 --line 350 of file sources.bib.bib
-Warning--entry type for "less" isn't style-file defined
+Warning--entry type for "bootstrap" isn't style-file defined
 --line 361 of file sources.bib.bib
-Warning--entry type for "google" isn't style-file defined
+Warning--entry type for "less" isn't style-file defined
 --line 372 of file sources.bib.bib
+Warning--entry type for "google" isn't style-file defined
+--line 383 of file sources.bib.bib
 Warning--entry type for "joomla" isn't style-file defined
---line 382 of file sources.bib.bib
-Warning--entry type for "html:logo" isn't style-file defined
 --line 393 of file sources.bib.bib
+Warning--entry type for "html:logo" isn't style-file defined
+--line 404 of file sources.bib.bib
 Warning--entry type for "ruby:icon" isn't style-file defined
---line 402 of file sources.bib.bib
+--line 413 of file sources.bib.bib
 Warning--entry type for "kramdown" isn't style-file defined
---line 411 of file sources.bib.bib
-Warning--entry type for "markdown" isn't style-file defined
 --line 422 of file sources.bib.bib
-Warning--entry type for "ruby:optionparser" isn't style-file defined
+Warning--entry type for "markdown" isn't style-file defined
 --line 433 of file sources.bib.bib
-Warning--entry type for "ruby:gemdev" isn't style-file defined
+Warning--entry type for "ruby:optionparser" isn't style-file defined
 --line 444 of file sources.bib.bib
-Warning--entry type for "ruby:gemdoc" isn't style-file defined
+Warning--entry type for "ruby:gemdev" isn't style-file defined
 --line 455 of file sources.bib.bib
-Warning--entry type for "ruby:about" isn't style-file defined
+Warning--entry type for "ruby:gemdoc" isn't style-file defined
 --line 466 of file sources.bib.bib
-Warning--entry type for "ruby:talk" isn't style-file defined
+Warning--entry type for "ruby:about" isn't style-file defined
 --line 477 of file sources.bib.bib
-Warning--entry type for "trello:gettingstarted" isn't style-file defined
+Warning--entry type for "ruby:talk" isn't style-file defined
 --line 488 of file sources.bib.bib
-Warning--entry type for "json" isn't style-file defined
+Warning--entry type for "trello:gettingstarted" isn't style-file defined
 --line 499 of file sources.bib.bib
-Warning--entry type for "oauth" isn't style-file defined
+Warning--entry type for "json" isn't style-file defined
 --line 510 of file sources.bib.bib
-Warning--entry type for "trello:docu" isn't style-file defined
+Warning--entry type for "oauth" isn't style-file defined
 --line 521 of file sources.bib.bib
-Warning--entry type for "rest" isn't style-file defined
+Warning--entry type for "trello:docu" isn't style-file defined
 --line 532 of file sources.bib.bib
-Warning--entry type for "trello:ios" isn't style-file defined
+Warning--entry type for "rest" isn't style-file defined
 --line 543 of file sources.bib.bib
-Warning--entry type for "trello:android" isn't style-file defined
+Warning--entry type for "trello:ios" isn't style-file defined
 --line 554 of file sources.bib.bib
+Warning--entry type for "trello:android" isn't style-file defined
+--line 565 of file sources.bib.bib
 Warning--entry type for "alfred" isn't style-file defined
---line 564 of file sources.bib.bib
+--line 575 of file sources.bib.bib
 Warning--to sort, need author or key in ruby:icon
 Warning--to sort, need author or key in html:logo
 Warning--to sort, need author or key in joomla

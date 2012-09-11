@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  10 SEP 2012 07:48
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  10 SEP 2012 15:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -659,7 +659,7 @@ LaTeX Font Info:    Font shape `OT1/cmtt/bx/it' in size <10.95> not available
 ])
 [14] (./sec1.tex
 Chapter 1.
-<figures/trello.png, id=478, 940.51375pt x 447.6725pt>
+<figures/trello.png, id=480, 940.51375pt x 447.6725pt>
 File: figures/trello.png Graphic file (type png)
 
 <use figures/trello.png>
@@ -680,7 +680,7 @@ ifier (name{page.2}) has been already used, duplicate ignored
 l.279 \cleardoublepage
                        [2] (./sec2.tex
 Chapter 2.
-<figures/trello-card.png, id=498, 706.64pt x 1025.8325pt>
+<figures/trello-card.png, id=501, 706.64pt x 1025.8325pt>
 File: figures/trello-card.png Graphic file (type png)
 
 <use figures/trello-card.png>
@@ -715,7 +715,7 @@ File: ts1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 ) [10] [11]
 [12]) [13] [14 <./figures/trello-card.png>] (./sec21.tex
 Chapter 3.
-<figures/api-wrapper.png, id=691, 2214.2725pt x 1459.4525pt>
+<figures/api-wrapper.png, id=694, 2214.2725pt x 1459.4525pt>
 File: figures/api-wrapper.png Graphic file (type png)
 
 <use figures/api-wrapper.png>
@@ -738,40 +738,48 @@ File: lstlang1.sty 2004/09/05 1.3 listings language file
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [18]
-[19] [20] [21] [22]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [19]
+[20] [21] [22]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [23]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [24]
-[25]
-Underfull \hbox (badness 6842) in paragraph at lines 305--306
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [25]
+[26]
+Underfull \hbox (badness 6842) in paragraph at lines 307--308
 \OT1/cmr/m/n/12 To ac-cess CMS[] there are two meth-ods. [][][]
  []
 
 
-Underfull \hbox (badness 5787) in paragraph at lines 305--306
+Underfull \hbox (badness 5787) in paragraph at lines 307--308
 [][][][][][][][][][][][][] \OT1/cmr/m/n/12 and [][][][][][][][][][][][][][][]
  []
 
-[26] [27] [28]
-Underfull \vbox (badness 7540) has occurred while \output is active []
 
- [29]
-[30]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [31]
-[32] [33]
+ [27]
+[28] [29]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [34])
-[35] [36
+ [30]
+[31] [32] [33]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-] (./sec3.tex
+ [34]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [35])
+[36] (./sec3.tex
 Chapter 4.
 [37
+
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -786,39 +794,51 @@ File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 59.
  [39]
-<figures/markdown-result.png, id=1329, 438.63875pt x 384.43625pt>
+<figures/markdown-result.png, id=1332, 438.63875pt x 384.43625pt>
 File: figures/markdown-result.png Graphic file (type png)
 
 <use figures/markdown-result.png>
 Package pdftex.def Info: figures/markdown-result.png used on input line 83.
 (pdftex.def)             Requested size: 263.18527pt x 230.66351pt.
  [40]
-<figures/kramdown.png, id=1353, 132.7359pt x 86.2422pt>
+<figures/kramdown.png, id=1356, 132.7359pt x 86.2422pt>
 File: figures/kramdown.png Graphic file (type png)
 
 <use figures/kramdown.png>
 Package pdftex.def Info: figures/kramdown.png used on input line 96.
 (pdftex.def)             Requested size: 398.33858pt x 258.84435pt.
  [41 <./figures/markdown-result.png>] [42 <./figures/kramdown.png>] [43] [44] [
-45] [46] [47] [48] [49] [50] [51] [52] [53]
+45] [46]
+Underfull \vbox (badness 3219) has occurred while \output is active []
+
+ [47]
+[48]
+Underfull \vbox (badness 3735) has occurred while \output is active []
+
+ [49]
+[50] [51] [52] [53]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [54]
 [55]
 
-LaTeX Warning: Reference `021' on page 56 undefined on input line 385.
+LaTeX Warning: Reference `021' on page 56 undefined on input line 389.
 
 [56] [57] [58] [59] [60] [61] [62] [63]
-LaTeX Font Info:    Try loading font information for OMS+cmtt on input line 534
+LaTeX Font Info:    Try loading font information for OMS+cmtt on input line 540
 .
-LaTeX Font Info:    No file OMScmtt.fd. on input line 534.
+LaTeX Font Info:    No file OMScmtt.fd. on input line 540.
 
 
 LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbraceleft' on input line 534.
+(Font)              for symbol `textbraceleft' on input line 540.
 
-[64] [65]) [66] (./sec4.tex
+
+Underfull \vbox (badness 1817) has occurred while \output is active []
+
+ [64]
+[65]) [66] (./sec4.tex
 Chapter 5.
 ) [67
 
@@ -835,7 +855,7 @@ mr/m/n/12 will
 
 [69
 
-] <figures/trello-ext.png, id=1813, 650.43pt x 190.7125pt>
+] <figures/trello-ext.png, id=1816, 650.43pt x 190.7125pt>
 File: figures/trello-ext.png Graphic file (type png)
 
 <use figures/trello-ext.png>
@@ -1029,12 +1049,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 208--212
  []
 
 ) [76] (/Users/juuro/Dropbox/Studium/Diplomarbeit/Ausarbeitung/./paper.ind
-Underfull \hbox (badness 10000) in paragraph at lines 84--86
+Underfull \hbox (badness 10000) in paragraph at lines 85--87
 []\OT1/cmr/m/n/12 Internet En-gi-neer-ing Task Force
  []
 
 
-Underfull \hbox (badness 1776) in paragraph at lines 84--86
+Underfull \hbox (badness 1776) in paragraph at lines 85--87
 \OT1/cmr/m/n/12 Cal-en-dar-ing and Schedul-ing
  []
 
@@ -1069,9 +1089,9 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 340.
  ) 
 Here is how much of TeX's memory you used:
- 13063 strings out of 493488
- 188087 string characters out of 3141326
- 494880 words of memory out of 3000000
+ 13064 strings out of 493488
+ 188099 string characters out of 3141326
+ 495880 words of memory out of 3000000
  15117 multiletter control sequences out of 15000+200000
  17526 words of font info for 72 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -1094,10 +1114,10 @@ e/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive
 /2012/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2
 012/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
 Output written on /Users/juuro/Dropbox/Studium/Diplomarbeit/Ausarbeitung/./pape
-r.pdf (97 pages, 1098620 bytes).
+r.pdf (97 pages, 1098925 bytes).
 PDF statistics:
- 2433 PDF objects out of 2487 (max. 8388607)
- 2278 compressed objects within 23 object streams
- 1040 named destinations out of 1200 (max. 500000)
+ 2441 PDF objects out of 2487 (max. 8388607)
+ 2286 compressed objects within 23 object streams
+ 1041 named destinations out of 1200 (max. 500000)
  423 words of extra memory for PDF output out of 10000 (max. 10000000)
 

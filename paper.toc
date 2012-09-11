@@ -19,7 +19,7 @@
 \contentsline {subsection}{\numberline {3.2.2}Special methods}{22}{subsection.3.2.2}
 \contentsline {subsubsection}{getCardsAsArray(arrayCardsStd, downloads = true)}{22}{section*.12}
 \contentsline {subsubsection}{isThisMe(memberId)}{26}{section*.13}
-\contentsline {subsection}{\numberline {3.2.3}Accessing CMS}{26}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.3}Accessing CMS}{27}{subsection.3.2.3}
 \contentsline {subsubsection}{trelloJoomlaSync(cardId, sectionid, catid, joomlaVersion)}{27}{section*.14}
 \contentsline {subsubsection}{trelloToJoomlaSingle(joomlaArticleId, articles)}{33}{section*.15}
 \contentsline {chapter}{\numberline {4}Applications}{37}{chapter.4}
@@ -31,9 +31,9 @@
 \contentsline {subsection}{\numberline {4.1.4}Templating with ERB}{43}{subsection.4.1.4}
 \contentsline {section}{\numberline {4.2}Google Calendar Synchronisation}{47}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Google Calendar API}{48}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Synchronisation}{49}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.2}Synchronisation}{50}{subsection.4.2.2}
 \contentsline {section}{\numberline {4.3}iCalendar Export}{52}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}iCalendar format}{52}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.1}iCalendar format}{53}{subsection.4.3.1}
 \contentsline {subsection}{\numberline {4.3.2}Export}{55}{subsection.4.3.2}
 \contentsline {subsection}{\numberline {4.3.3}Comparison to the Google Calendar synchronisation}{57}{subsection.4.3.3}
 \contentsline {section}{\numberline {4.4}Joomla Synchronisation}{58}{section.4.4}
@@ -43,7 +43,7 @@
 \contentsline {subsection}{\numberline {4.5.1}Export}{60}{subsection.4.5.1}
 \contentsline {subsubsection}{Saving to JSON files}{61}{section*.19}
 \contentsline {subsection}{\numberline {4.5.2}Import}{63}{subsection.4.5.2}
-\contentsline {subsection}{\numberline {4.5.3}Member import}{64}{subsection.4.5.3}
+\contentsline {subsection}{\numberline {4.5.3}Member import}{65}{subsection.4.5.3}
 \contentsline {section}{\numberline {4.6}Close all boards and organizations}{65}{section.4.6}
 \contentsline {chapter}{\numberline {5}Conclusion}{67}{chapter.5}
 \contentsline {chapter}{\numberline {6}Outlook}{69}{chapter.6}

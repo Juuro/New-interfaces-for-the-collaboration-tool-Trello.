@@ -87,6 +87,8 @@ end
 
 The methods which wrap \texttt{POST} or \texttt{PUT} requests look like in listing \ref{listing048}. Several arguments have to or can be passed to the URL. 
 
+\vskip 12cm
+
 \begin{lstlisting}[aboveskip=1\baselineskip, caption=\lstinline{postCard()}, label=listing048]
 def postCard(cardName, cardDesc, cardPos, idList)
 	response = RestClient.post(
@@ -314,6 +316,8 @@ description = Kramdown::Document.new(card['desc']).to_html  (*@ \label{line026}@
 \end{lstlisting}
 
 \lstinline{trelloJoomlaSync()} must determine a card's whole information itself. The \lstinline{getSingleCard()} supplies the standard information of a card such as the title in line \ref{line025} of listing \ref{listing029} and the description in line \ref{line026}. Again, the \texttt{kramdown} gem is used to convert the Markdown\index{Markdown} formatted description string to HTML\index{HTML}. But attachments and checklists would also be meaningful to depict in a CMS\index{CMS}. Besides, the cards creation or update date is required to decide whether a card has changed or not.
+
+\vskip 6cm
 
 \begin{lstlisting}[aboveskip=1\baselineskip, caption=Getting the date of a cards last change., label=listing030]
 changed = nil
